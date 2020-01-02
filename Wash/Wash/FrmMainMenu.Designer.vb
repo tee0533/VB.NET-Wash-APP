@@ -27,8 +27,8 @@ Partial Class FrmMainMenu
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuGeneral = New System.Windows.Forms.Button()
+        Me.MenuAddCusGeneral = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
@@ -52,8 +52,8 @@ Partial Class FrmMainMenu
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.Controls.Add(Me.Button3)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.MenuGeneral)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.MenuAddCusGeneral)
         '
         'SplitContainer1.Panel2
         '
@@ -77,7 +77,7 @@ Partial Class FrmMainMenu
         Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(685, 203)
-        Me.Button3.TabIndex = 27
+        Me.Button3.TabIndex = 29
         Me.Button3.Text = "รายงาน"
         Me.Button3.UseVisualStyleBackColor = False
         '
@@ -94,21 +94,6 @@ Partial Class FrmMainMenu
         Me.btnExit.Text = "ปิดโปรแกรม"
         Me.btnExit.UseVisualStyleBackColor = False
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Button1.BackgroundImage = Global.Wash.My.Resources.Resources.เพิ่มลูกค้าธรรมดา
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Button1.Location = New System.Drawing.Point(0, 177)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(685, 171)
-        Me.Button1.TabIndex = 24
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'MenuGeneral
         '
         Me.MenuGeneral.BackColor = System.Drawing.SystemColors.Highlight
@@ -117,12 +102,27 @@ Partial Class FrmMainMenu
         Me.MenuGeneral.Dock = System.Windows.Forms.DockStyle.Top
         Me.MenuGeneral.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.MenuGeneral.ForeColor = System.Drawing.SystemColors.Control
-        Me.MenuGeneral.Location = New System.Drawing.Point(0, 0)
+        Me.MenuGeneral.Location = New System.Drawing.Point(0, 171)
         Me.MenuGeneral.Margin = New System.Windows.Forms.Padding(2)
         Me.MenuGeneral.Name = "MenuGeneral"
         Me.MenuGeneral.Size = New System.Drawing.Size(685, 177)
-        Me.MenuGeneral.TabIndex = 25
+        Me.MenuGeneral.TabIndex = 28
         Me.MenuGeneral.UseVisualStyleBackColor = False
+        '
+        'MenuAddCusGeneral
+        '
+        Me.MenuAddCusGeneral.BackColor = System.Drawing.SystemColors.Highlight
+        Me.MenuAddCusGeneral.BackgroundImage = Global.Wash.My.Resources.Resources.เพิ่มลูกค้าธรรมดา
+        Me.MenuAddCusGeneral.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.MenuAddCusGeneral.Dock = System.Windows.Forms.DockStyle.Top
+        Me.MenuAddCusGeneral.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.MenuAddCusGeneral.ForeColor = System.Drawing.SystemColors.Control
+        Me.MenuAddCusGeneral.Location = New System.Drawing.Point(0, 0)
+        Me.MenuAddCusGeneral.Margin = New System.Windows.Forms.Padding(2)
+        Me.MenuAddCusGeneral.Name = "MenuAddCusGeneral"
+        Me.MenuAddCusGeneral.Size = New System.Drawing.Size(685, 171)
+        Me.MenuAddCusGeneral.TabIndex = 24
+        Me.MenuAddCusGeneral.UseVisualStyleBackColor = False
         '
         'Button8
         '
@@ -200,12 +200,12 @@ Partial Class FrmMainMenu
     End Sub
     Friend WithEvents Timer1 As Timer
     Friend WithEvents SplitContainer1 As SplitContainer
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents MenuGeneral As Button
+    Friend WithEvents MenuAddCusGeneral As Button
     Friend WithEvents Button8 As Button
     Friend WithEvents btnExit As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Button4 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents MenuGeneral As Button
 End Class

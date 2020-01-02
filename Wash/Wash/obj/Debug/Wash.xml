@@ -42,6 +42,11 @@ Wash
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Wash.My.Resources.Resources.save">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Wash.My.Resources.Resources.unfollow">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

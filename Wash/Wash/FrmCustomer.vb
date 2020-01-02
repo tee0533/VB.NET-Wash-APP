@@ -142,7 +142,7 @@ SELECT TOP (1000) [groupid]
 
     End Sub
 
-    Private Sub btPrint_Click(sender As Object, e As EventArgs) Handles btPrint.Click
+    Private Sub btPrint_Click(sender As Object, e As EventArgs) Handles btSave.Click
         If (Check_Data()) Then
 
             Dim result As Integer = MessageBox.Show("คุณต้องการบันทึกข้อมูลหรือไม่ ?", "Wash System", MessageBoxButtons.YesNo)

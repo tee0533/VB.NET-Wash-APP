@@ -63,11 +63,18 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -91,6 +98,17 @@
   <ItemGroup>
     <Compile Include="Class\ClassConnectDb.vb" />
     <Compile Include="Class\ClassServiceDb.vb" />
+    <Compile Include="DataSet\DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="File Report\wash_detail.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wash_detail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form2.Designer.vb">
       <DependentUpon>Form2.vb</DependentUpon>
     </Compile>
@@ -122,6 +140,12 @@
       <DependentUpon>FrmssLogin.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmViewer.Designer.vb">
+      <DependentUpon>FrmViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ListCus.Designer.vb">
       <DependentUpon>ListCus.vb</DependentUpon>
     </Compile>
@@ -135,6 +159,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module\mVariable.vb" />
+    <Compile Include="FrmCusList_General.Designer.vb">
+      <DependentUpon>FrmCusList_General.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCusList_General.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Payment.Designer.vb">
       <DependentUpon>Payment.vb</DependentUpon>
     </Compile>
@@ -158,6 +188,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="File Report\wash_detail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>wash_detail.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
@@ -173,11 +207,17 @@
     <EmbeddedResource Include="FrmssLogin.resx">
       <DependentUpon>FrmssLogin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmViewer.resx">
+      <DependentUpon>FrmViewer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListCus.resx">
       <DependentUpon>ListCus.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Addcus.resx">
       <DependentUpon>Addcus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCusList_General.resx">
+      <DependentUpon>FrmCusList_General.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Payment.resx">
       <DependentUpon>Payment.vb</DependentUpon>
@@ -191,6 +231,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="database file\WashingStore" />
+    <None Include="DataSet\DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet\DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -239,9 +290,14 @@
     <Content Include="Icon\follow.png" />
     <Content Include="Icon\menu.png" />
     <Content Include="Icon\print.png" />
+    <Content Include="Icon\save.png" />
     <Content Include="Icon\unfollow.png" />
     <Content Include="Icon\user.png" />
     <Content Include="Icon\verified-account.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

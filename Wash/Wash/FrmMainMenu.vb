@@ -15,7 +15,15 @@
 
     End Sub
 
-    Private Sub MenuGeneral_Click(sender As Object, e As EventArgs) Handles MenuGeneral.Click
+    Private Sub MenuGeneral_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub MenuAddCusGeneral_Click(sender As Object, e As EventArgs) Handles MenuAddCusGeneral.Click
         FrmCustomer.Show()
+    End Sub
+
+    Private Sub MenuGeneral_Click_1(sender As Object, e As EventArgs) Handles MenuGeneral.Click
+        FrmCusList_General.Show()
     End Sub
 End Class

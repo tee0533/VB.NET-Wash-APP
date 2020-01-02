@@ -129,7 +129,7 @@ Public Class ClassConnectDb
 
             Using cmd As SqlCommand = conn.CreateCommand()
                 Dim sql As String = "INSERT INTO Customer
-                                ( name, tel)
+                                (name,tel)
                                 VALUES(@name, @tel);SELECT SCOPE_IDENTITY()"
                 cmd.CommandType = CommandType.Text
                 cmd.CommandText = sql
