@@ -52,3 +52,7 @@ F:\SVN\Source Code\Job\Wash\Wash\bin\Debug\Wash.exe.config
 F:\SVN\Source Code\Job\Wash\Wash\obj\Debug\Wash.exe
 F:\SVN\Source Code\Job\Wash\Wash\obj\Debug\Wash.xml
 F:\SVN\Source Code\Job\Wash\Wash\obj\Debug\Wash.pdb
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\bin\Debug\Wash.exe.config
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.exe
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.xml
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.pdb
