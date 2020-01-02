@@ -1,4 +1,6 @@
-﻿Public Class FrmCustomer
+﻿Imports System.Globalization
+
+Public Class FrmCustomer
     Private Sub FrmCustomer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Initial_frm()
         init_combobox_group()
@@ -95,25 +97,49 @@ SELECT TOP (1000) [groupid]
     End Sub
 
     Private Sub btAdd_Click(sender As Object, e As EventArgs) Handles btAdd.Click
+        Try
+            Dim vPriceRolled As Integer = 0
+            If (cmbCategory.Text.Trim = "รีดอย่างเดียว") Then
+                If (CheckHard.Checked = False And CheckMid.Checked = False And CheckEz.Checked = False) Then
+                    MsgBox("กรุณาเลือก ง่าย กลาง ยาก", MsgBoxStyle.Information, "Wash System")
+                    Return
+                End If
+                If (CheckEz.Checked = True) Then
+                    vPriceRolled = 5
+                ElseIf (CheckHard.Checked = True) Then
+                    vPriceRolled = 10
+                Else
+                    vPriceRolled = 15
+                End If
+            End If
 
-        Dim Number As Integer = 1
-        If (dgv.Rows.Count > 0) Then
-            Number = dgv.Item(0, dgv.Rows.Count - 1).Value + 1
-        End If
+            Dim Number As Integer = 1
+            If (dgv.Rows.Count > 0) Then
+                Number = dgv.Item(0, dgv.Rows.Count - 1).Value + 1
+            End If
 
-        Dim vGroup As String = cmbGroup.Text
-        Dim vList As String = cmbList.Text
-        Dim vCategory As String = cmbCategory.Text
-        Dim vCount As String = txtNum.Text
-        Dim vPrice As String = 10 * Convert.ToInt32(vCount)
-        Dim row As String() = New String() {Number, vGroup, vList, vCategory, vCount, vPrice}
-        dgv.Rows.Add(row)
+            Dim vGroup As String = cmbGroup.Text
+            Dim vList As String = cmbList.Text
+            Dim vCategory As String = cmbCategory.Text
+            Dim vCount As String = txtNum.Text
+            Dim vProductPrice As Integer = ClassServiceDb.getProductPrice(cmbList.SelectedValue)
+
+            Dim vPrice As String = (vProductPrice + vPriceRolled) * Convert.ToInt32(vCount)
+            Dim row As String() = New String() {Number, vGroup, vList, vCategory, vCount, vPrice}
+            dgv.Rows.Add(row)
+            assign_total_price()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
+        End Try
+
     End Sub
 
     Private Sub btDel_Click(sender As Object, e As EventArgs) Handles btDel.Click
         For Each row As DataGridViewRow In dgv.SelectedRows
             dgv.Rows.Remove(row)
         Next
+        assign_total_price()
+
     End Sub
 
     Private Sub btPrint_Click(sender As Object, e As EventArgs) Handles btPrint.Click
@@ -136,9 +162,46 @@ SELECT TOP (1000) [groupid]
 
         Dim res() As String = ClassConnectDb.add_customer(txtName.Text.Trim, txtTel.Text).Split("|")
         If (res(0) = "OK") Then
+            Save_Header(res(1))
+        Else
+            MsgBox(res(1), MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
+        End If
+    End Sub
+
+    Private Sub cmbCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCategory.SelectedIndexChanged
+        If (cmbCategory.Text.Trim = "ซักอย่างเดียว") Then
+            CheckMid.Checked = False
+            CheckHard.Checked = False
+            CheckEz.Checked = False
+        End If
+    End Sub
+    Private Sub Save_Header(ByVal pCusID As String)
+        Dim strDate = dtpDate.Value.ToString("dd/MM/yyyy", New CultureInfo("en-US"))
+        Dim res() As String = ClassConnectDb.add_wash_header(pCusID, strDate, txtTotal_Price.Text).Split("|")
+        If (res(0) = "OK") Then
             MsgBox("บันทึกข้อมูลเรียบร้อย", MsgBoxStyle.Information, "Wash System")
         Else
-            MsgBox("บันทึกข้อมูลเรียบร้อย", MsgBoxStyle.Critical, "Wash System")
+            MsgBox(res(1), MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
         End If
+    End Sub
+    Private Sub Save_List(ByVal pCusID As String)
+
+    End Sub
+
+    Private Sub btNew_Click(sender As Object, e As EventArgs) Handles btNew.Click
+        dgv.Rows.Clear()
+        txtTotal_Price.Text = 0
+    End Sub
+    Sub assign_total_price()
+        txtTotal_Price.Text = 0
+        Dim i As Integer = 0
+        Try
+            Do While dgv.RowCount > i
+                txtTotal_Price.Text = CType(CType(txtTotal_Price.Text, Integer) + CType(dgv.Rows(i).Cells("price").Value, Integer), String)
+                i = i + 1
+            Loop
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

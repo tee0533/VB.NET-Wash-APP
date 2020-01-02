@@ -16,6 +16,16 @@
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt
     End Function
+    Friend Shared Function getProductPrice(pCategoryID As String) As Integer
+        Dim sql As String = String.Empty
+        sql = "SELECT ListNo
+                  ,ListPrice
+              FROM ListCloth
+              where ListNo =" & pCategoryID
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Dim vPrice As Integer = dt.Rows(0).Item("ListPrice")
+        Return vPrice
+    End Function
     Friend Shared Function getgroup_category() As DataTable
         Dim sql As String = String.Empty
         sql = "SELECT  CategoryID, CategoryName  FROM  Category"

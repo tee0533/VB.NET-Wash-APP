@@ -157,6 +157,47 @@ Public Class ClassConnectDb
 
         Return res
     End Function
+    Public Shared Function add_wash_header(ByVal cus_id As String, ByVal wash_date As String, ByVal total_price As String) As String
+        Dim res As String = String.Empty
+
+        Using conn As SqlConnection = New SqlConnection()
+            conn.ConnectionString = strconn
+            conn.Open()
+
+            Using cmd As SqlCommand = conn.CreateCommand()
+                Dim sql As String = "INSERT INTO [dbo].[wash_header]
+                                       ([cus_id]
+                                       ,[wash_date]
+                                       ,[total_price])
+                                     VALUES
+                                       (@cus_id
+                                       ,@wash_date
+                                       ,@total_price)"
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = sql
+                cmd.Parameters.Clear()
+                cmd.Parameters.Add(New SqlParameter("@cus_id", cus_id))
+                cmd.Parameters.Add(New SqlParameter("@wash_date", wash_date))
+                cmd.Parameters.Add(New SqlParameter("@total_price", total_price))
+                Try
+                    If cmd.ExecuteNonQuery Then
+
+                        res = "OK|"
+                    Else
+                        res = "NOK|No Data Execute"
+                    End If
+
+                Catch ex As Exception
+                    res = "NOK|" & ex.Message.ToString().Trim()
+                End Try
+
+                conn.Close()
+                conn.Dispose()
+            End Using
+        End Using
+
+        Return res
+    End Function
 #End Region
 
 

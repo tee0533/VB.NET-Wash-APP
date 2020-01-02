@@ -22,19 +22,26 @@ Partial Class FrmCustomer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnlHeader = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btMenu = New System.Windows.Forms.Button()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtTel = New System.Windows.Forms.TextBox()
         Me.pnlFooter = New System.Windows.Forms.Panel()
+        Me.btNew = New System.Windows.Forms.Button()
+        Me.btEdit = New System.Windows.Forms.Button()
+        Me.btDel = New System.Windows.Forms.Button()
+        Me.btPrint = New System.Windows.Forms.Button()
+        Me.btBack = New System.Windows.Forms.Button()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.CheckHard = New System.Windows.Forms.CheckBox()
         Me.CheckMid = New System.Windows.Forms.CheckBox()
         Me.CheckEz = New System.Windows.Forms.CheckBox()
@@ -46,25 +53,21 @@ Partial Class FrmCustomer
         Me.cmbCategory = New System.Windows.Forms.ComboBox()
         Me.cmbList = New System.Windows.Forms.ComboBox()
         Me.cmbGroup = New System.Windows.Forms.ComboBox()
-        Me.dgv = New System.Windows.Forms.DataGridView()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.dtpDate = New System.Windows.Forms.DateTimePicker()
-        Me.Label18 = New System.Windows.Forms.Label()
         Me.btAdd = New System.Windows.Forms.Button()
-        Me.btNew = New System.Windows.Forms.Button()
-        Me.btEdit = New System.Windows.Forms.Button()
-        Me.btDel = New System.Windows.Forms.Button()
-        Me.btPrint = New System.Windows.Forms.Button()
-        Me.btBack = New System.Windows.Forms.Button()
-        Me.btMenu = New System.Windows.Forms.Button()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.dgv = New System.Windows.Forms.DataGridView()
         Me.order = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.group = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.list = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.category = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.price = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.dtpDate = New System.Windows.Forms.DateTimePicker()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtTotal_Price = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.pnlHeader.SuspendLayout()
         Me.pnlFooter.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,6 +75,7 @@ Partial Class FrmCustomer
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -101,6 +105,20 @@ Partial Class FrmCustomer
         Me.Label1.Size = New System.Drawing.Size(306, 55)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "เพิ่มลูกค้าทั่วไป"
+        '
+        'btMenu
+        '
+        Me.btMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btMenu.Image = Global.Wash.My.Resources.Resources.menu
+        Me.btMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btMenu.Location = New System.Drawing.Point(4, 11)
+        Me.btMenu.Margin = New System.Windows.Forms.Padding(2)
+        Me.btMenu.Name = "btMenu"
+        Me.btMenu.Size = New System.Drawing.Size(123, 61)
+        Me.btMenu.TabIndex = 38
+        Me.btMenu.Text = "เมนูหลัก"
+        Me.btMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btMenu.UseVisualStyleBackColor = True
         '
         'txtName
         '
@@ -161,6 +179,78 @@ Partial Class FrmCustomer
         Me.pnlFooter.Size = New System.Drawing.Size(1166, 65)
         Me.pnlFooter.TabIndex = 1
         '
+        'btNew
+        '
+        Me.btNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btNew.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btNew.Image = Global.Wash.My.Resources.Resources.verified_account
+        Me.btNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btNew.Location = New System.Drawing.Point(1010, 2)
+        Me.btNew.Margin = New System.Windows.Forms.Padding(2)
+        Me.btNew.Name = "btNew"
+        Me.btNew.Size = New System.Drawing.Size(133, 48)
+        Me.btNew.TabIndex = 47
+        Me.btNew.Text = "รายการใหม่"
+        Me.btNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btNew.UseVisualStyleBackColor = True
+        '
+        'btEdit
+        '
+        Me.btEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btEdit.Image = Global.Wash.My.Resources.Resources.user
+        Me.btEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btEdit.Location = New System.Drawing.Point(871, 2)
+        Me.btEdit.Margin = New System.Windows.Forms.Padding(2)
+        Me.btEdit.Name = "btEdit"
+        Me.btEdit.Size = New System.Drawing.Size(135, 48)
+        Me.btEdit.TabIndex = 46
+        Me.btEdit.Text = "แก้ไข"
+        Me.btEdit.UseVisualStyleBackColor = True
+        '
+        'btDel
+        '
+        Me.btDel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btDel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btDel.Image = Global.Wash.My.Resources.Resources.unfollow
+        Me.btDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btDel.Location = New System.Drawing.Point(747, 2)
+        Me.btDel.Margin = New System.Windows.Forms.Padding(2)
+        Me.btDel.Name = "btDel"
+        Me.btDel.Size = New System.Drawing.Size(118, 48)
+        Me.btDel.TabIndex = 45
+        Me.btDel.Text = "ลบ"
+        Me.btDel.UseVisualStyleBackColor = True
+        '
+        'btPrint
+        '
+        Me.btPrint.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btPrint.Image = Global.Wash.My.Resources.Resources.print
+        Me.btPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btPrint.Location = New System.Drawing.Point(390, 2)
+        Me.btPrint.Margin = New System.Windows.Forms.Padding(2)
+        Me.btPrint.Name = "btPrint"
+        Me.btPrint.Size = New System.Drawing.Size(95, 48)
+        Me.btPrint.TabIndex = 44
+        Me.btPrint.Text = "พิมพ์"
+        Me.btPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btPrint.UseVisualStyleBackColor = True
+        '
+        'btBack
+        '
+        Me.btBack.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btBack.Image = Global.Wash.My.Resources.Resources.arrow
+        Me.btBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btBack.Location = New System.Drawing.Point(9, 4)
+        Me.btBack.Margin = New System.Windows.Forms.Padding(2)
+        Me.btBack.Name = "btBack"
+        Me.btBack.Size = New System.Drawing.Size(138, 48)
+        Me.btBack.TabIndex = 43
+        Me.btBack.Text = "ย้อนกลับ"
+        Me.btBack.UseVisualStyleBackColor = True
+        '
         'SplitContainer1
         '
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -194,6 +284,19 @@ Partial Class FrmCustomer
         Me.SplitContainer1.Size = New System.Drawing.Size(1166, 522)
         Me.SplitContainer1.SplitterDistance = 357
         Me.SplitContainer1.TabIndex = 2
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label8.Location = New System.Drawing.Point(227, 244)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(77, 20)
+        Me.Label8.TabIndex = 57
+        Me.Label8.Text = "ชิ้น/ตัว/ผืน"
         '
         'CheckHard
         '
@@ -344,210 +447,65 @@ Partial Class FrmCustomer
         Me.cmbGroup.Size = New System.Drawing.Size(204, 33)
         Me.cmbGroup.TabIndex = 45
         '
-        'dgv
-        '
-        Me.dgv.AllowUserToAddRows = False
-        Me.dgv.AllowUserToDeleteRows = False
-        Me.dgv.AllowUserToResizeColumns = False
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.White
-        Me.dgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
-        Me.dgv.ColumnHeadersHeight = 35
-        Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.order, Me.group, Me.list, Me.category, Me.total, Me.price})
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgv.DefaultCellStyle = DataGridViewCellStyle13
-        Me.dgv.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgv.Location = New System.Drawing.Point(0, 48)
-        Me.dgv.Name = "dgv"
-        Me.dgv.ReadOnly = True
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle14
-        Me.dgv.RowHeadersVisible = False
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgv.RowsDefaultCellStyle = DataGridViewCellStyle15
-        Me.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv.Size = New System.Drawing.Size(805, 426)
-        Me.dgv.TabIndex = 97
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(185, Byte), Integer))
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 474)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(805, 48)
-        Me.Panel2.TabIndex = 1
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(154, Byte), Integer))
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Controls.Add(Me.dtpDate)
-        Me.Panel1.Controls.Add(Me.Label18)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(805, 48)
-        Me.Panel1.TabIndex = 0
-        '
-        'dtpDate
-        '
-        Me.dtpDate.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dtpDate.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.dtpDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpDate.Location = New System.Drawing.Point(638, 11)
-        Me.dtpDate.Name = "dtpDate"
-        Me.dtpDate.Size = New System.Drawing.Size(151, 31)
-        Me.dtpDate.TabIndex = 105
-        Me.dtpDate.Value = New Date(2015, 3, 16, 16, 23, 2, 0)
-        '
-        'Label18
-        '
-        Me.Label18.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label18.AutoSize = True
-        Me.Label18.BackColor = System.Drawing.Color.Transparent
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label18.ForeColor = System.Drawing.Color.White
-        Me.Label18.Location = New System.Drawing.Point(586, 14)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(46, 24)
-        Me.Label18.TabIndex = 104
-        Me.Label18.Text = "วันที่"
-        '
         'btAdd
         '
         Me.btAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.btAdd.Image = Global.Wash.My.Resources.Resources.follow
         Me.btAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btAdd.Location = New System.Drawing.Point(188, 332)
+        Me.btAdd.Location = New System.Drawing.Point(100, 302)
         Me.btAdd.Margin = New System.Windows.Forms.Padding(2)
         Me.btAdd.Name = "btAdd"
-        Me.btAdd.Size = New System.Drawing.Size(118, 48)
+        Me.btAdd.Size = New System.Drawing.Size(204, 48)
         Me.btAdd.TabIndex = 44
         Me.btAdd.Text = "เพิ่ม"
         Me.btAdd.UseVisualStyleBackColor = True
         '
-        'btNew
+        'dgv
         '
-        Me.btNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btNew.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btNew.Image = Global.Wash.My.Resources.Resources.verified_account
-        Me.btNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btNew.Location = New System.Drawing.Point(1010, 2)
-        Me.btNew.Margin = New System.Windows.Forms.Padding(2)
-        Me.btNew.Name = "btNew"
-        Me.btNew.Size = New System.Drawing.Size(133, 48)
-        Me.btNew.TabIndex = 47
-        Me.btNew.Text = "รายการใหม่"
-        Me.btNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btNew.UseVisualStyleBackColor = True
-        '
-        'btEdit
-        '
-        Me.btEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btEdit.Image = Global.Wash.My.Resources.Resources.user
-        Me.btEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btEdit.Location = New System.Drawing.Point(871, 2)
-        Me.btEdit.Margin = New System.Windows.Forms.Padding(2)
-        Me.btEdit.Name = "btEdit"
-        Me.btEdit.Size = New System.Drawing.Size(135, 48)
-        Me.btEdit.TabIndex = 46
-        Me.btEdit.Text = "แก้ไข"
-        Me.btEdit.UseVisualStyleBackColor = True
-        '
-        'btDel
-        '
-        Me.btDel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btDel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btDel.Image = Global.Wash.My.Resources.Resources.unfollow
-        Me.btDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btDel.Location = New System.Drawing.Point(747, 2)
-        Me.btDel.Margin = New System.Windows.Forms.Padding(2)
-        Me.btDel.Name = "btDel"
-        Me.btDel.Size = New System.Drawing.Size(118, 48)
-        Me.btDel.TabIndex = 45
-        Me.btDel.Text = "ลบ"
-        Me.btDel.UseVisualStyleBackColor = True
-        '
-        'btPrint
-        '
-        Me.btPrint.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btPrint.Image = Global.Wash.My.Resources.Resources.print
-        Me.btPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btPrint.Location = New System.Drawing.Point(390, 2)
-        Me.btPrint.Margin = New System.Windows.Forms.Padding(2)
-        Me.btPrint.Name = "btPrint"
-        Me.btPrint.Size = New System.Drawing.Size(95, 48)
-        Me.btPrint.TabIndex = 44
-        Me.btPrint.Text = "พิมพ์"
-        Me.btPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btPrint.UseVisualStyleBackColor = True
-        '
-        'btBack
-        '
-        Me.btBack.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btBack.Image = Global.Wash.My.Resources.Resources.arrow
-        Me.btBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btBack.Location = New System.Drawing.Point(9, 4)
-        Me.btBack.Margin = New System.Windows.Forms.Padding(2)
-        Me.btBack.Name = "btBack"
-        Me.btBack.Size = New System.Drawing.Size(118, 48)
-        Me.btBack.TabIndex = 43
-        Me.btBack.Text = "ย้อนกลับ"
-        Me.btBack.UseVisualStyleBackColor = True
-        '
-        'btMenu
-        '
-        Me.btMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btMenu.Image = Global.Wash.My.Resources.Resources.menu
-        Me.btMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btMenu.Location = New System.Drawing.Point(4, 11)
-        Me.btMenu.Margin = New System.Windows.Forms.Padding(2)
-        Me.btMenu.Name = "btMenu"
-        Me.btMenu.Size = New System.Drawing.Size(123, 61)
-        Me.btMenu.TabIndex = 38
-        Me.btMenu.Text = "เมนูหลัก"
-        Me.btMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btMenu.UseVisualStyleBackColor = True
-        '
-        'Label8
-        '
-        Me.Label8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label8.Location = New System.Drawing.Point(227, 244)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(77, 20)
-        Me.Label8.TabIndex = 57
-        Me.Label8.Text = "ชิ้น/ตัว/ผืน"
+        Me.dgv.AllowUserToAddRows = False
+        Me.dgv.AllowUserToDeleteRows = False
+        Me.dgv.AllowUserToResizeColumns = False
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        Me.dgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        Me.dgv.ColumnHeadersHeight = 35
+        Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.order, Me.group, Me.list, Me.category, Me.total, Me.price})
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgv.DefaultCellStyle = DataGridViewCellStyle8
+        Me.dgv.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgv.Location = New System.Drawing.Point(0, 48)
+        Me.dgv.Name = "dgv"
+        Me.dgv.ReadOnly = True
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        Me.dgv.RowHeadersVisible = False
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgv.RowsDefaultCellStyle = DataGridViewCellStyle10
+        Me.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgv.Size = New System.Drawing.Size(805, 426)
+        Me.dgv.TabIndex = 97
         '
         'order
         '
@@ -593,6 +551,96 @@ Partial Class FrmCustomer
         Me.price.Name = "price"
         Me.price.ReadOnly = True
         '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(185, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Label10)
+        Me.Panel2.Controls.Add(Me.txtTotal_Price)
+        Me.Panel2.Controls.Add(Me.Label9)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel2.Location = New System.Drawing.Point(0, 474)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(805, 48)
+        Me.Panel2.TabIndex = 1
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(154, Byte), Integer))
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.dtpDate)
+        Me.Panel1.Controls.Add(Me.Label18)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(805, 48)
+        Me.Panel1.TabIndex = 0
+        '
+        'dtpDate
+        '
+        Me.dtpDate.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dtpDate.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.dtpDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpDate.Location = New System.Drawing.Point(638, 11)
+        Me.dtpDate.Name = "dtpDate"
+        Me.dtpDate.Size = New System.Drawing.Size(151, 31)
+        Me.dtpDate.TabIndex = 105
+        Me.dtpDate.Value = New Date(2015, 3, 16, 16, 23, 2, 0)
+        '
+        'Label18
+        '
+        Me.Label18.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label18.AutoSize = True
+        Me.Label18.BackColor = System.Drawing.Color.Transparent
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label18.ForeColor = System.Drawing.Color.White
+        Me.Label18.Location = New System.Drawing.Point(586, 14)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(46, 24)
+        Me.Label18.TabIndex = 104
+        Me.Label18.Text = "วันที่"
+        '
+        'Label9
+        '
+        Me.Label9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label9.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label9.Location = New System.Drawing.Point(516, 9)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(78, 25)
+        Me.Label9.TabIndex = 51
+        Me.Label9.Text = "รวมเงิน"
+        '
+        'txtTotal_Price
+        '
+        Me.txtTotal_Price.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.txtTotal_Price.ForeColor = System.Drawing.Color.Red
+        Me.txtTotal_Price.Location = New System.Drawing.Point(607, 2)
+        Me.txtTotal_Price.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtTotal_Price.Multiline = True
+        Me.txtTotal_Price.Name = "txtTotal_Price"
+        Me.txtTotal_Price.Size = New System.Drawing.Size(140, 41)
+        Me.txtTotal_Price.TabIndex = 52
+        Me.txtTotal_Price.Text = "0"
+        Me.txtTotal_Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label10
+        '
+        Me.Label10.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label10.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label10.Location = New System.Drawing.Point(753, 11)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(48, 25)
+        Me.Label10.TabIndex = 53
+        Me.Label10.Text = "บาท"
+        '
         'FrmCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -613,6 +661,8 @@ Partial Class FrmCustomer
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
@@ -657,4 +707,7 @@ Partial Class FrmCustomer
     Friend WithEvents category As DataGridViewTextBoxColumn
     Friend WithEvents total As DataGridViewTextBoxColumn
     Friend WithEvents price As DataGridViewTextBoxColumn
+    Friend WithEvents Label10 As Label
+    Friend WithEvents txtTotal_Price As TextBox
+    Friend WithEvents Label9 As Label
 End Class
