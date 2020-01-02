@@ -62,12 +62,12 @@ Partial Class FrmCustomer
         Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.price = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtTotal_Price = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.dtpDate = New System.Windows.Forms.DateTimePicker()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtTotal_Price = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.pnlHeader.SuspendLayout()
         Me.pnlFooter.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -282,7 +282,7 @@ Partial Class FrmCustomer
         Me.SplitContainer1.Panel2.Controls.Add(Me.Panel2)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Panel1)
         Me.SplitContainer1.Size = New System.Drawing.Size(1166, 522)
-        Me.SplitContainer1.SplitterDistance = 357
+        Me.SplitContainer1.SplitterDistance = 300
         Me.SplitContainer1.TabIndex = 2
         '
         'Label8
@@ -291,7 +291,7 @@ Partial Class FrmCustomer
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label8.Location = New System.Drawing.Point(227, 244)
+        Me.Label8.Location = New System.Drawing.Point(170, 244)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(77, 20)
@@ -305,7 +305,7 @@ Partial Class FrmCustomer
         Me.CheckHard.AutoSize = True
         Me.CheckHard.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckHard.ForeColor = System.Drawing.SystemColors.Window
-        Me.CheckHard.Location = New System.Drawing.Point(239, 194)
+        Me.CheckHard.Location = New System.Drawing.Point(227, 194)
         Me.CheckHard.Name = "CheckHard"
         Me.CheckHard.Size = New System.Drawing.Size(57, 28)
         Me.CheckHard.TabIndex = 56
@@ -333,7 +333,7 @@ Partial Class FrmCustomer
         Me.CheckEz.AutoSize = True
         Me.CheckEz.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckEz.ForeColor = System.Drawing.SystemColors.Window
-        Me.CheckEz.Location = New System.Drawing.Point(58, 194)
+        Me.CheckEz.Location = New System.Drawing.Point(71, 194)
         Me.CheckEz.Name = "CheckEz"
         Me.CheckEz.Size = New System.Drawing.Size(54, 28)
         Me.CheckEz.TabIndex = 54
@@ -362,7 +362,7 @@ Partial Class FrmCustomer
         Me.txtNum.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNum.Multiline = True
         Me.txtNum.Name = "txtNum"
-        Me.txtNum.Size = New System.Drawing.Size(112, 36)
+        Me.txtNum.Size = New System.Drawing.Size(55, 36)
         Me.txtNum.TabIndex = 51
         Me.txtNum.Text = "1"
         Me.txtNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -374,7 +374,7 @@ Partial Class FrmCustomer
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label5.Location = New System.Drawing.Point(31, 153)
+        Me.Label5.Location = New System.Drawing.Point(6, 154)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(63, 20)
@@ -388,7 +388,7 @@ Partial Class FrmCustomer
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label4.Location = New System.Drawing.Point(32, 109)
+        Me.Label4.Location = New System.Drawing.Point(7, 110)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(60, 20)
@@ -402,7 +402,7 @@ Partial Class FrmCustomer
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(36, 64)
+        Me.Label3.Location = New System.Drawing.Point(11, 65)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(39, 20)
@@ -415,10 +415,10 @@ Partial Class FrmCustomer
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cmbCategory.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.cmbCategory.FormattingEnabled = True
-        Me.cmbCategory.Location = New System.Drawing.Point(102, 153)
+        Me.cmbCategory.Location = New System.Drawing.Point(71, 153)
         Me.cmbCategory.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbCategory.Name = "cmbCategory"
-        Me.cmbCategory.Size = New System.Drawing.Size(204, 33)
+        Me.cmbCategory.Size = New System.Drawing.Size(206, 33)
         Me.cmbCategory.TabIndex = 47
         '
         'cmbList
@@ -427,10 +427,10 @@ Partial Class FrmCustomer
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cmbList.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.cmbList.FormattingEnabled = True
-        Me.cmbList.Location = New System.Drawing.Point(102, 109)
+        Me.cmbList.Location = New System.Drawing.Point(71, 109)
         Me.cmbList.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbList.Name = "cmbList"
-        Me.cmbList.Size = New System.Drawing.Size(204, 33)
+        Me.cmbList.Size = New System.Drawing.Size(206, 33)
         Me.cmbList.TabIndex = 46
         '
         'cmbGroup
@@ -441,10 +441,10 @@ Partial Class FrmCustomer
         Me.cmbGroup.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbGroup.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.cmbGroup.FormattingEnabled = True
-        Me.cmbGroup.Location = New System.Drawing.Point(102, 65)
+        Me.cmbGroup.Location = New System.Drawing.Point(71, 65)
         Me.cmbGroup.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbGroup.Name = "cmbGroup"
-        Me.cmbGroup.Size = New System.Drawing.Size(204, 33)
+        Me.cmbGroup.Size = New System.Drawing.Size(206, 33)
         Me.cmbGroup.TabIndex = 45
         '
         'btAdd
@@ -453,7 +453,7 @@ Partial Class FrmCustomer
         Me.btAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.btAdd.Image = Global.Wash.My.Resources.Resources.follow
         Me.btAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btAdd.Location = New System.Drawing.Point(100, 302)
+        Me.btAdd.Location = New System.Drawing.Point(71, 295)
         Me.btAdd.Margin = New System.Windows.Forms.Padding(2)
         Me.btAdd.Name = "btAdd"
         Me.btAdd.Size = New System.Drawing.Size(204, 48)
@@ -504,7 +504,7 @@ Partial Class FrmCustomer
         DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgv.RowsDefaultCellStyle = DataGridViewCellStyle10
         Me.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv.Size = New System.Drawing.Size(805, 426)
+        Me.dgv.Size = New System.Drawing.Size(862, 426)
         Me.dgv.TabIndex = 97
         '
         'order
@@ -560,45 +560,35 @@ Partial Class FrmCustomer
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.Location = New System.Drawing.Point(0, 474)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(805, 48)
+        Me.Panel2.Size = New System.Drawing.Size(862, 48)
         Me.Panel2.TabIndex = 1
         '
-        'Panel1
+        'Label10
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(154, Byte), Integer))
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Controls.Add(Me.dtpDate)
-        Me.Panel1.Controls.Add(Me.Label18)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(805, 48)
-        Me.Panel1.TabIndex = 0
+        Me.Label10.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label10.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label10.Location = New System.Drawing.Point(753, 11)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(48, 25)
+        Me.Label10.TabIndex = 53
+        Me.Label10.Text = "บาท"
         '
-        'dtpDate
+        'txtTotal_Price
         '
-        Me.dtpDate.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dtpDate.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.dtpDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpDate.Location = New System.Drawing.Point(638, 11)
-        Me.dtpDate.Name = "dtpDate"
-        Me.dtpDate.Size = New System.Drawing.Size(151, 31)
-        Me.dtpDate.TabIndex = 105
-        Me.dtpDate.Value = New Date(2015, 3, 16, 16, 23, 2, 0)
-        '
-        'Label18
-        '
-        Me.Label18.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label18.AutoSize = True
-        Me.Label18.BackColor = System.Drawing.Color.Transparent
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label18.ForeColor = System.Drawing.Color.White
-        Me.Label18.Location = New System.Drawing.Point(586, 14)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(46, 24)
-        Me.Label18.TabIndex = 104
-        Me.Label18.Text = "วันที่"
+        Me.txtTotal_Price.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.txtTotal_Price.ForeColor = System.Drawing.Color.Red
+        Me.txtTotal_Price.Location = New System.Drawing.Point(607, 2)
+        Me.txtTotal_Price.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtTotal_Price.Multiline = True
+        Me.txtTotal_Price.Name = "txtTotal_Price"
+        Me.txtTotal_Price.Size = New System.Drawing.Size(140, 41)
+        Me.txtTotal_Price.TabIndex = 52
+        Me.txtTotal_Price.Text = "0"
+        Me.txtTotal_Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label9
         '
@@ -614,32 +604,42 @@ Partial Class FrmCustomer
         Me.Label9.TabIndex = 51
         Me.Label9.Text = "รวมเงิน"
         '
-        'txtTotal_Price
+        'Panel1
         '
-        Me.txtTotal_Price.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.txtTotal_Price.ForeColor = System.Drawing.Color.Red
-        Me.txtTotal_Price.Location = New System.Drawing.Point(607, 2)
-        Me.txtTotal_Price.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtTotal_Price.Multiline = True
-        Me.txtTotal_Price.Name = "txtTotal_Price"
-        Me.txtTotal_Price.Size = New System.Drawing.Size(140, 41)
-        Me.txtTotal_Price.TabIndex = 52
-        Me.txtTotal_Price.Text = "0"
-        Me.txtTotal_Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(154, Byte), Integer))
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.dtpDate)
+        Me.Panel1.Controls.Add(Me.Label18)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(862, 48)
+        Me.Panel1.TabIndex = 0
         '
-        'Label10
+        'dtpDate
         '
-        Me.Label10.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label10.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label10.Location = New System.Drawing.Point(753, 11)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(48, 25)
-        Me.Label10.TabIndex = 53
-        Me.Label10.Text = "บาท"
+        Me.dtpDate.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dtpDate.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.dtpDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpDate.Location = New System.Drawing.Point(695, 11)
+        Me.dtpDate.Name = "dtpDate"
+        Me.dtpDate.Size = New System.Drawing.Size(151, 31)
+        Me.dtpDate.TabIndex = 105
+        Me.dtpDate.Value = New Date(2015, 3, 16, 16, 23, 2, 0)
+        '
+        'Label18
+        '
+        Me.Label18.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label18.AutoSize = True
+        Me.Label18.BackColor = System.Drawing.Color.Transparent
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label18.ForeColor = System.Drawing.Color.White
+        Me.Label18.Location = New System.Drawing.Point(643, 14)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(46, 24)
+        Me.Label18.TabIndex = 104
+        Me.Label18.Text = "วันที่"
         '
         'FrmCustomer
         '

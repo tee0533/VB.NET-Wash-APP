@@ -118,9 +118,9 @@ SELECT TOP (1000) [groupid]
                 Number = dgv.Item(0, dgv.Rows.Count - 1).Value + 1
             End If
 
-            Dim vGroup As String = cmbGroup.Text
-            Dim vList As String = cmbList.Text
-            Dim vCategory As String = cmbCategory.Text
+            Dim vGroup As String = cmbGroup.SelectedValue & "-" & cmbGroup.Text
+            Dim vList As String = cmbList.SelectedValue & "-" & cmbList.Text
+            Dim vCategory As String = cmbCategory.SelectedValue & "-" & cmbCategory.Text
             Dim vCount As String = txtNum.Text
             Dim vProductPrice As Integer = ClassServiceDb.getProductPrice(cmbList.SelectedValue)
 
@@ -144,7 +144,12 @@ SELECT TOP (1000) [groupid]
 
     Private Sub btPrint_Click(sender As Object, e As EventArgs) Handles btPrint.Click
         If (Check_Data()) Then
-            Save_Data()
+
+            Dim result As Integer = MessageBox.Show("คุณต้องการบันทึกข้อมูลหรือไม่ ?", "Wash System", MessageBoxButtons.YesNo)
+            If result = DialogResult.Yes Then
+                Save_Data()
+            End If
+
         End If
     End Sub
     Function Check_Data() As Boolean
@@ -179,15 +184,39 @@ SELECT TOP (1000) [groupid]
         Dim strDate = dtpDate.Value.ToString("dd/MM/yyyy", New CultureInfo("en-US"))
         Dim res() As String = ClassConnectDb.add_wash_header(pCusID, strDate, txtTotal_Price.Text).Split("|")
         If (res(0) = "OK") Then
+            Save_List(pCusID, res(1))
+        Else
+            MsgBox(res(1), MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
+        End If
+    End Sub
+    Private Sub Save_List(ByVal pCusID As String, ByVal pWash_ID As String)
+        Dim dt As DataTable = ConvertToDataTable()
+
+        Dim res() As String = ClassServiceDb.add_wash_list(pCusID, pWash_ID, dt).Split("|")
+        If (res(0) = "OK") Then
             MsgBox("บันทึกข้อมูลเรียบร้อย", MsgBoxStyle.Information, "Wash System")
         Else
             MsgBox(res(1), MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
         End If
     End Sub
-    Private Sub Save_List(ByVal pCusID As String)
+    Function ConvertToDataTable() As DataTable
+        'Creating DataTable.
+        Dim dt As New DataTable()
 
-    End Sub
+        'Adding the Columns.
+        For Each column As DataGridViewColumn In dgv.Columns
+            dt.Columns.Add(column.HeaderText)
+        Next
 
+        'Adding the Rows.
+        For Each row As DataGridViewRow In dgv.Rows
+            dt.Rows.Add()
+            For Each cell As DataGridViewCell In row.Cells
+                dt.Rows(dt.Rows.Count - 1)(cell.ColumnIndex) = cell.Value.ToString()
+            Next
+        Next
+        Return dt
+    End Function
     Private Sub btNew_Click(sender As Object, e As EventArgs) Handles btNew.Click
         dgv.Rows.Clear()
         txtTotal_Price.Text = 0

@@ -172,7 +172,7 @@ Public Class ClassConnectDb
                                      VALUES
                                        (@cus_id
                                        ,@wash_date
-                                       ,@total_price)"
+                                       ,@total_price);SELECT SCOPE_IDENTITY()"
                 cmd.CommandType = CommandType.Text
                 cmd.CommandText = sql
                 cmd.Parameters.Clear()
@@ -180,9 +180,9 @@ Public Class ClassConnectDb
                 cmd.Parameters.Add(New SqlParameter("@wash_date", wash_date))
                 cmd.Parameters.Add(New SqlParameter("@total_price", total_price))
                 Try
-                    If cmd.ExecuteNonQuery Then
-
-                        res = "OK|"
+                    Dim res_wash_id As Integer = CInt(cmd.ExecuteScalar())
+                    If res_wash_id > 0 Then
+                        res = "OK|" & res_wash_id
                     Else
                         res = "NOK|No Data Execute"
                     End If
