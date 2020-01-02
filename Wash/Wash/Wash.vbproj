@@ -201,7 +201,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="ฐานข้อมูลร้านซักรีด.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Untitled-4.png" />
