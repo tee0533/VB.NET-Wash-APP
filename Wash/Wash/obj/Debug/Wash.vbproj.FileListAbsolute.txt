@@ -56,3 +56,17 @@ F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\bin\Debug\Wash.exe.config
 F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.exe
 F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.xml
 F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.pdb
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\bin\Debug\Wash.exe
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\bin\Debug\Wash.pdb
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\bin\Debug\Wash.xml
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.vbprojResolveAssemblyReference.cache
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.Form2.resources
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.FrmCustomer.resources
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.FrmLogin.resources
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.FrmMainMenu.resources
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.Form1.resources
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.Form3.resources
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.Form4.resources
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.Payment.resources
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.Resources.resources
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.vbproj.GenerateResource.Cache
