@@ -6,6 +6,7 @@ Public Class FrmCustomer
         Initial_frm()
         init_combobox_group()
         init_combobox_category()
+        AutoComplete()
     End Sub
     Private Sub Initial_frm()
         dtpDate.Value = Date.Today
@@ -153,6 +154,10 @@ SELECT TOP (1000) [groupid]
         End If
     End Sub
     Function Check_Data() As Boolean
+        If (dgv.RowCount = 0) Then
+            MsgBox("กรุณาใส่ข้อมูลการซักหรือการรีด", MsgBoxStyle.Information, "Wash System")
+            Return False
+        End If
         If (txtName.Text = String.Empty) Then
             MsgBox("กรุณาระบุ ชื่อลูกค้า", MsgBoxStyle.Information, "Wash System")
             Return False
@@ -161,16 +166,21 @@ SELECT TOP (1000) [groupid]
             MsgBox("กรุณาระบุ เบอร์โทร", MsgBoxStyle.Information, "Wash System")
             Return False
         End If
+
         Return True
     End Function
     Private Sub Save_Data()
-
-        Dim res() As String = ClassConnectDb.add_customer(txtName.Text.Trim, txtTel.Text).Split("|")
-        If (res(0) = "OK") Then
-            Save_Header(res(1))
+        If (ClassServiceDb.Check_Cus_Name_Data_Exist(txtName.Text.Trim())) Then
+            Save_Header(ClassServiceDb.get_cus_id(txtName.Text.Trim()))
         Else
-            MsgBox(res(1), MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
+            Dim res() As String = ClassConnectDb.add_customer(txtName.Text.Trim, txtTel.Text).Split("|")
+            If (res(0) = "OK") Then
+                Save_Header(res(1))
+            Else
+                MsgBox(res(1), MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
+            End If
         End If
+
     End Sub
     Private Sub PrintReport()
         FrmViewer.wash_id = wash_id
@@ -228,6 +238,16 @@ SELECT TOP (1000) [groupid]
     Private Sub btNew_Click(sender As Object, e As EventArgs) Handles btNew.Click
         dgv.Rows.Clear()
         txtTotal_Price.Text = 0
+    End Sub
+    Private Sub AutoComplete()
+        Dim autoComp As New AutoCompleteStringCollection()
+        Dim dt As DataTable = ClassServiceDb.Load_Name_Customer()
+        For Each row As DataRow In dt.Rows
+            autoComp.Add(row("name"))
+        Next
+        txtName.AutoCompleteMode = AutoCompleteMode.Suggest
+        txtName.AutoCompleteSource = AutoCompleteSource.CustomSource
+        txtName.AutoCompleteCustomSource = autoComp
     End Sub
     Sub assign_total_price()
         txtTotal_Price.Text = 0

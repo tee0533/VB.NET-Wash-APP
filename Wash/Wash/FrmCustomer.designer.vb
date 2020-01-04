@@ -22,18 +22,16 @@ Partial Class FrmCustomer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnlHeader = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btMenu = New System.Windows.Forms.Button()
-        Me.txtName = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtTel = New System.Windows.Forms.TextBox()
         Me.pnlFooter = New System.Windows.Forms.Panel()
         Me.btNew = New System.Windows.Forms.Button()
         Me.btEdit = New System.Windows.Forms.Button()
@@ -41,10 +39,11 @@ Partial Class FrmCustomer
         Me.btSave = New System.Windows.Forms.Button()
         Me.btBack = New System.Windows.Forms.Button()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.CheckHard = New System.Windows.Forms.CheckBox()
-        Me.CheckMid = New System.Windows.Forms.CheckBox()
+        Me.pnlOption = New System.Windows.Forms.Panel()
         Me.CheckEz = New System.Windows.Forms.CheckBox()
+        Me.CheckMid = New System.Windows.Forms.CheckBox()
+        Me.CheckHard = New System.Windows.Forms.CheckBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtNum = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -55,14 +54,6 @@ Partial Class FrmCustomer
         Me.cmbGroup = New System.Windows.Forms.ComboBox()
         Me.btAdd = New System.Windows.Forms.Button()
         Me.dgv = New System.Windows.Forms.DataGridView()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtTotal_Price = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.dtpDate = New System.Windows.Forms.DateTimePicker()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.pnlOption = New System.Windows.Forms.Panel()
         Me.order = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.group = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.list = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -70,28 +61,37 @@ Partial Class FrmCustomer
         Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.unit_price = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.price = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtTotal_Price = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.dtpDate = New System.Windows.Forms.DateTimePicker()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.txtTel = New System.Windows.Forms.TextBox()
         Me.pnlHeader.SuspendLayout()
         Me.pnlFooter.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        Me.pnlOption.SuspendLayout()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        Me.pnlOption.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlHeader
         '
         Me.pnlHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(121, Byte), Integer), CType(CType(185, Byte), Integer))
         Me.pnlHeader.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.pnlHeader.Controls.Add(Me.txtTel)
+        Me.pnlHeader.Controls.Add(Me.txtName)
         Me.pnlHeader.Controls.Add(Me.Label1)
         Me.pnlHeader.Controls.Add(Me.btMenu)
-        Me.pnlHeader.Controls.Add(Me.txtName)
         Me.pnlHeader.Controls.Add(Me.Label7)
         Me.pnlHeader.Controls.Add(Me.Label2)
-        Me.pnlHeader.Controls.Add(Me.txtTel)
         Me.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlHeader.Location = New System.Drawing.Point(0, 0)
         Me.pnlHeader.Name = "pnlHeader"
@@ -123,16 +123,6 @@ Partial Class FrmCustomer
         Me.btMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btMenu.UseVisualStyleBackColor = True
         '
-        'txtName
-        '
-        Me.txtName.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.txtName.Location = New System.Drawing.Point(216, 5)
-        Me.txtName.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtName.Multiline = True
-        Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(221, 41)
-        Me.txtName.TabIndex = 41
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -156,16 +146,6 @@ Partial Class FrmCustomer
         Me.Label2.Size = New System.Drawing.Size(70, 20)
         Me.Label2.TabIndex = 40
         Me.Label2.Text = "เบอร์โทร"
-        '
-        'txtTel
-        '
-        Me.txtTel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.txtTel.Location = New System.Drawing.Point(216, 50)
-        Me.txtTel.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtTel.Multiline = True
-        Me.txtTel.Name = "txtTel"
-        Me.txtTel.Size = New System.Drawing.Size(221, 41)
-        Me.txtTel.TabIndex = 42
         '
         'pnlFooter
         '
@@ -286,32 +266,31 @@ Partial Class FrmCustomer
         Me.SplitContainer1.SplitterDistance = 300
         Me.SplitContainer1.TabIndex = 2
         '
-        'Label8
+        'pnlOption
         '
-        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label8.Location = New System.Drawing.Point(170, 244)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(77, 20)
-        Me.Label8.TabIndex = 57
-        Me.Label8.Text = "ชิ้น/ตัว/ผืน"
+        Me.pnlOption.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pnlOption.Controls.Add(Me.CheckEz)
+        Me.pnlOption.Controls.Add(Me.CheckMid)
+        Me.pnlOption.Controls.Add(Me.CheckHard)
+        Me.pnlOption.Location = New System.Drawing.Point(71, 191)
+        Me.pnlOption.Name = "pnlOption"
+        Me.pnlOption.Size = New System.Drawing.Size(216, 41)
+        Me.pnlOption.TabIndex = 58
+        Me.pnlOption.Visible = False
         '
-        'CheckHard
+        'CheckEz
         '
-        Me.CheckHard.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.CheckEz.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CheckHard.AutoSize = True
-        Me.CheckHard.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.CheckHard.ForeColor = System.Drawing.SystemColors.Window
-        Me.CheckHard.Location = New System.Drawing.Point(159, 10)
-        Me.CheckHard.Name = "CheckHard"
-        Me.CheckHard.Size = New System.Drawing.Size(57, 28)
-        Me.CheckHard.TabIndex = 56
-        Me.CheckHard.Text = "ยาก"
-        Me.CheckHard.UseVisualStyleBackColor = True
+        Me.CheckEz.AutoSize = True
+        Me.CheckEz.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.CheckEz.ForeColor = System.Drawing.SystemColors.Window
+        Me.CheckEz.Location = New System.Drawing.Point(3, 10)
+        Me.CheckEz.Name = "CheckEz"
+        Me.CheckEz.Size = New System.Drawing.Size(54, 28)
+        Me.CheckEz.TabIndex = 54
+        Me.CheckEz.Text = "ง่าย"
+        Me.CheckEz.UseVisualStyleBackColor = True
         '
         'CheckMid
         '
@@ -327,19 +306,32 @@ Partial Class FrmCustomer
         Me.CheckMid.Text = "กลาง"
         Me.CheckMid.UseVisualStyleBackColor = True
         '
-        'CheckEz
+        'CheckHard
         '
-        Me.CheckEz.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.CheckHard.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CheckEz.AutoSize = True
-        Me.CheckEz.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.CheckEz.ForeColor = System.Drawing.SystemColors.Window
-        Me.CheckEz.Location = New System.Drawing.Point(3, 10)
-        Me.CheckEz.Name = "CheckEz"
-        Me.CheckEz.Size = New System.Drawing.Size(54, 28)
-        Me.CheckEz.TabIndex = 54
-        Me.CheckEz.Text = "ง่าย"
-        Me.CheckEz.UseVisualStyleBackColor = True
+        Me.CheckHard.AutoSize = True
+        Me.CheckHard.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.CheckHard.ForeColor = System.Drawing.SystemColors.Window
+        Me.CheckHard.Location = New System.Drawing.Point(159, 10)
+        Me.CheckHard.Name = "CheckHard"
+        Me.CheckHard.Size = New System.Drawing.Size(57, 28)
+        Me.CheckHard.TabIndex = 56
+        Me.CheckHard.Text = "ยาก"
+        Me.CheckHard.UseVisualStyleBackColor = True
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label8.Location = New System.Drawing.Point(170, 244)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(77, 20)
+        Me.Label8.TabIndex = 57
+        Me.Label8.Text = "ชิ้น/ตัว/ผืน"
         '
         'Label6
         '
@@ -467,46 +459,96 @@ Partial Class FrmCustomer
         Me.dgv.AllowUserToAddRows = False
         Me.dgv.AllowUserToDeleteRows = False
         Me.dgv.AllowUserToResizeColumns = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.dgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        Me.dgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.dgv.ColumnHeadersHeight = 35
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.order, Me.group, Me.list, Me.category, Me.total, Me.unit_price, Me.price})
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgv.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgv.DefaultCellStyle = DataGridViewCellStyle8
         Me.dgv.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgv.Location = New System.Drawing.Point(0, 48)
         Me.dgv.Name = "dgv"
         Me.dgv.ReadOnly = True
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.dgv.RowHeadersVisible = False
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgv.RowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgv.RowsDefaultCellStyle = DataGridViewCellStyle10
         Me.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv.Size = New System.Drawing.Size(862, 426)
         Me.dgv.TabIndex = 97
+        '
+        'order
+        '
+        Me.order.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.order.HeaderText = "ลำดับ"
+        Me.order.Name = "order"
+        Me.order.ReadOnly = True
+        Me.order.Width = 71
+        '
+        'group
+        '
+        Me.group.HeaderText = "กลุ่ม"
+        Me.group.Name = "group"
+        Me.group.ReadOnly = True
+        '
+        'list
+        '
+        Me.list.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.list.HeaderText = "รายการ"
+        Me.list.Name = "list"
+        Me.list.ReadOnly = True
+        '
+        'category
+        '
+        Me.category.HeaderText = "ประเภท"
+        Me.category.Name = "category"
+        Me.category.ReadOnly = True
+        Me.category.Width = 120
+        '
+        'total
+        '
+        Me.total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.total.HeaderText = "จำนวน"
+        Me.total.Name = "total"
+        Me.total.ReadOnly = True
+        Me.total.Width = 79
+        '
+        'unit_price
+        '
+        Me.unit_price.HeaderText = "ราคาต่อหน่วย"
+        Me.unit_price.Name = "unit_price"
+        Me.unit_price.ReadOnly = True
+        Me.unit_price.Width = 120
+        '
+        'price
+        '
+        Me.price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.price.HeaderText = "ราคา"
+        Me.price.Name = "price"
+        Me.price.ReadOnly = True
         '
         'Panel2
         '
@@ -597,67 +639,25 @@ Partial Class FrmCustomer
         Me.Label18.TabIndex = 104
         Me.Label18.Text = "วันที่"
         '
-        'pnlOption
+        'txtName
         '
-        Me.pnlOption.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pnlOption.Controls.Add(Me.CheckEz)
-        Me.pnlOption.Controls.Add(Me.CheckMid)
-        Me.pnlOption.Controls.Add(Me.CheckHard)
-        Me.pnlOption.Location = New System.Drawing.Point(71, 191)
-        Me.pnlOption.Name = "pnlOption"
-        Me.pnlOption.Size = New System.Drawing.Size(216, 41)
-        Me.pnlOption.TabIndex = 58
-        Me.pnlOption.Visible = False
+        Me.txtName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.txtName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txtName.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.txtName.Location = New System.Drawing.Point(216, 11)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(221, 35)
+        Me.txtName.TabIndex = 43
         '
-        'order
+        'txtTel
         '
-        Me.order.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.order.HeaderText = "ลำดับ"
-        Me.order.Name = "order"
-        Me.order.ReadOnly = True
-        Me.order.Width = 71
-        '
-        'group
-        '
-        Me.group.HeaderText = "กลุ่ม"
-        Me.group.Name = "group"
-        Me.group.ReadOnly = True
-        '
-        'list
-        '
-        Me.list.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.list.HeaderText = "รายการ"
-        Me.list.Name = "list"
-        Me.list.ReadOnly = True
-        '
-        'category
-        '
-        Me.category.HeaderText = "ประเภท"
-        Me.category.Name = "category"
-        Me.category.ReadOnly = True
-        Me.category.Width = 120
-        '
-        'total
-        '
-        Me.total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.total.HeaderText = "จำนวน"
-        Me.total.Name = "total"
-        Me.total.ReadOnly = True
-        Me.total.Width = 79
-        '
-        'unit_price
-        '
-        Me.unit_price.HeaderText = "ราคาต่อหน่วย"
-        Me.unit_price.Name = "unit_price"
-        Me.unit_price.ReadOnly = True
-        Me.unit_price.Width = 120
-        '
-        'price
-        '
-        Me.price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.price.HeaderText = "ราคา"
-        Me.price.Name = "price"
-        Me.price.ReadOnly = True
+        Me.txtTel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.txtTel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txtTel.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.txtTel.Location = New System.Drawing.Point(216, 52)
+        Me.txtTel.Name = "txtTel"
+        Me.txtTel.Size = New System.Drawing.Size(221, 35)
+        Me.txtTel.TabIndex = 44
         '
         'FrmCustomer
         '
@@ -678,13 +678,13 @@ Partial Class FrmCustomer
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        Me.pnlOption.ResumeLayout(False)
+        Me.pnlOption.PerformLayout()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.pnlOption.ResumeLayout(False)
-        Me.pnlOption.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -698,10 +698,8 @@ Partial Class FrmCustomer
     Friend WithEvents dtpDate As DateTimePicker
     Friend WithEvents Label18 As Label
     Friend WithEvents btMenu As Button
-    Friend WithEvents txtName As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtTel As TextBox
     Friend WithEvents btBack As Button
     Friend WithEvents CheckHard As CheckBox
     Friend WithEvents CheckMid As CheckBox
@@ -732,4 +730,6 @@ Partial Class FrmCustomer
     Friend WithEvents total As DataGridViewTextBoxColumn
     Friend WithEvents unit_price As DataGridViewTextBoxColumn
     Friend WithEvents price As DataGridViewTextBoxColumn
+    Friend WithEvents txtTel As TextBox
+    Friend WithEvents txtName As TextBox
 End Class

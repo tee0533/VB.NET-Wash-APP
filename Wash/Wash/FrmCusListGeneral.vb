@@ -55,4 +55,16 @@
         FrmViewer.wash_id = vWash_ID
         FrmViewer.ShowDialog()
     End Sub
+
+    Private Sub btnPay_Service_Click(sender As Object, e As EventArgs) Handles btnPay_Service.Click
+        If dgvHeader.Rows.Count <= 0 Then Exit Sub
+        Dim index As Integer = dgvHeader.CurrentRow.Index
+        Dim vWash_ID As String = Trim(dgvHeader.Rows(index).Cells("รหัส").Value.ToString)
+        If (dgvHeader.Rows(index).Cells("สถานะ").Value.ToString() = "ส่งคืนแล้ว") Then
+            MsgBox("รหัส " & vWash_ID & "ชำระค่าบริการแล้ว", MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
+            Exit Sub
+        End If
+        FrmPayServicevb.wash_id = vWash_ID
+        FrmPayServicevb.ShowDialog()
+    End Sub
 End Class

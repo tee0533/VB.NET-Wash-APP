@@ -16,6 +16,32 @@
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt
     End Function
+    Friend Shared Function Load_Name_Customer() As DataTable
+        Dim sql As String = String.Empty
+        sql = "SELECT name FROM Customer"
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Return dt
+    End Function
+    Friend Shared Function Check_Cus_Name_Data_Exist(pName As String) As Boolean
+        Dim sql As String = String.Empty
+        sql = "SELECT count(name) AS  vCount
+                FROM Customer 
+                where name ='" & pName & "'"
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        If (Convert.ToInt16(dt.Rows(0).Item("vCount")) > 0) Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+    Friend Shared Function get_cus_id(pName As String) As String
+        Dim sql As String = String.Empty
+        sql = "SELECT cus_id
+                FROM Customer 
+                where name ='" & pName & "'"
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Return dt.Rows(0).Item("cus_id").ToString()
+    End Function
     Friend Shared Function getProductPrice(pCategoryID As String) As Integer
         Dim sql As String = String.Empty
         sql = "SELECT ListNo
@@ -37,12 +63,36 @@
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt
     End Function
+    Friend Shared Function getWash_List(ByVal wash_id As String) As DataTable
+        Dim sql As String = String.Empty
+        sql = "SELECT row_number() OVER (ORDER BY wh.wash_id) AS 'ลำดับ',wl.list_name as 'รายการ',wh.wash_date  as 'วันที่รับ',wl.number,wl.price as 'ราคา'
+              FROM wash_list  wl
+			  inner join wash_header wh
+			  on wl.wash_id =wh.wash_id 
+              where wl.wash_id=" & wash_id
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Return dt
+    End Function
+    Friend Shared Function getWash_Detail(ByVal wash_id As String) As DataTable
+        Dim sql As String = String.Empty
+        sql = "select  c.name,c.tel,wh.total_price,wh.wash_date   from Customer c 
+                inner join wash_header wh
+                on c.cus_id = wh.cus_id 
+              where wh.wash_id =" & wash_id
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Return dt
+    End Function
 
     Friend Shared Function getgroup_category() As DataTable
         Dim sql As String = String.Empty
         sql = "SELECT  CategoryID, CategoryName  FROM  Category"
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt
+    End Function
+    Friend Shared Function change_status_wash(wash_id As String) As String
+        Dim sql As String = String.Empty
+        sql = "UPDATE wash_header SET status =1 WHERE wash_id =" & wash_id
+        Return ClassConnectDb.Exec_NonQuery(sql)
     End Function
 
     Friend Shared Function add_wash_list(ByVal pCusID As String, ByVal wash_id As String, dt As DataTable) As String
