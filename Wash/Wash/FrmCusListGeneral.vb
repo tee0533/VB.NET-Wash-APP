@@ -3,7 +3,7 @@
         Load_Data()
     End Sub
 
-    Private Sub Load_Data()
+    Public Sub Load_Data()
         Dim dt As DataTable = ClassServiceDb.getWash_Header()
         dgvHeader.DataSource = dt
         Dim column As DataGridViewColumn = dgvHeader.Columns("ชื่อลูกค้า")

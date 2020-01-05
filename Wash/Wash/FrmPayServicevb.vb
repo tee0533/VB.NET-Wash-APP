@@ -12,6 +12,8 @@
     End Sub
 
     Private Sub FrmPayServicevb_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtChange.Text = String.Empty
+        txtPay.Text = String.Empty
         Load_Data(wash_id)
     End Sub
 
@@ -22,6 +24,7 @@
             txtTel.Text = dt.Rows(0).Item("tel").ToString()
             txtAmount.Text = dt.Rows(0).Item("total_price").ToString()
             lblPriceTotal.Text = dt.Rows(0).Item("total_price").ToString()
+            dtpDate.Value = dt.Rows(0).Item("wash_date").ToString()
         End If
 
         dt = ClassServiceDb.getWash_List(wash_id)
@@ -38,6 +41,7 @@
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        txtChange.Text = String.Empty
         txtPay.Text = String.Empty
     End Sub
 
@@ -73,8 +77,15 @@
         If Check_Data() Then
             txtChange.Text = Convert.ToDouble(txtPay.Text) - Convert.ToDouble(txtAmount.Text)
             ClassServiceDb.change_status_wash(wash_id)
-            FrmViewer.wash_id = wash_id
-            FrmViewer.ShowDialog()
+            If MsgBox("ชำระค่าบริการเรียบร้อยแล้ว\nคุณต้องการพิมพ์หรือไม่ ?", vbOKCancel + vbInformation) = vbOK Then
+                Me.Close()
+                FrmViewer.wash_id = wash_id
+                FrmViewer.ShowDialog()
+                FrmCusListGeneral.Load_Data()
+            Else
+                Me.Close()
+                FrmCusListGeneral.Load_Data()
+            End If
         End If
     End Sub
     Function Check_Data() As Boolean
@@ -91,5 +102,12 @@
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
         FrmViewer.wash_id = wash_id
         FrmViewer.ShowDialog()
+    End Sub
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        Try
+            Me.Close()
+        Catch ex As Exception
+        End Try
     End Sub
 End Class

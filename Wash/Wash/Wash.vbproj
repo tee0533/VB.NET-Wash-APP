@@ -98,6 +98,11 @@
   <ItemGroup>
     <Compile Include="Class\ClassConnectDb.vb" />
     <Compile Include="Class\ClassServiceDb.vb" />
+    <Compile Include="DataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet\DataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -255,6 +260,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="database file\WashingStore" />
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
     <None Include="DataSet\DataSet.xsc">
       <DependentUpon>DataSet.xsd</DependentUpon>
     </None>

@@ -108,6 +108,13 @@
             Dim arrCategory = row("ประเภท").ToString().Trim().Split("-")
             Dim category_id As String = arrCategory(0)
             Dim category_name As String = arrCategory(1)
+            Dim Levels As String = String.Empty
+            Dim Levels_price As String = String.Empty
+            If (row("ระดับการรีด/ราคา").ToString() <> String.Empty) Then
+                Dim arrLevels = row("ระดับการรีด/ราคา").ToString().Trim().Split("-")
+                Levels = arrLevels(0)
+                Levels_price = arrLevels(1)
+            End If
             sql = "INSERT INTO [dbo].[wash_list]
                    ([wash_id]
                    ,[cus_id]
@@ -117,6 +124,8 @@
                    ,[list_name]
                    ,[category_id]
                    ,[category_name]
+                   ,[levels]
+                   ,levels_price
                    ,[number]
                    ,[unit_price]
                    ,[price])
@@ -129,6 +138,8 @@
                    ,'@list_name'
                    ,@category_id
                    ,'@category_name'
+                   ,'@levels'
+                   ,'@Levels_price'
                    ,@number
                    ,@unit_price
                    ,@price)"
@@ -140,6 +151,9 @@
             sql = sql.Replace("@list_name", list_name)
             sql = sql.Replace("@category_id", category_id)
             sql = sql.Replace("@category_name", category_name)
+            sql = sql.Replace("@category_id", category_id)
+            sql = sql.Replace("@levels", Levels)
+            sql = sql.Replace("@Levels_price", Levels_price)
             sql = sql.Replace("@number", row("จำนวน"))
             sql = sql.Replace("@unit_price", row("ราคาต่อหน่วย"))
             sql = sql.Replace("@price", row("ราคา"))
@@ -152,7 +166,7 @@
 #Region "Report"
     Friend Shared Function get_Rpt_Wash_Detail(ByVal wash_id As String) As DataTable
         Dim sql As String = String.Empty
-        sql = "SELECT  name, tel, wash_date, total_price, group_name, list_name, id, category_name, number, unit_price, price
+        sql = "SELECT  name, tel, wash_date, total_price, group_name, list_name, id, category_name,levels,levels_price, number, unit_price, price
                FROM   View_Rpt_Wash_Detail where wash_id= " & wash_id
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt

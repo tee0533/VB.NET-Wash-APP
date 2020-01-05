@@ -108,7 +108,7 @@ SELECT TOP (1000) [groupid]
                 End If
                 If (CheckEz.Checked = True) Then
                     vPriceRolled = 5
-                ElseIf (CheckHard.Checked = True) Then
+                ElseIf (CheckMid.Checked = True) Then
                     vPriceRolled = 10
                 Else
                     vPriceRolled = 15
@@ -126,7 +126,17 @@ SELECT TOP (1000) [groupid]
             Dim vCount As String = txtNum.Text
             Dim vUnit_price As Integer = ClassServiceDb.getProductPrice(cmbList.SelectedValue)
             Dim vPrice As String = (vUnit_price + vPriceRolled) * Convert.ToInt32(vCount)
-            Dim row As String() = New String() {Number, vGroup, vList, vCategory, vCount, vUnit_price, vPrice}
+            Dim Level As String = String.Empty
+            If (cmbCategory.Text.Trim = "รีดอย่างเดียว") Then
+                If (CheckEz.Checked) Then
+                    Level = "ง่าย-5"
+                ElseIf (CheckMid.Checked) Then
+                    Level = "กลาง-10"
+                Else
+                    Level = "ยาก-15"
+                End If
+            End If
+            Dim row As String() = New String() {Number, vGroup, vList, vCategory, Level, vCount, vUnit_price, vPrice}
             dgv.Rows.Add(row)
             assign_total_price()
         Catch ex As Exception
@@ -212,7 +222,8 @@ SELECT TOP (1000) [groupid]
         Dim res() As String = ClassServiceDb.add_wash_list(pCusID, pWash_ID, dt).Split("|")
         If (res(0) = "OK") Then
             MsgBox("บันทึกข้อมูลเรียบร้อย", MsgBoxStyle.Information, "Wash System")
-            PrintReport()
+            Me.Close()
+            FrmCusListGeneral.Show()
         Else
             MsgBox(res(1), MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
         End If

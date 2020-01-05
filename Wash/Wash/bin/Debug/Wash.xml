@@ -102,6 +102,11 @@ Wash
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="T:Wash.DataSet2">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
 <member name="T:Wash.DataSet">
 <summary>
 Represents a strongly typed in-memory cache of data.

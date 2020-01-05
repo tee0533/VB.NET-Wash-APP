@@ -131,7 +131,6 @@ F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.pdb
 F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\bin\Debug\Wash.exe
 F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\bin\Debug\Wash.pdb
 F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\bin\Debug\Wash.xml
-F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.vbprojResolveAssemblyReference.cache
 F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.Form2.resources
 F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.FrmCustomer.resources
 F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.FrmLogin.resources
@@ -213,3 +212,6 @@ F:\SVN\Source Code\Job\VB.NET-Wash-APP-R\Wash\bin\Debug\Wash.exe.config
 F:\SVN\Source Code\Job\VB.NET-Wash-APP-R\Wash\obj\Debug\Wash.exe
 F:\SVN\Source Code\Job\VB.NET-Wash-APP-R\Wash\obj\Debug\Wash.xml
 F:\SVN\Source Code\Job\VB.NET-Wash-APP-R\Wash\obj\Debug\Wash.pdb
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.vbprojAssemblyReference.cache
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.vbproj.CoreCompileInputs.cache
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.vbproj.CopyComplete
