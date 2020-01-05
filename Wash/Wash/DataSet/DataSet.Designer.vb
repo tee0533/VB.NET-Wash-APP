@@ -305,6 +305,10 @@ Partial Public Class DataSet
         
         Private columnprice As Global.System.Data.DataColumn
         
+        Private columnlevels As Global.System.Data.DataColumn
+        
+        Private columnlevels_price As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -429,6 +433,22 @@ Partial Public Class DataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property levelsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnlevels
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property levels_priceColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnlevels_price
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -465,9 +485,9 @@ Partial Public Class DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddView_Rpt_Wash_DetailRow(ByVal name As String, ByVal tel As String, ByVal wash_date As Date, ByVal total_price As Integer, ByVal group_name As String, ByVal list_name As String, ByVal id As String, ByVal category_name As String, ByVal number As Integer, ByVal unit_price As Integer, ByVal price As Integer) As View_Rpt_Wash_DetailRow
+        Public Overloads Function AddView_Rpt_Wash_DetailRow(ByVal name As String, ByVal tel As String, ByVal wash_date As Date, ByVal total_price As Integer, ByVal group_name As String, ByVal list_name As String, ByVal id As String, ByVal category_name As String, ByVal number As Integer, ByVal unit_price As Integer, ByVal price As Integer, ByVal levels As String, ByVal levels_price As String) As View_Rpt_Wash_DetailRow
             Dim rowView_Rpt_Wash_DetailRow As View_Rpt_Wash_DetailRow = CType(Me.NewRow,View_Rpt_Wash_DetailRow)
-            Dim columnValuesArray() As Object = New Object() {name, tel, wash_date, total_price, group_name, list_name, id, category_name, number, unit_price, price}
+            Dim columnValuesArray() As Object = New Object() {name, tel, wash_date, total_price, group_name, list_name, id, category_name, number, unit_price, price, levels, levels_price}
             rowView_Rpt_Wash_DetailRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowView_Rpt_Wash_DetailRow)
             Return rowView_Rpt_Wash_DetailRow
@@ -501,6 +521,8 @@ Partial Public Class DataSet
             Me.columnnumber = MyBase.Columns("number")
             Me.columnunit_price = MyBase.Columns("unit_price")
             Me.columnprice = MyBase.Columns("price")
+            Me.columnlevels = MyBase.Columns("levels")
+            Me.columnlevels_price = MyBase.Columns("levels_price")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -528,6 +550,10 @@ Partial Public Class DataSet
             MyBase.Columns.Add(Me.columnunit_price)
             Me.columnprice = New Global.System.Data.DataColumn("price", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnprice)
+            Me.columnlevels = New Global.System.Data.DataColumn("levels", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnlevels)
+            Me.columnlevels_price = New Global.System.Data.DataColumn("levels_price", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnlevels_price)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -839,6 +865,36 @@ Partial Public Class DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property levels() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableView_Rpt_Wash_Detail.levelsColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'levels' in table 'View_Rpt_Wash_Detail' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableView_Rpt_Wash_Detail.levelsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property levels_price() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableView_Rpt_Wash_Detail.levels_priceColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'levels_price' in table 'View_Rpt_Wash_Detail' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableView_Rpt_Wash_Detail.levels_priceColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsnameNull() As Boolean
             Return Me.IsNull(Me.tableView_Rpt_Wash_Detail.nameColumn)
         End Function
@@ -967,6 +1023,30 @@ Partial Public Class DataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetpriceNull()
             Me(Me.tableView_Rpt_Wash_Detail.priceColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IslevelsNull() As Boolean
+            Return Me.IsNull(Me.tableView_Rpt_Wash_Detail.levelsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetlevelsNull()
+            Me(Me.tableView_Rpt_Wash_Detail.levelsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Islevels_priceNull() As Boolean
+            Return Me.IsNull(Me.tableView_Rpt_Wash_Detail.levels_priceColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setlevels_priceNull()
+            Me(Me.tableView_Rpt_Wash_Detail.levels_priceColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     

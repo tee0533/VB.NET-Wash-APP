@@ -12,7 +12,7 @@
   <xs:element name="DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet" msprop:Generator_UserDSName="DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="View_Rpt_Wash_Detail" msprop:Generator_TableClassName="View_Rpt_Wash_DetailDataTable" msprop:Generator_TableVarName="tableView_Rpt_Wash_Detail" msprop:Generator_RowChangedName="View_Rpt_Wash_DetailRowChanged" msprop:Generator_TablePropName="View_Rpt_Wash_Detail" msprop:Generator_RowDeletingName="View_Rpt_Wash_DetailRowDeleting" msprop:Generator_RowChangingName="View_Rpt_Wash_DetailRowChanging" msprop:Generator_RowEvHandlerName="View_Rpt_Wash_DetailRowChangeEventHandler" msprop:Generator_RowDeletedName="View_Rpt_Wash_DetailRowDeleted" msprop:Generator_RowClassName="View_Rpt_Wash_DetailRow" msprop:Generator_UserTableName="View_Rpt_Wash_Detail" msprop:Generator_RowEvArgName="View_Rpt_Wash_DetailRowChangeEvent">
+        <xs:element name="View_Rpt_Wash_Detail" msprop:Generator_TableClassName="View_Rpt_Wash_DetailDataTable" msprop:Generator_TableVarName="tableView_Rpt_Wash_Detail" msprop:Generator_TablePropName="View_Rpt_Wash_Detail" msprop:Generator_RowDeletingName="View_Rpt_Wash_DetailRowDeleting" msprop:Generator_RowChangingName="View_Rpt_Wash_DetailRowChanging" msprop:Generator_RowEvHandlerName="View_Rpt_Wash_DetailRowChangeEventHandler" msprop:Generator_RowDeletedName="View_Rpt_Wash_DetailRowDeleted" msprop:Generator_UserTableName="View_Rpt_Wash_Detail" msprop:Generator_RowChangedName="View_Rpt_Wash_DetailRowChanged" msprop:Generator_RowEvArgName="View_Rpt_Wash_DetailRowChangeEvent" msprop:Generator_RowClassName="View_Rpt_Wash_DetailRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" type="xs:string" minOccurs="0" />
@@ -26,6 +26,8 @@
               <xs:element name="number" msprop:Generator_ColumnVarNameInTable="columnnumber" msprop:Generator_ColumnPropNameInRow="number" msprop:Generator_ColumnPropNameInTable="numberColumn" msprop:Generator_UserColumnName="number" type="xs:int" minOccurs="0" />
               <xs:element name="unit_price" msprop:Generator_ColumnVarNameInTable="columnunit_price" msprop:Generator_ColumnPropNameInRow="unit_price" msprop:Generator_ColumnPropNameInTable="unit_priceColumn" msprop:Generator_UserColumnName="unit_price" type="xs:int" minOccurs="0" />
               <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:int" minOccurs="0" />
+              <xs:element name="levels" msprop:Generator_ColumnVarNameInTable="columnlevels" msprop:Generator_ColumnPropNameInRow="levels" msprop:Generator_ColumnPropNameInTable="levelsColumn" msprop:Generator_UserColumnName="levels" type="xs:string" minOccurs="0" />
+              <xs:element name="levels_price" msprop:Generator_ColumnVarNameInTable="columnlevels_price" msprop:Generator_ColumnPropNameInRow="levels_price" msprop:Generator_ColumnPropNameInTable="levels_priceColumn" msprop:Generator_UserColumnName="levels_price" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
