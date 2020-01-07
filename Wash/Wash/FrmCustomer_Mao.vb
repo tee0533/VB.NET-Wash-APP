@@ -6,6 +6,7 @@
 
     Private Sub FrmCustomer_Mao_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         init_combobox()
+        dtpDate.Value = Date.Today
     End Sub
     Private Sub init_combobox()
         Dim dt As DataTable = ClassServiceDb.getType_Mao()
@@ -81,8 +82,8 @@
             Me.Close()
             Dim result As Integer = MessageBox.Show("ต้องการชำระบริการหรือไม่?", "Wash System", MessageBoxButtons.YesNo)
             If result = DialogResult.Yes Then
-                FrmCusListMao.Show()
                 FrmPayServiceMao.cus_id = pCusID
+                FrmPayServiceMao.Show()
             End If
 
         Else

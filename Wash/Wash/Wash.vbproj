@@ -144,6 +144,12 @@
     <Compile Include="FrmCustomer_Mao.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmCustomer_Mao_List.Designer.vb">
+      <DependentUpon>FrmCustomer_Mao_List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCustomer_Mao_List.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmLogin.Designer.vb">
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </Compile>
@@ -245,6 +251,9 @@
     <EmbeddedResource Include="FrmCustomer_Mao.resx">
       <DependentUpon>FrmCustomer_Mao.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCustomer_Mao_List.resx">
+      <DependentUpon>FrmCustomer_Mao_List.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
@@ -344,6 +353,7 @@
     <Content Include="Icon\menu.png" />
     <Content Include="Icon\print.png" />
     <Content Include="Icon\save.png" />
+    <Content Include="Icon\search.png" />
     <Content Include="Icon\unfollow.png" />
     <Content Include="Icon\user.png" />
     <Content Include="Icon\verified-account.png" />
