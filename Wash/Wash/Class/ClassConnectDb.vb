@@ -120,7 +120,7 @@ Public Class ClassConnectDb
         Return res
     End Function
 #Region "Action"
-    Public Shared Function add_customer(ByVal name As String, ByVal tel As String) As String
+    Public Shared Function add_customer(ByVal name As String, ByVal tel As String, ByVal type As Integer) As String
         Dim res As String = String.Empty
 
         Using conn As SqlConnection = New SqlConnection()
@@ -129,13 +129,14 @@ Public Class ClassConnectDb
 
             Using cmd As SqlCommand = conn.CreateCommand()
                 Dim sql As String = "INSERT INTO Customer
-                                (name,tel)
-                                VALUES(@name, @tel);SELECT SCOPE_IDENTITY()"
+                                (name,tel,type)
+                                VALUES(@name, @tel,@type);SELECT SCOPE_IDENTITY()"
                 cmd.CommandType = CommandType.Text
                 cmd.CommandText = sql
                 cmd.Parameters.Clear()
                 cmd.Parameters.Add(New SqlParameter("@name", name))
                 cmd.Parameters.Add(New SqlParameter("@tel", tel))
+                cmd.Parameters.Add(New SqlParameter("@type", type))
 
                 Try
                     Dim cus_id As Integer = CInt(cmd.ExecuteScalar())

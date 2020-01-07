@@ -77,28 +77,28 @@ SELECT TOP (1000) [groupid]
         End Select
     End Sub
 
-    Private Sub CheckEz_CheckedChanged(sender As Object, e As EventArgs) Handles CheckEz.CheckedChanged
+    Private Sub CheckEz_CheckedChanged(sender As Object, e As EventArgs) Handles CheckEz.CheckedChanged, CheckBox7.CheckedChanged, CheckBox4.CheckedChanged, CheckBox19.CheckedChanged, CheckBox16.CheckedChanged, CheckBox13.CheckedChanged, CheckBox10.CheckedChanged, CheckBox1.CheckedChanged
         If (CheckEz.Checked = True) Then
             CheckHard.Checked = False
             CheckMid.Checked = False
         End If
     End Sub
 
-    Private Sub CheckMid_CheckedChanged(sender As Object, e As EventArgs) Handles CheckMid.CheckedChanged
+    Private Sub CheckMid_CheckedChanged(sender As Object, e As EventArgs) Handles CheckMid.CheckedChanged, CheckBox8.CheckedChanged, CheckBox5.CheckedChanged, CheckBox20.CheckedChanged, CheckBox2.CheckedChanged, CheckBox17.CheckedChanged, CheckBox14.CheckedChanged, CheckBox11.CheckedChanged
         If (CheckMid.Checked = True) Then
             CheckHard.Checked = False
             CheckEz.Checked = False
         End If
     End Sub
 
-    Private Sub CheckHard_CheckedChanged(sender As Object, e As EventArgs) Handles CheckHard.CheckedChanged
+    Private Sub CheckHard_CheckedChanged(sender As Object, e As EventArgs) Handles CheckHard.CheckedChanged, CheckBox9.CheckedChanged, CheckBox6.CheckedChanged, CheckBox3.CheckedChanged, CheckBox21.CheckedChanged, CheckBox18.CheckedChanged, CheckBox15.CheckedChanged, CheckBox12.CheckedChanged
         If (CheckHard.Checked = True) Then
             CheckMid.Checked = False
             CheckEz.Checked = False
         End If
     End Sub
 
-    Private Sub btAdd_Click(sender As Object, e As EventArgs) Handles btAdd.Click
+    Private Sub btAdd_Click(sender As Object, e As EventArgs) Handles btAdd.Click, Button7.Click, Button6.Click, Button5.Click, Button4.Click, Button3.Click, Button2.Click, Button1.Click
         Try
             Dim vPriceRolled As Integer = 0
             If (cmbCategory.Text.Trim = "รีดอย่างเดียว") Then
@@ -183,7 +183,7 @@ SELECT TOP (1000) [groupid]
         If (ClassServiceDb.Check_Cus_Name_Data_Exist(txtName.Text.Trim())) Then
             Save_Header(ClassServiceDb.get_cus_id(txtName.Text.Trim()))
         Else
-            Dim res() As String = ClassConnectDb.add_customer(txtName.Text.Trim, txtTel.Text).Split("|")
+            Dim res() As String = ClassConnectDb.add_customer(txtName.Text.Trim, txtTel.Text, 1).Split("|")
             If (res(0) = "OK") Then
                 Save_Header(res(1))
             Else
@@ -196,7 +196,7 @@ SELECT TOP (1000) [groupid]
         FrmViewer.wash_id = wash_id
         FrmViewer.Show()
     End Sub
-    Private Sub cmbCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCategory.SelectedIndexChanged
+    Private Sub cmbCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCategory.SelectedIndexChanged, ComboBox5.SelectedIndexChanged, ComboBox4.SelectedIndexChanged, ComboBox2.SelectedIndexChanged
         If (cmbCategory.Text.Trim = "ซักอย่างเดียว") Then
             CheckMid.Checked = False
             CheckHard.Checked = False

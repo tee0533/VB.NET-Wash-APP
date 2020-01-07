@@ -7,9 +7,9 @@
         If Check_Data() Then
             If (txtUsername.Text.ToUpper = "ADMIN") And (txtPassword.Text.ToUpper = "ADMIN") Then
                 vLogInSuccess = True
+                Me.Hide()
                 FrmMainMenu.UseWaitCursor = False
                 FrmMainMenu.Show()
-                Me.Close()
             Else
                 vLogInSuccess = False
             End If
@@ -42,8 +42,13 @@
     End Sub
 
     Private Sub FrmLogin_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
-        If Not vLogInSuccess Then
-            FrmMainMenu.Close()
+        If vLogInSuccess Then
+            Dim Mainmenu As New FrmMainMenu
+            Mainmenu.Show()
         End If
+    End Sub
+
+    Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

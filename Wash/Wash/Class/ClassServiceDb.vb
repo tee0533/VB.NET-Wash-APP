@@ -5,6 +5,20 @@
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt
     End Function
+    Friend Shared Function getType_Mao() As DataTable
+        Dim sql As String = String.Empty
+        sql = "SELECT promotion_id, promotion_name, amount, descriptions, created_te, updated_at
+               FROM  promotion"
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Return dt
+    End Function
+    Friend Shared Function getType_Mao(promotion_id As String) As DataTable
+        Dim sql As String = String.Empty
+        sql = "SELECT promotion_id, promotion_name, amount,price, descriptions, created_te, updated_at
+               FROM  promotion where promotion_id=" & promotion_id
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Return dt
+    End Function
     Friend Shared Function getList(pGroupID As String) As DataTable
         Dim sql As String = String.Empty
         sql = "SELECT ListNo
