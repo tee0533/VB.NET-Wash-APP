@@ -79,6 +79,12 @@
         If (res(0) = "OK") Then
             MsgBox("บันทึกข้อมูลเรียบร้อย", MsgBoxStyle.Information, "Wash System")
             Me.Close()
+            Dim result As Integer = MessageBox.Show("ต้องการชำระบริการหรือไม่?", "Wash System", MessageBoxButtons.YesNo)
+            If result = DialogResult.Yes Then
+                FrmCusListMao.Show()
+                FrmPayServiceMao.cus_id = pCusID
+            End If
+
         Else
             MsgBox(res(1), MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
         End If
@@ -152,5 +158,20 @@
         Dim index As Integer = dgv.CurrentRow.Index
         Dim arrTypeMao = dgv.Rows(index).Cells("TypeMao").Value.ToString().Trim().Split("-")
         cbType_Mao.SelectedValue = arrTypeMao(0)
+    End Sub
+
+    Private Sub BtBack_Click(sender As Object, e As EventArgs) Handles btBack.Click
+        Me.Close()
+    End Sub
+
+    Private Sub TxtTel_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTel.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' key โค๊ด ของตัวเลขจะอยู่ระหว่าง48-57ครับ 48คือเลข0 57คือเลข9ตามลำดับ
+                e.Handled = False
+            Case 8, 13, 46 ' ปุ่ม Backspace = 8,ปุ่ม Enter = 13, ปุ่มDelete = 46
+                e.Handled = False
+            Case Else
+                e.Handled = True
+        End Select
     End Sub
 End Class

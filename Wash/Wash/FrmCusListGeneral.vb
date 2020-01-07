@@ -4,7 +4,8 @@
     End Sub
 
     Public Sub Load_Data()
-        Dim dt As DataTable = ClassServiceDb.getWash_Header()
+        Dim vSearch = txtSearch.Text.Trim()
+        Dim dt As DataTable = ClassServiceDb.getWash_Header(vSearch)
         dgvHeader.DataSource = dt
         Dim column As DataGridViewColumn = dgvHeader.Columns("ชื่อลูกค้า")
         column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
@@ -53,6 +54,7 @@
         Dim index As Integer = dgvHeader.CurrentRow.Index
         Dim vWash_ID As String = Trim(dgvHeader.Rows(index).Cells("รหัส").Value.ToString)
         FrmViewer.wash_id = vWash_ID
+        FrmViewer.report_name = "รายงานการซักทั่วไป"
         FrmViewer.ShowDialog()
     End Sub
 
@@ -66,5 +68,9 @@
         End If
         FrmPayServicevb.wash_id = vWash_ID
         FrmPayServicevb.ShowDialog()
+    End Sub
+
+    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        Load_Data()
     End Sub
 End Class

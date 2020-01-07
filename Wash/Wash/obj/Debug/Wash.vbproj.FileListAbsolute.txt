@@ -216,3 +216,7 @@ F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.vbprojAssemblyReferen
 F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.vbproj.CoreCompileInputs.cache
 F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.vbproj.CopyComplete
 F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.FrmCustomer_Mao.resources
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.FrmCusListMao.resources
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.FrmPayServiceMao.resources
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\bin\Debug\File Report\slip_customer_mao.rpt
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\bin\Debug\File Report\slip_customer_mao.vb

@@ -102,11 +102,6 @@ Wash
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="T:Wash.DataSet2">
-<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member>
 <member name="T:Wash.DataSet">
 <summary>
 Represents a strongly typed in-memory cache of data.
@@ -117,12 +112,27 @@ Represents a strongly typed in-memory cache of data.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:Wash.DataSet.customer_mao_detailsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:Wash.DataSet.View_Rpt_Wash_DetailRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
+<member name="T:Wash.DataSet.customer_mao_detailsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
 <member name="T:Wash.DataSet.View_Rpt_Wash_DetailRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Wash.DataSet.customer_mao_detailsRowChangeEvent">
 <summary>
 Row event argument class
 </summary>

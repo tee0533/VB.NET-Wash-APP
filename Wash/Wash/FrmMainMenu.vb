@@ -32,4 +32,8 @@
     Private Sub FrmMainMenu_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Application.Exit()
     End Sub
+
+    Private Sub MenuCusMao_Click(sender As Object, e As EventArgs) Handles MenuCusMao.Click
+        FrmCusListMao.Show()
+    End Sub
 End Class

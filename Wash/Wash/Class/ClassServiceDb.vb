@@ -88,9 +88,9 @@
      VALUES
            (@cus_id
            ,@promotion_id
-           ,@promotion_name
+           ,'@promotion_name'
            ,@price
-           ,@description
+           ,'@description'
            ,@amount
            ,@balance)"
             sql = sql.Replace("@cus_id", pCusID)
@@ -120,9 +120,27 @@
         sql = "DELETE FROM [dbo].[wash_header] WHERE  WASH_ID=" & pWash_ID
         Return ClassConnectDb.Exec_NonQuery(sql)
     End Function
-    Friend Shared Function getWash_Header() As DataTable
+    Friend Shared Function getWash_Header(ByVal value As String) As DataTable
         Dim sql As String = String.Empty
-        sql = "SELECT  wash_date as 'วันที่รับ',wash_id as 'รหัส',name  as 'ชื่อลูกค้า', tel as เบอร์โทร,  total_price as ราคา, status_name as 'สถานะ' FROM  View_Wash_Header"
+        Dim cond As String = String.Empty
+        If (Not String.IsNullOrEmpty(value)) Then
+            cond = String.Format("where name like '%{0}%' or tel like '%{0}%'", value)
+        End If
+        sql = "SELECT  wash_date as 'วันที่รับ',wash_id as 'รหัส',name  as 'ชื่อลูกค้า', tel as เบอร์โทร,  total_price as ราคา, status_name as 'สถานะ' FROM  View_Wash_Header " & cond
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Return dt
+    End Function
+    Friend Shared Function getWash_Header_Mao(ByVal value As String) As DataTable
+        Dim sql As String = String.Empty
+        Dim cond As String = String.Empty
+        If (Not String.IsNullOrEmpty(value)) Then
+            cond = String.Format("where c.name like '%{0}%' or c.tel like '%{0}%'", value)
+        End If
+        sql = "SELECT c.cus_id as 'รหัส',c.name as 'ชื่อลูกค้า',c.tel as 'เบอร์โทร',m.promotion_name as 'โปรโมชั่น',m.balance as 'คงเหลือ', case WHEN  m.status =1 then 'ชำระแล้ว' else 'ค้างชำระ' end as 'สถานะ'
+              FROM Customer c 
+              inner join 
+              dbo.wash_header_mao  m
+              on c.cus_id = m.cus_id " & cond
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt
     End Function
@@ -136,12 +154,29 @@
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt
     End Function
+    Friend Shared Function getWash_List_Mao(ByVal cus_id As String) As DataTable
+        Dim sql As String = String.Empty
+        sql = "SELECT row_number() OVER (ORDER BY wl.wash_id) AS 'ลำดับ',wl.promotion_name as 'ชนิดการเหมา',wl.price  as 'ราคา',wl.description as 'เงือนไข'
+              FROM wash_header_mao  wl
+              where wl.cus_id=" & cus_id
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Return dt
+    End Function
     Friend Shared Function getWash_Detail(ByVal wash_id As String) As DataTable
         Dim sql As String = String.Empty
         sql = "select  c.name,c.tel,wh.total_price,wh.wash_date   from Customer c 
                 inner join wash_header wh
                 on c.cus_id = wh.cus_id 
               where wh.wash_id =" & wash_id
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Return dt
+    End Function
+    Friend Shared Function getWash_Detail_Mao(ByVal wash_id As String) As DataTable
+        Dim sql As String = String.Empty
+        sql = "select c.name,c.tel,w.wash_id,w.promotion_name,w.price,w.description from Customer c
+                inner join wash_header_mao w on
+                c.cus_id = w.cus_id
+              where w.cus_id =" & wash_id
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt
     End Function
@@ -155,6 +190,11 @@
     Friend Shared Function change_status_wash(wash_id As String) As String
         Dim sql As String = String.Empty
         sql = "UPDATE wash_header SET status =1 WHERE wash_id =" & wash_id
+        Return ClassConnectDb.Exec_NonQuery(sql)
+    End Function
+    Friend Shared Function change_status_wash_mao(cus_id As String, pay_money As String, change_money As String) As String
+        Dim sql As String = String.Empty
+        sql = String.Format("UPDATE wash_header_mao SET status =1,pay_money={0},change_money={1} WHERE cus_id ={2}", pay_money, change_money, cus_id)
         Return ClassConnectDb.Exec_NonQuery(sql)
     End Function
 
@@ -231,6 +271,22 @@
         Dim sql As String = String.Empty
         sql = "SELECT  name, tel, wash_date, total_price, group_name, list_name, id, category_name,levels,levels_price, number, unit_price, price
                FROM   View_Rpt_Wash_Detail where wash_id= " & wash_id
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Return dt
+    End Function
+    Friend Shared Function get_Rpt_Wash_Mao(ByVal cus_id As String) As DataTable
+        Dim sql As String = String.Empty
+        sql = "SELECT c.name
+      , c.tel
+      ,h.wash_id
+      ,c.cus_id
+      ,[promotion_id]
+      ,[promotion_name]
+      ,[price]
+      ,[description]
+      ,h.created_at
+  FROM [dbo].[wash_header_mao] h inner join Customer c
+  on h.cus_id =c.cus_id where h.cus_id=" & cus_id
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt
     End Function

@@ -31,7 +31,7 @@ Partial Class FrmMainMenu
         Me.MenuAddCusGeneral = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.MenuCusMao = New System.Windows.Forms.Button()
         Me.MenuAddCusMao = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -60,7 +60,7 @@ Partial Class FrmMainMenu
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button8)
         Me.SplitContainer1.Panel2.Controls.Add(Me.btnExit)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button6)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.Button5)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.MenuCusMao)
         Me.SplitContainer1.Panel2.Controls.Add(Me.MenuAddCusMao)
         Me.SplitContainer1.Size = New System.Drawing.Size(1199, 676)
         Me.SplitContainer1.SplitterDistance = 685
@@ -152,19 +152,19 @@ Partial Class FrmMainMenu
         Me.Button6.TabIndex = 29
         Me.Button6.UseVisualStyleBackColor = False
         '
-        'Button5
+        'MenuCusMao
         '
-        Me.Button5.BackColor = System.Drawing.Color.Green
-        Me.Button5.BackgroundImage = Global.Wash.My.Resources.Resources.รายการลูกค้าเหมา
-        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Location = New System.Drawing.Point(2, 130)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(502, 123)
-        Me.Button5.TabIndex = 28
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.MenuCusMao.BackColor = System.Drawing.Color.Green
+        Me.MenuCusMao.BackgroundImage = Global.Wash.My.Resources.Resources.รายการลูกค้าเหมา
+        Me.MenuCusMao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.MenuCusMao.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.MenuCusMao.ForeColor = System.Drawing.Color.White
+        Me.MenuCusMao.Location = New System.Drawing.Point(2, 130)
+        Me.MenuCusMao.Margin = New System.Windows.Forms.Padding(2)
+        Me.MenuCusMao.Name = "MenuCusMao"
+        Me.MenuCusMao.Size = New System.Drawing.Size(502, 123)
+        Me.MenuCusMao.TabIndex = 28
+        Me.MenuCusMao.UseVisualStyleBackColor = False
         '
         'MenuAddCusMao
         '
@@ -204,7 +204,7 @@ Partial Class FrmMainMenu
     Friend WithEvents Button8 As Button
     Friend WithEvents btnExit As Button
     Friend WithEvents Button6 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents MenuCusMao As Button
     Friend WithEvents MenuAddCusMao As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents MenuGeneral As Button

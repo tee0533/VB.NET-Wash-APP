@@ -77,7 +77,7 @@
         If Check_Data() Then
             txtChange.Text = Convert.ToDouble(txtPay.Text) - Convert.ToDouble(txtAmount.Text)
             ClassServiceDb.change_status_wash(wash_id)
-            If MsgBox("ชำระค่าบริการเรียบร้อยแล้ว\nคุณต้องการพิมพ์หรือไม่ ?", vbOKCancel + vbInformation) = vbOK Then
+            If MsgBox("ชำระค่าบริการเรียบร้อยแล้ว  คุณต้องการพิมพ์ใบเสร็จหรือไม่ ?", vbOKCancel + vbInformation) = vbOK Then
                 Me.Close()
                 FrmViewer.wash_id = wash_id
                 FrmViewer.ShowDialog()
@@ -101,6 +101,7 @@
     End Function
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
         FrmViewer.wash_id = wash_id
+        FrmViewer.Name = "รายงานการซักทั่วไป"
         FrmViewer.ShowDialog()
     End Sub
 

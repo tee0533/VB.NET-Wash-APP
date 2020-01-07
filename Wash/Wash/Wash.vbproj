@@ -98,11 +98,6 @@
   <ItemGroup>
     <Compile Include="Class\ClassConnectDb.vb" />
     <Compile Include="Class\ClassServiceDb.vb" />
-    <Compile Include="DataSet2.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet2.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DataSet\DataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -111,11 +106,12 @@
     <Compile Include="DataSet\DataSet.vb">
       <DependentUpon>DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="File Report\wash_detail.vb">
+    <Compile Include="File Report\slip_customer_mao.vb">
+      <DependentUpon>slip_customer_mao.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>wash_detail.rpt</DependentUpon>
       <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="File Report\wash_details.vb">
       <AutoGen>True</AutoGen>
@@ -128,6 +124,12 @@
       <DependentUpon>Form2.vb</DependentUpon>
     </Compile>
     <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCusListMao.Designer.vb">
+      <DependentUpon>FrmCusListMao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCusListMao.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmCustomer.designer.vb">
@@ -152,6 +154,12 @@
       <DependentUpon>FrmMainMenu.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmMainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPayServiceMao.Designer.vb">
+      <DependentUpon>FrmPayServiceMao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPayServiceMao.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmPayServicevb.Designer.vb">
@@ -215,9 +223,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="File Report\wash_detail.rpt">
+    <EmbeddedResource Include="File Report\slip_customer_mao.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>wash_detail.vb</LastGenOutput>
+      <LastGenOutput>slip_customer_mao.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="File Report\wash_details.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -226,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCusListMao.resx">
+      <DependentUpon>FrmCusListMao.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCustomer.resx">
       <DependentUpon>FrmCustomer.vb</DependentUpon>
@@ -238,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMainMenu.resx">
       <DependentUpon>FrmMainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPayServiceMao.resx">
+      <DependentUpon>FrmPayServiceMao.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPayServicevb.resx">
       <DependentUpon>FrmPayServicevb.vb</DependentUpon>
@@ -269,17 +284,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="database file\WashingStore" />
-    <None Include="DataSet2.xsc">
-      <DependentUpon>DataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet2.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet2.Designer.vb</LastGenOutput>
-    </None>
-    <None Include="DataSet2.xss">
-      <DependentUpon>DataSet2.xsd</DependentUpon>
-    </None>
     <None Include="DataSet\DataSet.xsc">
       <DependentUpon>DataSet.xsd</DependentUpon>
     </None>

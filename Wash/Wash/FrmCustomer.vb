@@ -98,7 +98,7 @@ SELECT TOP (1000) [groupid]
         End If
     End Sub
 
-    Private Sub btAdd_Click(sender As Object, e As EventArgs) Handles btAdd.Click, Button7.Click, Button6.Click, Button5.Click, Button4.Click, Button3.Click, Button2.Click, Button1.Click
+    Private Sub btAdd_Click(sender As Object, e As EventArgs) Handles btAdd.Click, Button7.Click, Button6.Click, Button5.Click, Button4.Click
         Try
             Dim vPriceRolled As Integer = 0
             If (cmbCategory.Text.Trim = "รีดอย่างเดียว") Then
@@ -119,13 +119,16 @@ SELECT TOP (1000) [groupid]
             If (dgv.Rows.Count > 0) Then
                 Number = dgv.Item(0, dgv.Rows.Count - 1).Value + 1
             End If
-
+            Dim Iron_wash As Integer = 0
+            If (cmbCategory.Text.Trim = "ซัก+รีด") Then
+                Iron_wash = 50
+            End If
             Dim vGroup As String = cmbGroup.SelectedValue & "-" & cmbGroup.Text
             Dim vList As String = cmbList.SelectedValue & "-" & cmbList.Text
             Dim vCategory As String = cmbCategory.SelectedValue & "-" & cmbCategory.Text
             Dim vCount As String = txtNum.Text
             Dim vUnit_price As Integer = ClassServiceDb.getProductPrice(cmbList.SelectedValue)
-            Dim vPrice As String = (vUnit_price + vPriceRolled) * Convert.ToInt32(vCount)
+            Dim vPrice As String = (vUnit_price + vPriceRolled + Iron_wash) * Convert.ToInt32(vCount)
             Dim Level As String = String.Empty
             If (cmbCategory.Text.Trim = "รีดอย่างเดียว") Then
                 If (CheckEz.Checked) Then
@@ -196,14 +199,14 @@ SELECT TOP (1000) [groupid]
         FrmViewer.wash_id = wash_id
         FrmViewer.Show()
     End Sub
-    Private Sub cmbCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCategory.SelectedIndexChanged, ComboBox5.SelectedIndexChanged, ComboBox4.SelectedIndexChanged, ComboBox2.SelectedIndexChanged
-        If (cmbCategory.Text.Trim = "ซักอย่างเดียว") Then
-            CheckMid.Checked = False
-            CheckHard.Checked = False
-            CheckEz.Checked = False
-            pnlOption.Visible = False
-        Else
+    Private Sub cmbCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCategory.SelectedIndexChanged, ComboBox5.SelectedIndexChanged, ComboBox4.SelectedIndexChanged
+        If (cmbCategory.Text.Trim = "รีดอย่างเดียว") Then
+            CheckMid.Checked = True
+            CheckHard.Checked = True
+            CheckEz.Checked = True
             pnlOption.Visible = True
+        Else
+            pnlOption.Visible = False
         End If
     End Sub
     Private Sub Save_Header(ByVal pCusID As String)

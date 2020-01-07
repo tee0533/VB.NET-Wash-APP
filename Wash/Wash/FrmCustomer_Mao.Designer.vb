@@ -22,11 +22,11 @@ Partial Class FrmCustomer_Mao
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnlFooter = New System.Windows.Forms.Panel()
         Me.dtpDate = New System.Windows.Forms.DateTimePicker()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -35,7 +35,14 @@ Partial Class FrmCustomer_Mao
         Me.txtTel = New System.Windows.Forms.TextBox()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.cbType_Mao = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.dgv = New System.Windows.Forms.DataGridView()
+        Me.order = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TypeMao = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.piece = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.price = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.condition = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtTotal_Price = New System.Windows.Forms.TextBox()
@@ -43,8 +50,6 @@ Partial Class FrmCustomer_Mao
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.pnlHeader = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.cbType_Mao = New System.Windows.Forms.ComboBox()
         Me.btAdd = New System.Windows.Forms.Button()
         Me.btMenu = New System.Windows.Forms.Button()
         Me.btNew = New System.Windows.Forms.Button()
@@ -52,11 +57,6 @@ Partial Class FrmCustomer_Mao
         Me.btDel = New System.Windows.Forms.Button()
         Me.btSave = New System.Windows.Forms.Button()
         Me.btBack = New System.Windows.Forms.Button()
-        Me.order = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TypeMao = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.piece = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.price = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.condition = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pnlFooter.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -176,51 +176,113 @@ Partial Class FrmCustomer_Mao
         Me.SplitContainer1.SplitterDistance = 289
         Me.SplitContainer1.TabIndex = 7
         '
+        'cbType_Mao
+        '
+        Me.cbType_Mao.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cbType_Mao.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.cbType_Mao.FormattingEnabled = True
+        Me.cbType_Mao.Location = New System.Drawing.Point(18, 83)
+        Me.cbType_Mao.Name = "cbType_Mao"
+        Me.cbType_Mao.Size = New System.Drawing.Size(252, 33)
+        Me.cbType_Mao.TabIndex = 46
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.InfoText
+        Me.Label3.Location = New System.Drawing.Point(14, 48)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(136, 20)
+        Me.Label3.TabIndex = 45
+        Me.Label3.Text = "เลือกชนิดการเหมา"
+        '
         'dgv
         '
         Me.dgv.AllowUserToAddRows = False
         Me.dgv.AllowUserToDeleteRows = False
         Me.dgv.AllowUserToResizeColumns = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.dgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.White
+        Me.dgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
         Me.dgv.ColumnHeadersHeight = 35
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.order, Me.TypeMao, Me.piece, Me.price, Me.condition})
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgv.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgv.DefaultCellStyle = DataGridViewCellStyle13
         Me.dgv.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgv.Location = New System.Drawing.Point(0, 48)
         Me.dgv.Name = "dgv"
         Me.dgv.ReadOnly = True
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle14
         Me.dgv.RowHeadersVisible = False
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgv.RowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgv.RowsDefaultCellStyle = DataGridViewCellStyle15
         Me.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv.Size = New System.Drawing.Size(832, 498)
         Me.dgv.TabIndex = 97
+        '
+        'order
+        '
+        Me.order.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.order.HeaderText = "ลำดับ"
+        Me.order.Name = "order"
+        Me.order.ReadOnly = True
+        Me.order.Width = 71
+        '
+        'TypeMao
+        '
+        Me.TypeMao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.TypeMao.HeaderText = "ชนิดการเหมา"
+        Me.TypeMao.Name = "TypeMao"
+        Me.TypeMao.ReadOnly = True
+        Me.TypeMao.Width = 126
+        '
+        'piece
+        '
+        Me.piece.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
+        Me.piece.HeaderText = "จำนวน ชิ้น/ตัว/ผืน"
+        Me.piece.Name = "piece"
+        Me.piece.ReadOnly = True
+        Me.piece.Width = 152
+        '
+        'price
+        '
+        Me.price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.price.HeaderText = "ราคา"
+        Me.price.Name = "price"
+        Me.price.ReadOnly = True
+        '
+        'condition
+        '
+        Me.condition.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.condition.HeaderText = "เงื่อนไข"
+        Me.condition.Name = "condition"
+        Me.condition.ReadOnly = True
+        Me.condition.Width = 86
         '
         'Panel2
         '
@@ -313,29 +375,6 @@ Partial Class FrmCustomer_Mao
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "เพิ่มลูกค้าเหมา"
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Label3.Location = New System.Drawing.Point(14, 48)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(136, 20)
-        Me.Label3.TabIndex = 45
-        Me.Label3.Text = "เลือกชนิดการเหมา"
-        '
-        'cbType_Mao
-        '
-        Me.cbType_Mao.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cbType_Mao.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.cbType_Mao.FormattingEnabled = True
-        Me.cbType_Mao.Location = New System.Drawing.Point(18, 83)
-        Me.cbType_Mao.Name = "cbType_Mao"
-        Me.cbType_Mao.Size = New System.Drawing.Size(252, 33)
-        Me.cbType_Mao.TabIndex = 46
-        '
         'btAdd
         '
         Me.btAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -413,12 +452,12 @@ Partial Class FrmCustomer_Mao
         Me.btSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.btSave.Image = Global.Wash.My.Resources.Resources.save
         Me.btSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btSave.Location = New System.Drawing.Point(343, 3)
+        Me.btSave.Location = New System.Drawing.Point(370, 4)
         Me.btSave.Margin = New System.Windows.Forms.Padding(2)
         Me.btSave.Name = "btSave"
-        Me.btSave.Size = New System.Drawing.Size(102, 48)
+        Me.btSave.Size = New System.Drawing.Size(143, 48)
         Me.btSave.TabIndex = 44
-        Me.btSave.Text = "บันทึก"
+        Me.btSave.Text = "บันทึกข้อมูล"
         Me.btSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btSave.UseVisualStyleBackColor = True
         '
@@ -435,45 +474,6 @@ Partial Class FrmCustomer_Mao
         Me.btBack.TabIndex = 43
         Me.btBack.Text = "ย้อนกลับ"
         Me.btBack.UseVisualStyleBackColor = True
-        '
-        'order
-        '
-        Me.order.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.order.HeaderText = "ลำดับ"
-        Me.order.Name = "order"
-        Me.order.ReadOnly = True
-        Me.order.Width = 71
-        '
-        'TypeMao
-        '
-        Me.TypeMao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.TypeMao.HeaderText = "ชนิดการเหมา"
-        Me.TypeMao.Name = "TypeMao"
-        Me.TypeMao.ReadOnly = True
-        Me.TypeMao.Width = 126
-        '
-        'piece
-        '
-        Me.piece.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.piece.HeaderText = "จำนวน ชิ้น/ตัว/ผืน"
-        Me.piece.Name = "piece"
-        Me.piece.ReadOnly = True
-        Me.piece.Width = 152
-        '
-        'price
-        '
-        Me.price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.price.HeaderText = "ราคา"
-        Me.price.Name = "price"
-        Me.price.ReadOnly = True
-        '
-        'condition
-        '
-        Me.condition.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.condition.HeaderText = "เงื่อนไข"
-        Me.condition.Name = "condition"
-        Me.condition.ReadOnly = True
-        Me.condition.Width = 86
         '
         'FrmCustomer_Mao
         '
