@@ -48,6 +48,18 @@
             Return False
         End If
     End Function
+    Friend Shared Function Check_Cus_Name_Data_Exist_Mao(pName As String) As Boolean
+        Dim sql As String = String.Empty
+        sql = "SELECT count(name) AS  vCount
+                FROM Customer 
+                where name ='" & pName & "' and type=2"
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        If (Convert.ToInt16(dt.Rows(0).Item("vCount")) > 0) Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
     Friend Shared Function get_cus_id(pName As String) As String
         Dim sql As String = String.Empty
         sql = "SELECT cus_id
@@ -56,6 +68,43 @@
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt.Rows(0).Item("cus_id").ToString()
     End Function
+
+    Friend Shared Function add_wash_header_mao(pCusID As String, dt As DataTable) As String
+        Dim sql As String = String.Empty
+        Dim list As New List(Of String)
+        For Each row As DataRow In dt.Rows
+            Dim arrTypeMao = row("TypeMao").ToString().Trim().Split("-")
+            Dim TypeMao_id As String = arrTypeMao(0)
+            Dim TypeMao_name As String = arrTypeMao(1)
+
+            sql = "INSERT INTO [dbo].[wash_header_mao]
+           ([cus_id]
+           ,[promotion_id]
+           ,[promotion_name]
+           ,[price]
+           ,[description]
+           ,[amount]
+           ,[balance])
+     VALUES
+           (@cus_id
+           ,@promotion_id
+           ,@promotion_name
+           ,@price
+           ,@description
+           ,@amount
+           ,@balance)"
+            sql = sql.Replace("@cus_id", pCusID)
+            sql = sql.Replace("@promotion_id", TypeMao_id)
+            sql = sql.Replace("@promotion_name", TypeMao_name)
+            sql = sql.Replace("@price", row("price"))
+            sql = sql.Replace("@description", row("condition"))
+            sql = sql.Replace("@amount", row("piece"))
+            sql = sql.Replace("@balance", row("piece"))
+            list.Add(sql)
+        Next row
+        Return ClassConnectDb.Exec_Transaction_NonQuery(list)
+    End Function
+
     Friend Shared Function getProductPrice(pCategoryID As String) As Integer
         Dim sql As String = String.Empty
         sql = "SELECT ListNo
