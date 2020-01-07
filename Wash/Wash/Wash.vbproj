@@ -283,7 +283,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="database file\WashingStore" />
+    <None Include="database file\WashingStore.bak" />
     <None Include="DataSet\DataSet.xsc">
       <DependentUpon>DataSet.xsd</DependentUpon>
     </None>
