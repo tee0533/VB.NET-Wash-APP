@@ -77,21 +77,21 @@ SELECT TOP (1000) [groupid]
         End Select
     End Sub
 
-    Private Sub CheckEz_CheckedChanged(sender As Object, e As EventArgs) Handles CheckEz.CheckedChanged, CheckBox7.CheckedChanged, CheckBox4.CheckedChanged, CheckBox19.CheckedChanged, CheckBox16.CheckedChanged, CheckBox13.CheckedChanged, CheckBox10.CheckedChanged, CheckBox1.CheckedChanged
+    Private Sub CheckEz_CheckedChanged(sender As Object, e As EventArgs) Handles CheckEz.CheckedChanged, CheckBox7.CheckedChanged, CheckBox4.CheckedChanged, CheckBox16.CheckedChanged, CheckBox13.CheckedChanged, CheckBox10.CheckedChanged, CheckBox1.CheckedChanged
         If (CheckEz.Checked = True) Then
             CheckHard.Checked = False
             CheckMid.Checked = False
         End If
     End Sub
 
-    Private Sub CheckMid_CheckedChanged(sender As Object, e As EventArgs) Handles CheckMid.CheckedChanged, CheckBox8.CheckedChanged, CheckBox5.CheckedChanged, CheckBox20.CheckedChanged, CheckBox2.CheckedChanged, CheckBox17.CheckedChanged, CheckBox14.CheckedChanged, CheckBox11.CheckedChanged
+    Private Sub CheckMid_CheckedChanged(sender As Object, e As EventArgs) Handles CheckMid.CheckedChanged, CheckBox8.CheckedChanged, CheckBox5.CheckedChanged, CheckBox2.CheckedChanged, CheckBox17.CheckedChanged, CheckBox14.CheckedChanged, CheckBox11.CheckedChanged
         If (CheckMid.Checked = True) Then
             CheckHard.Checked = False
             CheckEz.Checked = False
         End If
     End Sub
 
-    Private Sub CheckHard_CheckedChanged(sender As Object, e As EventArgs) Handles CheckHard.CheckedChanged, CheckBox9.CheckedChanged, CheckBox6.CheckedChanged, CheckBox3.CheckedChanged, CheckBox21.CheckedChanged, CheckBox18.CheckedChanged, CheckBox15.CheckedChanged, CheckBox12.CheckedChanged
+    Private Sub CheckHard_CheckedChanged(sender As Object, e As EventArgs) Handles CheckHard.CheckedChanged, CheckBox9.CheckedChanged, CheckBox6.CheckedChanged, CheckBox3.CheckedChanged, CheckBox18.CheckedChanged, CheckBox15.CheckedChanged, CheckBox12.CheckedChanged
         If (CheckHard.Checked = True) Then
             CheckMid.Checked = False
             CheckEz.Checked = False

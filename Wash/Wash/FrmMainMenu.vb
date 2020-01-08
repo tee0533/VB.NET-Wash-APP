@@ -36,4 +36,8 @@
     Private Sub MenuCusMao_Click(sender As Object, e As EventArgs) Handles MenuCusMao.Click
         FrmCusListMao.Show()
     End Sub
+
+    Private Sub MenuCusMao_Cometowash_Click(sender As Object, e As EventArgs) Handles MenuCusMao_Cometowash.Click
+        FrmCustomer_Mao_List.Show()
+    End Sub
 End Class

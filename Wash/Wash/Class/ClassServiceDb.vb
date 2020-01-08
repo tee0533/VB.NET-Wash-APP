@@ -36,6 +36,17 @@
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt
     End Function
+    Friend Shared Function get_customer(pSearch As String) As DataTable
+        Dim sql As String = String.Empty
+        Dim cond As String = String.Empty
+        If (Not String.IsNullOrEmpty(pSearch)) Then
+            cond = "where name like '%" & pSearch & "%' or tel like '%" & pSearch & "%'"
+        End If
+        sql = "SELECT  cus_id as 'รหัส', name as 'ชื่อ', tel as 'เบอร์โทร'
+               FROM    Customer " + cond
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Return dt
+    End Function
     Friend Shared Function Check_Cus_Name_Data_Exist(pName As String) As Boolean
         Dim sql As String = String.Empty
         sql = "SELECT count(name) AS  vCount

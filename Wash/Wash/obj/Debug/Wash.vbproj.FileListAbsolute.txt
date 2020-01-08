@@ -212,9 +212,6 @@ F:\SVN\Source Code\Job\VB.NET-Wash-APP-R\Wash\bin\Debug\Wash.exe.config
 F:\SVN\Source Code\Job\VB.NET-Wash-APP-R\Wash\obj\Debug\Wash.exe
 F:\SVN\Source Code\Job\VB.NET-Wash-APP-R\Wash\obj\Debug\Wash.xml
 F:\SVN\Source Code\Job\VB.NET-Wash-APP-R\Wash\obj\Debug\Wash.pdb
-F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.vbprojAssemblyReference.cache
-F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.vbproj.CoreCompileInputs.cache
-F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.vbproj.CopyComplete
 F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.FrmCustomer_Mao.resources
 F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.FrmCusListMao.resources
 F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.FrmPayServiceMao.resources
@@ -268,3 +265,6 @@ E:\SVN\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.vbproj.CopyComplete
 E:\SVN\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.exe
 E:\SVN\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.xml
 E:\SVN\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.pdb
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.vbprojResolveAssemblyReference.cache
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.FrmCusSearch.resources
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.FrmCustomer_Mao_List.resources
