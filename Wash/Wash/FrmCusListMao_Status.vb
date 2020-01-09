@@ -27,4 +27,18 @@
     Private Sub FrmCusListMao_Status_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Load_Data()
     End Sub
+
+    Private Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
+        If dgvHeader.Rows.Count <= 0 Then Exit Sub
+        Dim index As Integer = dgvHeader.CurrentRow.Index
+        Dim id As String = Trim(dgvHeader.Rows(index).Cells("รหัส").Value.ToString)
+        If MsgBox("คุณต้องการส่งคืนผ้าหรือไม่ ?", vbOKCancel + vbInformation) = vbOK Then
+            ClassServiceDb.change_status_wash_mao_status(id)
+            Load_Data()
+        End If
+    End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+
+    End Sub
 End Class

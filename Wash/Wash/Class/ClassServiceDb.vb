@@ -249,6 +249,11 @@
         sql = String.Format("UPDATE wash_header_mao SET status =1,pay_money={0},change_money={1} WHERE cus_id ={2}", pay_money, change_money, cus_id)
         Return ClassConnectDb.Exec_NonQuery(sql)
     End Function
+    Friend Shared Function change_status_wash_mao_status(id As String) As String
+        Dim sql As String = String.Empty
+        sql = String.Format("UPDATE wash_header_mao_status SET status =1 where id=" & id)
+        Return ClassConnectDb.Exec_NonQuery(sql)
+    End Function
 
     Friend Shared Function add_wash_list(ByVal pCusID As String, ByVal wash_id As String, dt As DataTable) As String
         Dim sql As String = String.Empty
