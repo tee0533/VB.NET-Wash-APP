@@ -22,13 +22,17 @@ Partial Class FrmCustomer_Mao_List
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.dgv = New System.Windows.Forms.DataGridView()
+        Me.order = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.group = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.list = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtNum = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -51,21 +55,17 @@ Partial Class FrmCustomer_Mao_List
         Me.btDel = New System.Windows.Forms.Button()
         Me.btSave = New System.Windows.Forms.Button()
         Me.btBack = New System.Windows.Forms.Button()
-        Me.txtTel = New System.Windows.Forms.TextBox()
+        Me.txtDetail = New System.Windows.Forms.TextBox()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.pnlHeader = New System.Windows.Forms.Panel()
+        Me.txtPromotion = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.lblID = New System.Windows.Forms.Label()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.btMenu = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtPromotion = New System.Windows.Forms.TextBox()
-        Me.order = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.group = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.list = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -95,46 +95,76 @@ Partial Class FrmCustomer_Mao_List
         Me.dgv.AllowUserToAddRows = False
         Me.dgv.AllowUserToDeleteRows = False
         Me.dgv.AllowUserToResizeColumns = False
-        DataGridViewCellStyle16.BackColor = System.Drawing.Color.White
-        Me.dgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgv.ColumnHeadersHeight = 35
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.order, Me.group, Me.list, Me.total})
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgv.DefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgv.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgv.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgv.Location = New System.Drawing.Point(0, 56)
         Me.dgv.Name = "dgv"
         Me.dgv.ReadOnly = True
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle19.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgv.RowHeadersVisible = False
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgv.RowsDefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgv.RowsDefaultCellStyle = DataGridViewCellStyle5
         Me.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv.Size = New System.Drawing.Size(853, 366)
         Me.dgv.TabIndex = 97
+        '
+        'order
+        '
+        Me.order.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.order.HeaderText = "ลำดับ"
+        Me.order.Name = "order"
+        Me.order.ReadOnly = True
+        Me.order.Width = 71
+        '
+        'group
+        '
+        Me.group.HeaderText = "กลุ่ม"
+        Me.group.Name = "group"
+        Me.group.ReadOnly = True
+        Me.group.Width = 300
+        '
+        'list
+        '
+        Me.list.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.list.HeaderText = "รายการ"
+        Me.list.Name = "list"
+        Me.list.ReadOnly = True
+        '
+        'total
+        '
+        Me.total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.total.HeaderText = "จำนวน"
+        Me.total.Name = "total"
+        Me.total.ReadOnly = True
+        Me.total.Width = 79
         '
         'Label6
         '
@@ -451,19 +481,19 @@ Partial Class FrmCustomer_Mao_List
         Me.btBack.Text = "ย้อนกลับ"
         Me.btBack.UseVisualStyleBackColor = True
         '
-        'txtTel
+        'txtDetail
         '
-        Me.txtTel.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtTel.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txtTel.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.txtTel.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.txtTel.Location = New System.Drawing.Point(238, 111)
-        Me.txtTel.MaxLength = 10
-        Me.txtTel.Multiline = True
-        Me.txtTel.Name = "txtTel"
-        Me.txtTel.ReadOnly = True
-        Me.txtTel.Size = New System.Drawing.Size(519, 70)
-        Me.txtTel.TabIndex = 44
+        Me.txtDetail.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.txtDetail.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txtDetail.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.txtDetail.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.txtDetail.Location = New System.Drawing.Point(238, 111)
+        Me.txtDetail.MaxLength = 10
+        Me.txtDetail.Multiline = True
+        Me.txtDetail.Name = "txtDetail"
+        Me.txtDetail.ReadOnly = True
+        Me.txtDetail.Size = New System.Drawing.Size(519, 70)
+        Me.txtDetail.TabIndex = 44
         '
         'txtName
         '
@@ -518,7 +548,7 @@ Partial Class FrmCustomer_Mao_List
         Me.pnlHeader.Controls.Add(Me.Label5)
         Me.pnlHeader.Controls.Add(Me.lblID)
         Me.pnlHeader.Controls.Add(Me.btnSearch)
-        Me.pnlHeader.Controls.Add(Me.txtTel)
+        Me.pnlHeader.Controls.Add(Me.txtDetail)
         Me.pnlHeader.Controls.Add(Me.txtName)
         Me.pnlHeader.Controls.Add(Me.Label1)
         Me.pnlHeader.Controls.Add(Me.btMenu)
@@ -529,6 +559,30 @@ Partial Class FrmCustomer_Mao_List
         Me.pnlHeader.Name = "pnlHeader"
         Me.pnlHeader.Size = New System.Drawing.Size(1153, 193)
         Me.pnlHeader.TabIndex = 3
+        '
+        'txtPromotion
+        '
+        Me.txtPromotion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.txtPromotion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txtPromotion.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.txtPromotion.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.txtPromotion.Location = New System.Drawing.Point(238, 60)
+        Me.txtPromotion.Name = "txtPromotion"
+        Me.txtPromotion.ReadOnly = True
+        Me.txtPromotion.Size = New System.Drawing.Size(519, 40)
+        Me.txtPromotion.TabIndex = 48
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label5.Location = New System.Drawing.Point(128, 64)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(93, 20)
+        Me.Label5.TabIndex = 47
+        Me.Label5.Text = "ชื่อโปรโมชั่น"
         '
         'lblID
         '
@@ -563,60 +617,6 @@ Partial Class FrmCustomer_Mao_List
         Me.btMenu.Text = "เมนูหลัก"
         Me.btMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btMenu.UseVisualStyleBackColor = True
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label5.Location = New System.Drawing.Point(128, 64)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(93, 20)
-        Me.Label5.TabIndex = 47
-        Me.Label5.Text = "ชื่อโปรโมชั่น"
-        '
-        'txtPromotion
-        '
-        Me.txtPromotion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtPromotion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txtPromotion.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.txtPromotion.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.txtPromotion.Location = New System.Drawing.Point(238, 60)
-        Me.txtPromotion.Name = "txtPromotion"
-        Me.txtPromotion.ReadOnly = True
-        Me.txtPromotion.Size = New System.Drawing.Size(519, 40)
-        Me.txtPromotion.TabIndex = 48
-        '
-        'order
-        '
-        Me.order.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.order.HeaderText = "ลำดับ"
-        Me.order.Name = "order"
-        Me.order.ReadOnly = True
-        Me.order.Width = 71
-        '
-        'group
-        '
-        Me.group.HeaderText = "กลุ่ม"
-        Me.group.Name = "group"
-        Me.group.ReadOnly = True
-        Me.group.Width = 300
-        '
-        'list
-        '
-        Me.list.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.list.HeaderText = "รายการ"
-        Me.list.Name = "list"
-        Me.list.ReadOnly = True
-        '
-        'total
-        '
-        Me.total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.total.HeaderText = "จำนวน"
-        Me.total.Name = "total"
-        Me.total.ReadOnly = True
-        Me.total.Width = 79
         '
         'FrmCustomer_Mao_List
         '
@@ -667,7 +667,7 @@ Partial Class FrmCustomer_Mao_List
     Friend WithEvents Label13 As Label
     Friend WithEvents pnlFooter As Panel
     Friend WithEvents btBack As Button
-    Friend WithEvents txtTel As TextBox
+    Friend WithEvents txtDetail As TextBox
     Friend WithEvents txtName As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label7 As Label

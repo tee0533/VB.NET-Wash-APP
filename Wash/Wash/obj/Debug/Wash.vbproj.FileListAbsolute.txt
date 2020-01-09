@@ -269,3 +269,7 @@ F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.vbprojResolveAssembly
 F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.FrmCusSearch.resources
 F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.FrmCustomer_Mao_List.resources
 F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.FrmCusListMao_Status.resources
+E:\SVN\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.FrmCusListMao_Status.resources
+E:\SVN\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.FrmCusSearch.resources
+E:\SVN\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.FrmCustomer_Mao_List.resources
+E:\SVN\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.FrmPromotion.resources

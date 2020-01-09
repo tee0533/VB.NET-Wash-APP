@@ -233,11 +233,29 @@
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt
     End Function
+    Friend Shared Function get_promotion() As DataTable
+        Dim sql As String = String.Empty
+        sql = "select promotion_id,promotion_name from promotion"
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Return dt
+    End Function
     Friend Shared Function get_promotion_balance(cus_id As String) As String
         Dim sql As String = String.Empty
         sql = "select balance from wash_header_mao where cus_id =" & cus_id
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt.Rows(0).Item("balance").ToString()
+    End Function
+    Friend Shared Function get_promotion_history(cus_id As String) As String
+        Dim sql As String = String.Empty
+        sql = "select promotion_list from wash_header_mao where cus_id =" & cus_id
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Return dt.Rows(0).Item("promotion_list").ToString()
+    End Function
+    Friend Shared Function get_wash_history(cus_id As String) As String
+        Dim sql As String = String.Empty
+        sql = "select wash_date_list from wash_header_mao where cus_id =" & cus_id
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Return dt.Rows(0).Item("wash_date_list").ToString()
     End Function
     Friend Shared Function change_status_wash(wash_id As String) As String
         Dim sql As String = String.Empty

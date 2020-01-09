@@ -58,4 +58,14 @@
         Dim res As String = ClassServiceDb.Delete_Wash_Mao(cus_id)
         Load_Data()
     End Sub
+
+    Private Sub btnPerpromotion_Click(sender As Object, e As EventArgs) Handles btnPerpromotion.Click
+        If dgvHeader.Rows.Count <= 0 Then Exit Sub
+        Dim index As Integer = dgvHeader.CurrentRow.Index
+        Dim cus_id As String = Trim(dgvHeader.Rows(index).Cells("รหัส").Value.ToString)
+        Dim promotion_name As String = Trim(dgvHeader.Rows(index).Cells("โปรโมชั่น").Value.ToString)
+        FrmPromotion.promotion_name = promotion_name
+        FrmPromotion.id = cus_id
+        FrmPromotion.Show()
+    End Sub
 End Class

@@ -1,12 +1,14 @@
 ﻿
 
 Imports System.Globalization
+Imports System.Text
 
 Public Class FrmCustomer_Mao_List
     Public id As String
     Public vname As String
     Public vPromotion As String
     Public vBalance As String
+
     Public Action As String = "add"
     Public Sub AssingValue()
         lblID.Text = id
@@ -14,6 +16,26 @@ Public Class FrmCustomer_Mao_List
         txtPromotion.Text = vPromotion
         If (Not String.IsNullOrEmpty(id)) Then
             vBalance = ClassServiceDb.get_promotion_balance(id)
+            Dim history() As String = ClassServiceDb.get_promotion_history(id).Trim().Split("|")
+            Dim wash_history() As String = ClassServiceDb.get_wash_history(id).Trim().Split("|")
+            Dim builder As New StringBuilder
+            If (history.Count > 0 And history(0) <> String.Empty) Then
+                builder.Append("โปรโมชั่นที่เคยสมัคร:")
+                For Each item As String In history
+                    builder.Append(item)
+                Next
+                builder.AppendLine()
+
+            End If
+            If (wash_history.Count > 0) Then
+                builder.Append("******************************")
+                builder.Append("วันเวลาที่เคยมาซัก:")
+                For Each item As String In history
+                    builder.Append(item)
+                Next
+                builder.AppendLine()
+            End If
+            txtDetail.Text = builder.ToString()
             txtBalance.Text = vBalance
             assign_balance()
         End If

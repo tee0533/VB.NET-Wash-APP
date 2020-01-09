@@ -281,6 +281,45 @@ Public Class ClassConnectDb
 
         Return res
     End Function
+    Public Shared Function update_promotion(ByVal cus_id As String, ByVal old_promotion As String, ByVal new_promotion_id As String, ByVal new_promotion As String) As String
+        Dim res As String = String.Empty
+
+        Using conn As SqlConnection = New SqlConnection()
+            conn.ConnectionString = strconn
+            conn.Open()
+
+            Using cmd As SqlCommand = conn.CreateCommand()
+                Dim sql As String = "UPDATE [dbo].[wash_header_mao]
+                                       SET [promotion_id] =@new_promotion_id
+                                          ,[promotion_name] =@new_promotion
+                                          ,[promotion_list] =  CAST((@old_promotion+'|') as nvarchar(200))+CAST((case when [promotion_list] is null then '' else [promotion_list] end) as nvarchar(200))
+                                      where cus_id =@cus_id "
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = sql
+                cmd.Parameters.Clear()
+                cmd.Parameters.Add(New SqlParameter("@cus_id", cus_id))
+                cmd.Parameters.Add(New SqlParameter("@new_promotion_id", new_promotion_id))
+                cmd.Parameters.Add(New SqlParameter("@new_promotion", new_promotion))
+                cmd.Parameters.Add(New SqlParameter("@old_promotion", old_promotion))
+                Try
+                    If cmd.ExecuteNonQuery() > 0 Then
+                        res = "OK|"
+                    Else
+                        res = "NOK|No Data Execute"
+                    End If
+
+                Catch ex As Exception
+                    res = "NOK|" & ex.Message.ToString().Trim()
+                End Try
+
+                conn.Close()
+                conn.Dispose()
+            End Using
+        End Using
+
+        Return res
+    End Function
+
 #End Region
 
 
