@@ -50,4 +50,12 @@
     Private Sub BtnAddCustomer_Click(sender As Object, e As EventArgs) Handles btnAddCustomer.Click
         FrmCustomer_Mao.Show()
     End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        If dgvHeader.Rows.Count <= 0 Then Exit Sub
+        Dim index As Integer = dgvHeader.CurrentRow.Index
+        Dim cus_id As String = Trim(dgvHeader.Rows(index).Cells("รหัส").Value.ToString)
+        Dim res As String = ClassServiceDb.Delete_Wash_Mao(cus_id)
+        Load_Data()
+    End Sub
 End Class

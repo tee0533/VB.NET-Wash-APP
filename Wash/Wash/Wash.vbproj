@@ -132,6 +132,12 @@
     <Compile Include="FrmCusListMao.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmCusListMao_Status.Designer.vb">
+      <DependentUpon>FrmCusListMao_Status.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCusListMao_Status.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmCusSearch.Designer.vb">
       <DependentUpon>FrmCusSearch.vb</DependentUpon>
     </Compile>
@@ -250,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCusListMao.resx">
       <DependentUpon>FrmCusListMao.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCusListMao_Status.resx">
+      <DependentUpon>FrmCusListMao_Status.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCusSearch.resx">
       <DependentUpon>FrmCusSearch.vb</DependentUpon>

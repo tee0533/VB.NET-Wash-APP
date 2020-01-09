@@ -31,9 +31,15 @@ Partial Class FrmCustomer
         Me.txtTel = New System.Windows.Forms.TextBox()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btMenu = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.pnlFooter = New System.Windows.Forms.Panel()
+        Me.btNew = New System.Windows.Forms.Button()
+        Me.btEdit = New System.Windows.Forms.Button()
+        Me.btDel = New System.Windows.Forms.Button()
+        Me.btSave = New System.Windows.Forms.Button()
+        Me.btBack = New System.Windows.Forms.Button()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel8 = New System.Windows.Forms.Panel()
@@ -46,7 +52,9 @@ Partial Class FrmCustomer
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.Label19 = New System.Windows.Forms.Label()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.ComboBox6 = New System.Windows.Forms.ComboBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
@@ -65,6 +73,8 @@ Partial Class FrmCustomer
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.ComboBox4 = New System.Windows.Forms.ComboBox()
@@ -85,6 +95,7 @@ Partial Class FrmCustomer
         Me.cmbCategory = New System.Windows.Forms.ComboBox()
         Me.cmbList = New System.Windows.Forms.ComboBox()
         Me.cmbGroup = New System.Windows.Forms.ComboBox()
+        Me.btAdd = New System.Windows.Forms.Button()
         Me.dgv = New System.Windows.Forms.DataGridView()
         Me.order = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.group = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -101,17 +112,6 @@ Partial Class FrmCustomer
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.dtpDate = New System.Windows.Forms.DateTimePicker()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.btAdd = New System.Windows.Forms.Button()
-        Me.btNew = New System.Windows.Forms.Button()
-        Me.btEdit = New System.Windows.Forms.Button()
-        Me.btDel = New System.Windows.Forms.Button()
-        Me.btSave = New System.Windows.Forms.Button()
-        Me.btBack = New System.Windows.Forms.Button()
-        Me.btMenu = New System.Windows.Forms.Button()
         Me.pnlHeader.SuspendLayout()
         Me.pnlFooter.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -178,6 +178,20 @@ Partial Class FrmCustomer
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "เพิ่มลูกค้าทั่วไป"
         '
+        'btMenu
+        '
+        Me.btMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btMenu.Image = Global.Wash.My.Resources.Resources.menu
+        Me.btMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btMenu.Location = New System.Drawing.Point(4, 11)
+        Me.btMenu.Margin = New System.Windows.Forms.Padding(2)
+        Me.btMenu.Name = "btMenu"
+        Me.btMenu.Size = New System.Drawing.Size(123, 61)
+        Me.btMenu.TabIndex = 38
+        Me.btMenu.Text = "เมนูหลัก"
+        Me.btMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btMenu.UseVisualStyleBackColor = True
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -216,6 +230,78 @@ Partial Class FrmCustomer
         Me.pnlFooter.Name = "pnlFooter"
         Me.pnlFooter.Size = New System.Drawing.Size(1166, 65)
         Me.pnlFooter.TabIndex = 1
+        '
+        'btNew
+        '
+        Me.btNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btNew.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btNew.Image = Global.Wash.My.Resources.Resources.verified_account
+        Me.btNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btNew.Location = New System.Drawing.Point(1010, 2)
+        Me.btNew.Margin = New System.Windows.Forms.Padding(2)
+        Me.btNew.Name = "btNew"
+        Me.btNew.Size = New System.Drawing.Size(133, 48)
+        Me.btNew.TabIndex = 47
+        Me.btNew.Text = "รายการใหม่"
+        Me.btNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btNew.UseVisualStyleBackColor = True
+        '
+        'btEdit
+        '
+        Me.btEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btEdit.Image = Global.Wash.My.Resources.Resources.user
+        Me.btEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btEdit.Location = New System.Drawing.Point(871, 2)
+        Me.btEdit.Margin = New System.Windows.Forms.Padding(2)
+        Me.btEdit.Name = "btEdit"
+        Me.btEdit.Size = New System.Drawing.Size(135, 48)
+        Me.btEdit.TabIndex = 46
+        Me.btEdit.Text = "แก้ไข"
+        Me.btEdit.UseVisualStyleBackColor = True
+        '
+        'btDel
+        '
+        Me.btDel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btDel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btDel.Image = Global.Wash.My.Resources.Resources.unfollow
+        Me.btDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btDel.Location = New System.Drawing.Point(747, 2)
+        Me.btDel.Margin = New System.Windows.Forms.Padding(2)
+        Me.btDel.Name = "btDel"
+        Me.btDel.Size = New System.Drawing.Size(118, 48)
+        Me.btDel.TabIndex = 45
+        Me.btDel.Text = "ลบ"
+        Me.btDel.UseVisualStyleBackColor = True
+        '
+        'btSave
+        '
+        Me.btSave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btSave.Image = Global.Wash.My.Resources.Resources.save
+        Me.btSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btSave.Location = New System.Drawing.Point(384, 3)
+        Me.btSave.Margin = New System.Windows.Forms.Padding(2)
+        Me.btSave.Name = "btSave"
+        Me.btSave.Size = New System.Drawing.Size(102, 48)
+        Me.btSave.TabIndex = 44
+        Me.btSave.Text = "บันทึก"
+        Me.btSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btSave.UseVisualStyleBackColor = True
+        '
+        'btBack
+        '
+        Me.btBack.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btBack.Image = Global.Wash.My.Resources.Resources.arrow
+        Me.btBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btBack.Location = New System.Drawing.Point(9, 4)
+        Me.btBack.Margin = New System.Windows.Forms.Padding(2)
+        Me.btBack.Name = "btBack"
+        Me.btBack.Size = New System.Drawing.Size(138, 48)
+        Me.btBack.TabIndex = 43
+        Me.btBack.Text = "ย้อนกลับ"
+        Me.btBack.UseVisualStyleBackColor = True
         '
         'SplitContainer1
         '
@@ -410,6 +496,20 @@ Partial Class FrmCustomer
         Me.ComboBox5.Size = New System.Drawing.Size(206, 33)
         Me.ComboBox5.TabIndex = 47
         '
+        'Button7
+        '
+        Me.Button7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Button7.Image = Global.Wash.My.Resources.Resources.follow
+        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button7.Location = New System.Drawing.Point(0, 104)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(204, 48)
+        Me.Button7.TabIndex = 44
+        Me.Button7.Text = "เพิ่ม"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
         'Label19
         '
         Me.Label19.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -423,6 +523,20 @@ Partial Class FrmCustomer
         Me.Label19.Size = New System.Drawing.Size(63, 20)
         Me.Label19.TabIndex = 50
         Me.Label19.Text = "ประเภท"
+        '
+        'Button6
+        '
+        Me.Button6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Button6.Image = Global.Wash.My.Resources.Resources.follow
+        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button6.Location = New System.Drawing.Point(0, 104)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(204, 48)
+        Me.Button6.TabIndex = 44
+        Me.Button6.Text = "เพิ่ม"
+        Me.Button6.UseVisualStyleBackColor = True
         '
         'ComboBox6
         '
@@ -673,6 +787,34 @@ Partial Class FrmCustomer
         Me.CheckBox3.TabIndex = 56
         Me.CheckBox3.Text = "ยาก"
         Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Button4.Image = Global.Wash.My.Resources.Resources.follow
+        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button4.Location = New System.Drawing.Point(0, 104)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(204, 48)
+        Me.Button4.TabIndex = 44
+        Me.Button4.Text = "เพิ่ม"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Button5.Image = Global.Wash.My.Resources.Resources.follow
+        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button5.Location = New System.Drawing.Point(0, 104)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(204, 48)
+        Me.Button5.TabIndex = 44
+        Me.Button5.Text = "เพิ่ม"
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'ComboBox3
         '
@@ -941,6 +1083,20 @@ Partial Class FrmCustomer
         Me.cmbGroup.Size = New System.Drawing.Size(206, 33)
         Me.cmbGroup.TabIndex = 45
         '
+        'btAdd
+        '
+        Me.btAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btAdd.Image = Global.Wash.My.Resources.Resources.follow
+        Me.btAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btAdd.Location = New System.Drawing.Point(71, 295)
+        Me.btAdd.Margin = New System.Windows.Forms.Padding(2)
+        Me.btAdd.Name = "btAdd"
+        Me.btAdd.Size = New System.Drawing.Size(204, 48)
+        Me.btAdd.TabIndex = 44
+        Me.btAdd.Text = "เพิ่ม"
+        Me.btAdd.UseVisualStyleBackColor = True
+        '
         'dgv
         '
         Me.dgv.AllowUserToAddRows = False
@@ -1133,162 +1289,6 @@ Partial Class FrmCustomer
         Me.Label18.Size = New System.Drawing.Size(46, 24)
         Me.Label18.TabIndex = 104
         Me.Label18.Text = "วันที่"
-        '
-        'Button7
-        '
-        Me.Button7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button7.Image = Global.Wash.My.Resources.Resources.follow
-        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button7.Location = New System.Drawing.Point(0, 104)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(204, 48)
-        Me.Button7.TabIndex = 44
-        Me.Button7.Text = "เพิ่ม"
-        Me.Button7.UseVisualStyleBackColor = True
-        '
-        'Button6
-        '
-        Me.Button6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button6.Image = Global.Wash.My.Resources.Resources.follow
-        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button6.Location = New System.Drawing.Point(0, 104)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(204, 48)
-        Me.Button6.TabIndex = 44
-        Me.Button6.Text = "เพิ่ม"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button4.Image = Global.Wash.My.Resources.Resources.follow
-        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(0, 104)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(204, 48)
-        Me.Button4.TabIndex = 44
-        Me.Button4.Text = "เพิ่ม"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button5.Image = Global.Wash.My.Resources.Resources.follow
-        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.Location = New System.Drawing.Point(0, 104)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(204, 48)
-        Me.Button5.TabIndex = 44
-        Me.Button5.Text = "เพิ่ม"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'btAdd
-        '
-        Me.btAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btAdd.Image = Global.Wash.My.Resources.Resources.follow
-        Me.btAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btAdd.Location = New System.Drawing.Point(71, 295)
-        Me.btAdd.Margin = New System.Windows.Forms.Padding(2)
-        Me.btAdd.Name = "btAdd"
-        Me.btAdd.Size = New System.Drawing.Size(204, 48)
-        Me.btAdd.TabIndex = 44
-        Me.btAdd.Text = "เพิ่ม"
-        Me.btAdd.UseVisualStyleBackColor = True
-        '
-        'btNew
-        '
-        Me.btNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btNew.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btNew.Image = Global.Wash.My.Resources.Resources.verified_account
-        Me.btNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btNew.Location = New System.Drawing.Point(1010, 2)
-        Me.btNew.Margin = New System.Windows.Forms.Padding(2)
-        Me.btNew.Name = "btNew"
-        Me.btNew.Size = New System.Drawing.Size(133, 48)
-        Me.btNew.TabIndex = 47
-        Me.btNew.Text = "รายการใหม่"
-        Me.btNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btNew.UseVisualStyleBackColor = True
-        '
-        'btEdit
-        '
-        Me.btEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btEdit.Image = Global.Wash.My.Resources.Resources.user
-        Me.btEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btEdit.Location = New System.Drawing.Point(871, 2)
-        Me.btEdit.Margin = New System.Windows.Forms.Padding(2)
-        Me.btEdit.Name = "btEdit"
-        Me.btEdit.Size = New System.Drawing.Size(135, 48)
-        Me.btEdit.TabIndex = 46
-        Me.btEdit.Text = "แก้ไข"
-        Me.btEdit.UseVisualStyleBackColor = True
-        '
-        'btDel
-        '
-        Me.btDel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btDel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btDel.Image = Global.Wash.My.Resources.Resources.unfollow
-        Me.btDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btDel.Location = New System.Drawing.Point(747, 2)
-        Me.btDel.Margin = New System.Windows.Forms.Padding(2)
-        Me.btDel.Name = "btDel"
-        Me.btDel.Size = New System.Drawing.Size(118, 48)
-        Me.btDel.TabIndex = 45
-        Me.btDel.Text = "ลบ"
-        Me.btDel.UseVisualStyleBackColor = True
-        '
-        'btSave
-        '
-        Me.btSave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btSave.Image = Global.Wash.My.Resources.Resources.save
-        Me.btSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btSave.Location = New System.Drawing.Point(384, 3)
-        Me.btSave.Margin = New System.Windows.Forms.Padding(2)
-        Me.btSave.Name = "btSave"
-        Me.btSave.Size = New System.Drawing.Size(102, 48)
-        Me.btSave.TabIndex = 44
-        Me.btSave.Text = "บันทึก"
-        Me.btSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btSave.UseVisualStyleBackColor = True
-        '
-        'btBack
-        '
-        Me.btBack.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btBack.Image = Global.Wash.My.Resources.Resources.arrow
-        Me.btBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btBack.Location = New System.Drawing.Point(9, 4)
-        Me.btBack.Margin = New System.Windows.Forms.Padding(2)
-        Me.btBack.Name = "btBack"
-        Me.btBack.Size = New System.Drawing.Size(138, 48)
-        Me.btBack.TabIndex = 43
-        Me.btBack.Text = "ย้อนกลับ"
-        Me.btBack.UseVisualStyleBackColor = True
-        '
-        'btMenu
-        '
-        Me.btMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btMenu.Image = Global.Wash.My.Resources.Resources.menu
-        Me.btMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btMenu.Location = New System.Drawing.Point(4, 11)
-        Me.btMenu.Margin = New System.Windows.Forms.Padding(2)
-        Me.btMenu.Name = "btMenu"
-        Me.btMenu.Size = New System.Drawing.Size(123, 61)
-        Me.btMenu.TabIndex = 38
-        Me.btMenu.Text = "เมนูหลัก"
-        Me.btMenu.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btMenu.UseVisualStyleBackColor = True
         '
         'FrmCustomer
         '

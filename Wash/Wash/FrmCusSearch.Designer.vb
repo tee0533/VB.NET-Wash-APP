@@ -29,6 +29,10 @@ Partial Class FrmCusSearch
         Me.Label7 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btnSelect = New System.Windows.Forms.Button()
+        Me.รหัส = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ชื่อลูกค้า = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.เบอร์โทร = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.โปรโมชั่น = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -68,6 +72,10 @@ Partial Class FrmCusSearch
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AllowUserToOrderColumns = True
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
@@ -77,31 +85,62 @@ Partial Class FrmCusSearch
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.รหัส, Me.ชื่อลูกค้า, Me.เบอร์โทร, Me.โปรโมชั่น})
+        Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.Location = New System.Drawing.Point(29, 90)
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersVisible = False
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridView1.RowTemplate.Height = 30
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(603, 388)
+        Me.DataGridView1.Size = New System.Drawing.Size(900, 388)
         Me.DataGridView1.TabIndex = 49
         '
         'btnSelect
         '
         Me.btnSelect.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btnSelect.Location = New System.Drawing.Point(255, 486)
+        Me.btnSelect.Location = New System.Drawing.Point(423, 484)
         Me.btnSelect.Name = "btnSelect"
         Me.btnSelect.Size = New System.Drawing.Size(77, 35)
         Me.btnSelect.TabIndex = 50
         Me.btnSelect.Text = "เลือก"
         Me.btnSelect.UseVisualStyleBackColor = True
         '
+        'รหัส
+        '
+        Me.รหัส.HeaderText = "รหัส"
+        Me.รหัส.Name = "รหัส"
+        Me.รหัส.ReadOnly = True
+        '
+        'ชื่อลูกค้า
+        '
+        Me.ชื่อลูกค้า.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ชื่อลูกค้า.HeaderText = "ชื่อลูกค้า"
+        Me.ชื่อลูกค้า.Name = "ชื่อลูกค้า"
+        Me.ชื่อลูกค้า.ReadOnly = True
+        '
+        'เบอร์โทร
+        '
+        Me.เบอร์โทร.HeaderText = "เบอร์โทร"
+        Me.เบอร์โทร.Name = "เบอร์โทร"
+        Me.เบอร์โทร.ReadOnly = True
+        Me.เบอร์โทร.Width = 150
+        '
+        'โปรโมชั่น
+        '
+        Me.โปรโมชั่น.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.โปรโมชั่น.HeaderText = "โปรโมชั่น"
+        Me.โปรโมชั่น.Name = "โปรโมชั่น"
+        Me.โปรโมชั่น.ReadOnly = True
+        '
         'FrmCusSearch
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(661, 531)
+        Me.ClientSize = New System.Drawing.Size(955, 531)
         Me.Controls.Add(Me.btnSelect)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnSerach)
@@ -120,6 +159,10 @@ Partial Class FrmCusSearch
     Friend WithEvents btnSerach As Button
     Friend WithEvents txtName As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents btnSelect As Button
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents รหัส As DataGridViewTextBoxColumn
+    Friend WithEvents ชื่อลูกค้า As DataGridViewTextBoxColumn
+    Friend WithEvents เบอร์โทร As DataGridViewTextBoxColumn
+    Friend WithEvents โปรโมชั่น As DataGridViewTextBoxColumn
 End Class

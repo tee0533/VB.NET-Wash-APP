@@ -1,7 +1,7 @@
 ﻿Public Class FrmMainMenu
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         If MsgBox("ท่านต้องการออกจากโปรแกรมใช่หรือไม่", vbInformation + vbYesNo) = vbYes Then
-            Me.Close()
+            Application.Exit()
         End If
     End Sub
 
@@ -39,5 +39,9 @@
 
     Private Sub MenuCusMao_Cometowash_Click(sender As Object, e As EventArgs) Handles MenuCusMao_Cometowash.Click
         FrmCustomer_Mao_List.Show()
+    End Sub
+
+    Private Sub MenuCusMao_Status_Click(sender As Object, e As EventArgs) Handles MenuCusMao_Status.Click
+        FrmCusListMao_Status.Show()
     End Sub
 End Class

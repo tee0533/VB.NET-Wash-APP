@@ -199,6 +199,88 @@ Public Class ClassConnectDb
 
         Return res
     End Function
+    Public Shared Function add_wash_header_status(ByVal wash_id As String, ByVal wash_date As String, ByVal cus_name As String, cus_tel As String, number As String) As String
+        Dim res As String = String.Empty
+
+        Using conn As SqlConnection = New SqlConnection()
+            conn.ConnectionString = strconn
+            conn.Open()
+
+            Using cmd As SqlCommand = conn.CreateCommand()
+                Dim sql As String = "INSERT INTO [dbo].[wash_header_mao_status]
+                           ([wash_id]
+                           ,[wash_date]
+                           ,[cus_name]
+                           ,[cus_tel]
+                           ,[number])
+                     VALUES
+                           (@wash_id
+                           ,@wash_date
+                           ,@cus_name
+                           ,@cus_tel
+                           ,@number)"
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = sql
+                cmd.Parameters.Clear()
+                cmd.Parameters.Add(New SqlParameter("@wash_id", wash_id))
+                cmd.Parameters.Add(New SqlParameter("@wash_date", wash_date))
+                cmd.Parameters.Add(New SqlParameter("@cus_name", cus_name))
+                cmd.Parameters.Add(New SqlParameter("@cus_tel", cus_tel))
+                cmd.Parameters.Add(New SqlParameter("@number", number))
+                Try
+                    If cmd.ExecuteNonQuery > 0 Then
+                        res = "OK|"
+                    Else
+                        res = "NOK|No Data Execute"
+                    End If
+
+                Catch ex As Exception
+                    res = "NOK|" & ex.Message.ToString().Trim()
+                End Try
+
+                conn.Close()
+                conn.Dispose()
+            End Using
+        End Using
+
+        Return res
+    End Function
+    Public Shared Function save_history_mao(ByVal wash_id As String, ByVal plist As String, ByVal pBalance As String) As String
+        Dim res As String = String.Empty
+
+        Using conn As SqlConnection = New SqlConnection()
+            conn.ConnectionString = strconn
+            conn.Open()
+
+            Using cmd As SqlCommand = conn.CreateCommand()
+                Dim sql As String = "update wash_header_mao 
+                                     set wash_date_list =  CAST((case when wash_date_list is null then '' else wash_date_list end) as nvarchar(200))+ CAST((@plist) as nvarchar(200))
+                                     ,balance =@balance 
+                                     where wash_id =@wash_id "
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = sql
+                cmd.Parameters.Clear()
+                cmd.Parameters.Add(New SqlParameter("@wash_id", wash_id))
+                cmd.Parameters.Add(New SqlParameter("@plist", plist))
+                cmd.Parameters.Add(New SqlParameter("@balance", pBalance))
+                Try
+                    If cmd.ExecuteNonQuery() > 0 Then
+                        res = "OK|"
+                    Else
+                        res = "NOK|No Data Execute"
+                    End If
+
+                Catch ex As Exception
+                    res = "NOK|" & ex.Message.ToString().Trim()
+                End Try
+
+                conn.Close()
+                conn.Dispose()
+            End Using
+        End Using
+
+        Return res
+    End Function
 #End Region
 
 

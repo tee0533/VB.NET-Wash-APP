@@ -64,7 +64,7 @@
         If (ClassServiceDb.Check_Cus_Name_Data_Exist_Mao(txtName.Text.Trim())) Then
             MsgBox("ลูกค้าชื่อ " & txtName.Text & " มีอยู่ในระบบลูกค้าเหมาแล้ว", MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
         Else
-            Dim res() As String = ClassConnectDb.add_customer(txtName.Text.Trim, txtTel.Text, 2).Split("|")
+            Dim res() As String = ClassConnectDb.add_customer(txtName.Text.Trim(), txtTel.Text, 2).Split("|")
             If (res(0) = "OK") Then
                 save_list(res(1))
             Else
@@ -85,7 +85,8 @@
                 FrmPayServiceMao.cus_id = pCusID
                 FrmPayServiceMao.Show()
             End If
-
+            FrmCusListMao.Load_Data()
+            FrmCusListMao.Show()
         Else
             MsgBox(res(1), MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
         End If

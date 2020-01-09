@@ -29,7 +29,7 @@ Partial Class FrmMainMenu
         Me.btnExit = New System.Windows.Forms.Button()
         Me.MenuGeneral = New System.Windows.Forms.Button()
         Me.MenuAddCusGeneral = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
+        Me.MenuCusMao_Status = New System.Windows.Forms.Button()
         Me.MenuCusMao_Cometowash = New System.Windows.Forms.Button()
         Me.MenuCusMao = New System.Windows.Forms.Button()
         Me.MenuAddCusMao = New System.Windows.Forms.Button()
@@ -57,7 +57,7 @@ Partial Class FrmMainMenu
         '
         'SplitContainer1.Panel2
         '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.Button8)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.MenuCusMao_Status)
         Me.SplitContainer1.Panel2.Controls.Add(Me.btnExit)
         Me.SplitContainer1.Panel2.Controls.Add(Me.MenuCusMao_Cometowash)
         Me.SplitContainer1.Panel2.Controls.Add(Me.MenuCusMao)
@@ -124,19 +124,19 @@ Partial Class FrmMainMenu
         Me.MenuAddCusGeneral.TabIndex = 24
         Me.MenuAddCusGeneral.UseVisualStyleBackColor = False
         '
-        'Button8
+        'MenuCusMao_Status
         '
-        Me.Button8.BackColor = System.Drawing.Color.Green
-        Me.Button8.BackgroundImage = Global.Wash.My.Resources.Resources.สถานะรับคืน
-        Me.Button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button8.ForeColor = System.Drawing.Color.White
-        Me.Button8.Location = New System.Drawing.Point(2, 385)
-        Me.Button8.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(502, 123)
-        Me.Button8.TabIndex = 31
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.MenuCusMao_Status.BackColor = System.Drawing.Color.Green
+        Me.MenuCusMao_Status.BackgroundImage = Global.Wash.My.Resources.Resources.สถานะรับคืน
+        Me.MenuCusMao_Status.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.MenuCusMao_Status.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.MenuCusMao_Status.ForeColor = System.Drawing.Color.White
+        Me.MenuCusMao_Status.Location = New System.Drawing.Point(2, 385)
+        Me.MenuCusMao_Status.Margin = New System.Windows.Forms.Padding(2)
+        Me.MenuCusMao_Status.Name = "MenuCusMao_Status"
+        Me.MenuCusMao_Status.Size = New System.Drawing.Size(502, 123)
+        Me.MenuCusMao_Status.TabIndex = 31
+        Me.MenuCusMao_Status.UseVisualStyleBackColor = False
         '
         'MenuCusMao_Cometowash
         '
@@ -201,7 +201,7 @@ Partial Class FrmMainMenu
     Friend WithEvents Timer1 As Timer
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents MenuAddCusGeneral As Button
-    Friend WithEvents Button8 As Button
+    Friend WithEvents MenuCusMao_Status As Button
     Friend WithEvents btnExit As Button
     Friend WithEvents MenuCusMao_Cometowash As Button
     Friend WithEvents MenuCusMao As Button
