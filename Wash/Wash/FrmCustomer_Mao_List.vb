@@ -20,20 +20,21 @@ Public Class FrmCustomer_Mao_List
             Dim wash_history() As String = ClassServiceDb.get_wash_history(id).Trim().Split("|")
             Dim builder As New StringBuilder
             If (history.Count > 0 And history(0) <> String.Empty) Then
-                builder.Append("โปรโมชั่นที่เคยสมัคร:")
+                builder.AppendLine("โปรโมชั่นที่เคยสมัคร:")
                 For Each item As String In history
-                    builder.Append(item)
+                    builder.AppendLine(item)
                 Next
                 builder.AppendLine()
 
             End If
             If (wash_history.Count > 0) Then
-                builder.Append("******************************")
-                builder.Append("วันเวลาที่เคยมาซัก:")
-                For Each item As String In history
-                    builder.Append(item)
+                builder.AppendLine("******************************")
+                builder.AppendLine("วันเวลาที่เคยมาซัก:")
+                For Each item As String In wash_history
+                    If (Not String.IsNullOrEmpty(item)) Then
+                        builder.AppendLine(item)
+                    End If
                 Next
-                builder.AppendLine()
             End If
             txtDetail.Text = builder.ToString()
             txtBalance.Text = vBalance

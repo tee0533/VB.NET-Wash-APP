@@ -186,12 +186,6 @@
     <Compile Include="FrmPayServicevb.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPromotion.Designer.vb">
-      <DependentUpon>FrmPromotion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmPromotion.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FrmssLogin.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -289,9 +283,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPayServicevb.resx">
       <DependentUpon>FrmPayServicevb.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmPromotion.resx">
-      <DependentUpon>FrmPromotion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmssLogin.resx">
       <DependentUpon>FrmssLogin.vb</DependentUpon>
