@@ -237,6 +237,27 @@
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt
     End Function
+    Friend Shared Function get_wash_header_mao(wash_id As String) As DataTable
+        Dim sql As String = String.Empty
+        sql = "SELECT [wash_id]
+              ,[cus_id]
+              ,[promotion_id]
+              ,[promotion_name]
+              ,[price]
+              ,[description]
+              ,[amount]
+              ,[balance]
+              ,[pay_money]
+              ,[change_money]
+              ,[pay_date]
+              ,[wash_date_list]
+              ,[promotion_list]
+              ,[status]
+              ,[expire_date]
+          FROM [dbo].[wash_header_mao] where wash_id=" & wash_id
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Return dt
+    End Function
     Friend Shared Function get_promotion() As DataTable
         Dim sql As String = String.Empty
         sql = "select promotion_id,promotion_name from promotion"
