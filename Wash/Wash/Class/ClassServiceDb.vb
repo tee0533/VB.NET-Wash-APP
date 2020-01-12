@@ -96,9 +96,10 @@
         Return dt.Rows(0).Item("tel").ToString()
     End Function
 
-    Friend Shared Function add_wash_header_mao(pCusID As String, dt As DataTable) As String
+    Friend Shared Function add_wash_header_mao(pCusID As String, exprie_date As String, dt As DataTable) As String
         Dim sql As String = String.Empty
         Dim list As New List(Of String)
+
         For Each row As DataRow In dt.Rows
             Dim arrTypeMao = row("TypeMao").ToString().Trim().Split("-")
             Dim TypeMao_id As String = arrTypeMao(0)
@@ -111,7 +112,8 @@
            ,[price]
            ,[description]
            ,[amount]
-           ,[balance])
+           ,[balance]
+           ,[expire_date])
      VALUES
            (@cus_id
            ,@promotion_id
@@ -119,7 +121,8 @@
            ,@price
            ,'@description'
            ,@amount
-           ,@balance)"
+           ,@balance
+           ,@expire_date)"
             sql = sql.Replace("@cus_id", pCusID)
             sql = sql.Replace("@promotion_id", TypeMao_id)
             sql = sql.Replace("@promotion_name", TypeMao_name)
@@ -127,6 +130,7 @@
             sql = sql.Replace("@description", row("condition"))
             sql = sql.Replace("@amount", row("piece"))
             sql = sql.Replace("@balance", row("piece"))
+            sql = sql.Replace("@expire_date", exprie_date)
             list.Add(sql)
         Next row
         Return ClassConnectDb.Exec_Transaction_NonQuery(list)
@@ -185,7 +189,7 @@
         If (Not String.IsNullOrEmpty(value)) Then
             cond = String.Format("where c.cus_name like '%{0}%' or c.cus_tel like '%{0}%'", value)
         End If
-        sql = "SELECT wash_date,id,cus_name,cus_tel,number,case when status =1 then 'ส่งคืนแล้ว' else 'ยังไม่ส่งคืน' end as status
+        sql = "SELECT FORMAT (wash_date,'d','us')  as wash_date,id,cus_name,cus_tel,number,case when status =1 then 'ส่งคืนแล้ว' else 'ยังไม่ส่งคืน' end as status
               FROM    wash_header_mao_status " & cond
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt

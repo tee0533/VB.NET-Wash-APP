@@ -1,4 +1,6 @@
-﻿Public Class FrmCustomer_Mao
+﻿Imports System.Globalization
+
+Public Class FrmCustomer_Mao
     Public Action As String = "add"
     Private Sub BtMenu_Click(sender As Object, e As EventArgs) Handles btMenu.Click
         Me.Close()
@@ -75,8 +77,16 @@
 
     Private Sub save_list(pCusID As String)
         Dim dt As DataTable = ConvertToDataTable()
+        Dim vExpire_Date As Date = Today.AddDays(30)
+        Dim Expire As String = String.Empty
 
-        Dim res() As String = ClassServiceDb.add_wash_header_mao(pCusID, dt).Split("|")
+        If (cbType_Mao.SelectedValue = 3) Then
+            vExpire_Date = Today.AddDays(30)
+            Expire = vExpire_Date.ToString("dd/MM/yyy", New CultureInfo("en-US"))
+        Else
+            Expire = Now.ToString("dd/MM/yyy", New CultureInfo("en-US"))
+        End If
+        Dim res() As String = ClassConnectDb.add_wash_header_mao(pCusID, Expire, dt).Split("|")
         If (res(0) = "OK") Then
             MsgBox("บันทึกข้อมูลเรียบร้อย", MsgBoxStyle.Information, "Wash System")
             Me.Close()

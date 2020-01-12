@@ -319,7 +319,65 @@ Public Class ClassConnectDb
 
         Return res
     End Function
+    Public Shared Function add_wash_header_mao(pCusID As String, exprie_date As String, dt As DataTable) As String
+        Dim res As String = String.Empty
 
+        Using conn As SqlConnection = New SqlConnection()
+            conn.ConnectionString = strconn
+            conn.Open()
+
+            Using cmd As SqlCommand = conn.CreateCommand()
+                For Each row As DataRow In dt.Rows
+                    Dim arrTypeMao = row("TypeMao").ToString().Trim().Split("-")
+                    Dim TypeMao_id As String = arrTypeMao(0)
+                    Dim TypeMao_name As String = arrTypeMao(1)
+                    Dim sql As String = "INSERT INTO [dbo].[wash_header_mao]
+                               ([cus_id]
+                               ,[promotion_id]
+                               ,[promotion_name]
+                               ,[price]
+                               ,[description]
+                               ,[amount]
+                               ,[balance]
+                               ,[expire_date])
+                         VALUES
+                               (@cus_id
+                               ,@promotion_id
+                               ,@promotion_name
+                               ,@price
+                               ,@description
+                               ,@amount
+                               ,@balance
+                               ,@expire_date)"
+                    cmd.CommandType = CommandType.Text
+                    cmd.CommandText = sql
+                    cmd.Parameters.Clear()
+                    cmd.Parameters.Add(New SqlParameter("@cus_id", pCusID))
+                    cmd.Parameters.Add(New SqlParameter("@promotion_id", TypeMao_id))
+                    cmd.Parameters.Add(New SqlParameter("@promotion_name", TypeMao_name))
+                    cmd.Parameters.Add(New SqlParameter("@price", row("price")))
+                    cmd.Parameters.Add(New SqlParameter("@description", row("condition")))
+                    cmd.Parameters.Add(New SqlParameter("@amount", row("piece")))
+                    cmd.Parameters.Add(New SqlParameter("@balance", row("piece")))
+                    cmd.Parameters.Add(New SqlParameter("@expire_date", exprie_date))
+                    Try
+                        If cmd.ExecuteNonQuery() > 0 Then
+                            res = "OK|"
+                        Else
+                            res = "NOK|No Data Execute"
+                        End If
+
+                    Catch ex As Exception
+                        res = "NOK|" & ex.Message.ToString().Trim()
+                    End Try
+                Next row
+                conn.Close()
+                conn.Dispose()
+            End Using
+        End Using
+
+        Return res
+    End Function
 #End Region
 
 

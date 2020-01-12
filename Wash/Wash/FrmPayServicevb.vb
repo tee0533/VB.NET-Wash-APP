@@ -80,6 +80,7 @@
             If MsgBox("ชำระค่าบริการเรียบร้อยแล้ว  คุณต้องการพิมพ์ใบเสร็จหรือไม่ ?", vbOKCancel + vbInformation) = vbOK Then
                 Me.Close()
                 FrmViewer.wash_id = wash_id
+                FrmViewer.report_name = "รายงานการซักทั่วไป"
                 FrmViewer.ShowDialog()
                 FrmCusListGeneral.Load_Data()
             Else
