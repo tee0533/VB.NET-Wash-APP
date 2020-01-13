@@ -273,3 +273,55 @@ E:\SVN\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.FrmCusListMao_Status.resources
 E:\SVN\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.FrmCusSearch.resources
 E:\SVN\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.FrmCustomer_Mao_List.resources
 E:\SVN\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.FrmPromotion.resources
+D:\svn\Wash\Wash\bin\Debug\File Report\slip_customer_mao.rpt
+D:\svn\Wash\Wash\bin\Debug\File Report\wash_details.rpt
+D:\svn\Wash\Wash\bin\Debug\File Report\slip_customer_mao.vb
+D:\svn\Wash\Wash\bin\Debug\File Report\wash_details.vb
+D:\svn\Wash\Wash\bin\Debug\Wash.exe.config
+D:\svn\Wash\Wash\bin\Debug\Wash.exe
+D:\svn\Wash\Wash\bin\Debug\Wash.pdb
+D:\svn\Wash\Wash\bin\Debug\Wash.xml
+D:\svn\Wash\Wash\bin\Debug\AxShockwaveFlashObjects.dll
+D:\svn\Wash\Wash\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\svn\Wash\Wash\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\svn\Wash\Wash\bin\Debug\CrystalDecisions.Shared.dll
+D:\svn\Wash\Wash\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\svn\Wash\Wash\bin\Debug\ShockwaveFlashObjects.dll
+D:\svn\Wash\Wash\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\svn\Wash\Wash\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\svn\Wash\Wash\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\svn\Wash\Wash\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\svn\Wash\Wash\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\svn\Wash\Wash\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\svn\Wash\Wash\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\svn\Wash\Wash\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\svn\Wash\Wash\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\svn\Wash\Wash\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\svn\Wash\Wash\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\svn\Wash\Wash\bin\Debug\stdole.dll
+D:\svn\Wash\Wash\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\svn\Wash\Wash\obj\Debug\Wash.vbprojAssemblyReference.cache
+D:\svn\Wash\Wash\obj\Debug\Wash.Form2.resources
+D:\svn\Wash\Wash\obj\Debug\Wash.FrmCusListMao.resources
+D:\svn\Wash\Wash\obj\Debug\Wash.FrmCusListMao_Status.resources
+D:\svn\Wash\Wash\obj\Debug\Wash.FrmCusSearch.resources
+D:\svn\Wash\Wash\obj\Debug\Wash.FrmCustomer.resources
+D:\svn\Wash\Wash\obj\Debug\Wash.FrmCustomer_Mao.resources
+D:\svn\Wash\Wash\obj\Debug\Wash.FrmCustomer_Mao_List.resources
+D:\svn\Wash\Wash\obj\Debug\Wash.FrmLogin.resources
+D:\svn\Wash\Wash\obj\Debug\Wash.FrmMainMenu.resources
+D:\svn\Wash\Wash\obj\Debug\Wash.FrmPayServiceMao.resources
+D:\svn\Wash\Wash\obj\Debug\Wash.FrmPayServicevb.resources
+D:\svn\Wash\Wash\obj\Debug\Wash.FrmPromotion.resources
+D:\svn\Wash\Wash\obj\Debug\Wash.Form1.resources
+D:\svn\Wash\Wash\obj\Debug\Wash.FrmViewer.resources
+D:\svn\Wash\Wash\obj\Debug\Wash.Form3.resources
+D:\svn\Wash\Wash\obj\Debug\Wash.Form4.resources
+D:\svn\Wash\Wash\obj\Debug\Wash.FrmCusListGeneral.resources
+D:\svn\Wash\Wash\obj\Debug\Wash.Payment.resources
+D:\svn\Wash\Wash\obj\Debug\Wash.Resources.resources
+D:\svn\Wash\Wash\obj\Debug\Wash.vbproj.GenerateResource.cache
+D:\svn\Wash\Wash\obj\Debug\Wash.vbproj.CopyComplete
+D:\svn\Wash\Wash\obj\Debug\Wash.exe
+D:\svn\Wash\Wash\obj\Debug\Wash.xml
+D:\svn\Wash\Wash\obj\Debug\Wash.pdb
