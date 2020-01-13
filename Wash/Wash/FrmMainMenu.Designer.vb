@@ -23,13 +23,14 @@ Partial Class FrmMainMenu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMainMenu))
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.btnExit = New System.Windows.Forms.Button()
         Me.MenuGeneral = New System.Windows.Forms.Button()
         Me.MenuAddCusGeneral = New System.Windows.Forms.Button()
         Me.MenuCusMao_Status = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.MenuCusMao_Cometowash = New System.Windows.Forms.Button()
         Me.MenuCusMao = New System.Windows.Forms.Button()
         Me.MenuAddCusMao = New System.Windows.Forms.Button()
@@ -47,6 +48,7 @@ Partial Class FrmMainMenu
         '
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.SplitContainer1.Name = "SplitContainer1"
         '
         'SplitContainer1.Panel1
@@ -62,135 +64,139 @@ Partial Class FrmMainMenu
         Me.SplitContainer1.Panel2.Controls.Add(Me.MenuCusMao_Cometowash)
         Me.SplitContainer1.Panel2.Controls.Add(Me.MenuCusMao)
         Me.SplitContainer1.Panel2.Controls.Add(Me.MenuAddCusMao)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1199, 676)
-        Me.SplitContainer1.SplitterDistance = 685
+        Me.SplitContainer1.Size = New System.Drawing.Size(1586, 745)
+        Me.SplitContainer1.SplitterDistance = 906
+        Me.SplitContainer1.SplitterWidth = 5
         Me.SplitContainer1.TabIndex = 24
         '
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.Brown
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button3.BackgroundImage = Global.Wash.My.Resources.Resources.BT_report
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Button3.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button3.Location = New System.Drawing.Point(0, 348)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button3.Location = New System.Drawing.Point(0, 428)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(685, 203)
+        Me.Button3.Size = New System.Drawing.Size(906, 250)
         Me.Button3.TabIndex = 29
-        Me.Button3.Text = "รายงาน"
         Me.Button3.UseVisualStyleBackColor = False
-        '
-        'btnExit
-        '
-        Me.btnExit.BackColor = System.Drawing.Color.Gray
-        Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btnExit.ForeColor = System.Drawing.Color.White
-        Me.btnExit.Location = New System.Drawing.Point(255, 512)
-        Me.btnExit.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(244, 57)
-        Me.btnExit.TabIndex = 30
-        Me.btnExit.Text = "ปิดโปรแกรม"
-        Me.btnExit.UseVisualStyleBackColor = False
         '
         'MenuGeneral
         '
         Me.MenuGeneral.BackColor = System.Drawing.SystemColors.Highlight
-        Me.MenuGeneral.BackgroundImage = Global.Wash.My.Resources.Resources.รายกรลูกค้าธรรมดา
-        Me.MenuGeneral.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.MenuGeneral.BackgroundImage = Global.Wash.My.Resources.Resources.BT_รายการลูกค้าาา
+        Me.MenuGeneral.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.MenuGeneral.Dock = System.Windows.Forms.DockStyle.Top
         Me.MenuGeneral.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.MenuGeneral.ForeColor = System.Drawing.SystemColors.Control
-        Me.MenuGeneral.Location = New System.Drawing.Point(0, 171)
-        Me.MenuGeneral.Margin = New System.Windows.Forms.Padding(2)
+        Me.MenuGeneral.Location = New System.Drawing.Point(0, 210)
+        Me.MenuGeneral.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MenuGeneral.Name = "MenuGeneral"
-        Me.MenuGeneral.Size = New System.Drawing.Size(685, 177)
+        Me.MenuGeneral.Size = New System.Drawing.Size(906, 218)
         Me.MenuGeneral.TabIndex = 28
         Me.MenuGeneral.UseVisualStyleBackColor = False
         '
         'MenuAddCusGeneral
         '
         Me.MenuAddCusGeneral.BackColor = System.Drawing.SystemColors.Highlight
-        Me.MenuAddCusGeneral.BackgroundImage = Global.Wash.My.Resources.Resources.เพิ่มลูกค้าธรรมดา
-        Me.MenuAddCusGeneral.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.MenuAddCusGeneral.BackgroundImage = Global.Wash.My.Resources.Resources.BT_เพิ่มลูกค้าธรรมดา_vbvb
+        Me.MenuAddCusGeneral.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.MenuAddCusGeneral.Dock = System.Windows.Forms.DockStyle.Top
         Me.MenuAddCusGeneral.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.MenuAddCusGeneral.ForeColor = System.Drawing.SystemColors.Control
         Me.MenuAddCusGeneral.Location = New System.Drawing.Point(0, 0)
-        Me.MenuAddCusGeneral.Margin = New System.Windows.Forms.Padding(2)
+        Me.MenuAddCusGeneral.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MenuAddCusGeneral.Name = "MenuAddCusGeneral"
-        Me.MenuAddCusGeneral.Size = New System.Drawing.Size(685, 171)
+        Me.MenuAddCusGeneral.Size = New System.Drawing.Size(906, 210)
         Me.MenuAddCusGeneral.TabIndex = 24
         Me.MenuAddCusGeneral.UseVisualStyleBackColor = False
         '
         'MenuCusMao_Status
         '
         Me.MenuCusMao_Status.BackColor = System.Drawing.Color.Green
-        Me.MenuCusMao_Status.BackgroundImage = Global.Wash.My.Resources.Resources.สถานะรับคืน
-        Me.MenuCusMao_Status.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.MenuCusMao_Status.BackgroundImage = Global.Wash.My.Resources.Resources.Bt_สถานะรับคืน
+        Me.MenuCusMao_Status.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.MenuCusMao_Status.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.MenuCusMao_Status.ForeColor = System.Drawing.Color.White
-        Me.MenuCusMao_Status.Location = New System.Drawing.Point(2, 385)
-        Me.MenuCusMao_Status.Margin = New System.Windows.Forms.Padding(2)
+        Me.MenuCusMao_Status.Location = New System.Drawing.Point(3, 465)
+        Me.MenuCusMao_Status.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MenuCusMao_Status.Name = "MenuCusMao_Status"
-        Me.MenuCusMao_Status.Size = New System.Drawing.Size(502, 123)
+        Me.MenuCusMao_Status.Size = New System.Drawing.Size(669, 151)
         Me.MenuCusMao_Status.TabIndex = 31
         Me.MenuCusMao_Status.UseVisualStyleBackColor = False
+        '
+        'btnExit
+        '
+        Me.btnExit.BackColor = System.Drawing.Color.Gray
+        Me.btnExit.BackgroundImage = Global.Wash.My.Resources.Resources.Btclose
+        Me.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btnExit.ForeColor = System.Drawing.Color.White
+        Me.btnExit.Location = New System.Drawing.Point(341, 656)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(325, 81)
+        Me.btnExit.TabIndex = 30
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'MenuCusMao_Cometowash
         '
         Me.MenuCusMao_Cometowash.BackColor = System.Drawing.Color.Green
-        Me.MenuCusMao_Cometowash.BackgroundImage = Global.Wash.My.Resources.Resources.ลูกค้าเหมามาซัก
-        Me.MenuCusMao_Cometowash.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.MenuCusMao_Cometowash.BackgroundImage = Global.Wash.My.Resources.Resources.Bt_ค้าเหมามาซัก
+        Me.MenuCusMao_Cometowash.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.MenuCusMao_Cometowash.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.MenuCusMao_Cometowash.ForeColor = System.Drawing.Color.White
-        Me.MenuCusMao_Cometowash.Location = New System.Drawing.Point(2, 257)
-        Me.MenuCusMao_Cometowash.Margin = New System.Windows.Forms.Padding(2)
+        Me.MenuCusMao_Cometowash.Location = New System.Drawing.Point(3, 310)
+        Me.MenuCusMao_Cometowash.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MenuCusMao_Cometowash.Name = "MenuCusMao_Cometowash"
-        Me.MenuCusMao_Cometowash.Size = New System.Drawing.Size(502, 123)
+        Me.MenuCusMao_Cometowash.Size = New System.Drawing.Size(669, 151)
         Me.MenuCusMao_Cometowash.TabIndex = 29
         Me.MenuCusMao_Cometowash.UseVisualStyleBackColor = False
         '
         'MenuCusMao
         '
         Me.MenuCusMao.BackColor = System.Drawing.Color.Green
-        Me.MenuCusMao.BackgroundImage = Global.Wash.My.Resources.Resources.รายการลูกค้าเหมา
-        Me.MenuCusMao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.MenuCusMao.BackgroundImage = Global.Wash.My.Resources.Resources.Bt_รายการเหมา
+        Me.MenuCusMao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.MenuCusMao.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.MenuCusMao.ForeColor = System.Drawing.Color.White
-        Me.MenuCusMao.Location = New System.Drawing.Point(2, 130)
-        Me.MenuCusMao.Margin = New System.Windows.Forms.Padding(2)
+        Me.MenuCusMao.Location = New System.Drawing.Point(3, 156)
+        Me.MenuCusMao.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MenuCusMao.Name = "MenuCusMao"
-        Me.MenuCusMao.Size = New System.Drawing.Size(502, 123)
+        Me.MenuCusMao.Size = New System.Drawing.Size(669, 151)
         Me.MenuCusMao.TabIndex = 28
         Me.MenuCusMao.UseVisualStyleBackColor = False
         '
         'MenuAddCusMao
         '
         Me.MenuAddCusMao.BackColor = System.Drawing.Color.Green
-        Me.MenuAddCusMao.BackgroundImage = Global.Wash.My.Resources.Resources.เพิ่มลูกค้าเหมา
-        Me.MenuAddCusMao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.MenuAddCusMao.BackgroundImage = Global.Wash.My.Resources.Resources.Bt_เพิ่มลูกค้าทั่วไปปป
+        Me.MenuAddCusMao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.MenuAddCusMao.CausesValidation = False
         Me.MenuAddCusMao.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MenuAddCusMao.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.MenuAddCusMao.ForeColor = System.Drawing.Color.White
-        Me.MenuAddCusMao.Location = New System.Drawing.Point(2, 2)
-        Me.MenuAddCusMao.Margin = New System.Windows.Forms.Padding(2)
+        Me.MenuAddCusMao.Location = New System.Drawing.Point(3, 2)
+        Me.MenuAddCusMao.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MenuAddCusMao.Name = "MenuAddCusMao"
-        Me.MenuAddCusMao.Size = New System.Drawing.Size(502, 123)
+        Me.MenuAddCusMao.Size = New System.Drawing.Size(669, 151)
         Me.MenuAddCusMao.TabIndex = 27
         Me.MenuAddCusMao.UseVisualStyleBackColor = False
         '
         'FrmMainMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1199, 676)
+        Me.ClientSize = New System.Drawing.Size(1586, 745)
         Me.Controls.Add(Me.SplitContainer1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmMainMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmMainMenu"
+        Me.Text = "ระบบบริหารจัดการร้านซักรีด"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()

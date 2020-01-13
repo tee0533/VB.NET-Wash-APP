@@ -384,6 +384,42 @@
     <Content Include="Icon\unfollow.png" />
     <Content Include="Icon\user.png" />
     <Content Include="Icon\verified-account.png" />
+    <None Include="Resources\ยกเลิก.jpg" />
+    <None Include="Resources\เข้าสู่ระบบ.jpg" />
+    <None Include="Resources\F1.jpg" />
+    <None Include="Resources\Btclose.jpg" />
+    <None Include="Resources\Bt-สถานะรับคืน.jpg" />
+    <None Include="Resources\Bt-ค้าเหมามาซัก.jpg" />
+    <None Include="Resources\Bt-รายการเหมา.jpg" />
+    <None Include="Resources\Bt-เพิ่มลูกค้าทั่วไปปป.jpg" />
+    <None Include="Resources\BT-report.jpg" />
+    <None Include="Resources\BT-รายการลูกค้าาา.jpg" />
+    <None Include="Resources\BT-เพิ่มลูกค้าธรรมดา-vbvb.jpg" />
+    <None Include="Resources\รายการใหม้.jpg" />
+    <None Include="Resources\แก้ไข.jpg" />
+    <None Include="Resources\บันทึก.jpg" />
+    <None Include="Resources\เพิ่ม.jpg" />
+    <None Include="Resources\BG.jpg" />
+    <None Include="Resources\เพิ่มลูกค้าา.jpg" />
+    <None Include="Resources\รวมเงินน.jpg" />
+    <None Include="Resources\เพิ่มลูกต้า.jpg" />
+    <None Include="Resources\ชรำระค่าบริการรวม.jpg" />
+    <None Include="Resources\จ่ายเงิน1.jpg" />
+    <None Include="Resources\ล้าง.jpg" />
+    <None Include="Resources\พอดี.jpg" />
+    <None Include="Resources\1000.jpg" />
+    <None Include="Resources\500.jpg" />
+    <None Include="Resources\100.jpg" />
+    <None Include="Resources\ชำระค่าบริการนะ.jpg" />
+    <None Include="Resources\ชำระค่าบริการ.jpg" />
+    <None Include="Resources\กลับ.jpg" />
+    <None Include="Resources\ลบบ.jpg" />
+    <None Include="Resources\พิมพ์.jpg" />
+    <None Include="Resources\จ่ายเงิน.jpg" />
+    <None Include="Resources\เพิ่มลค.jpg" />
+    <None Include="Resources\รายการลูกค้า.jpg" />
+    <None Include="Resources\ค้นหา1.jpg" />
+    <None Include="Resources\BT-Home.jpg" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
