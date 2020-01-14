@@ -47,6 +47,16 @@ Wash
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Wash.My.Resources.Resources.BG_List_cus">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Wash.My.Resources.Resources.BGG">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Wash.My.Resources.Resources.BT_Home">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -162,6 +172,11 @@ Wash
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Wash.My.Resources.Resources.เพิ่มลูกค้าเหมา1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Wash.My.Resources.Resources.เพิ่มลูกค้าธรรมดา">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -177,12 +192,42 @@ Wash
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Wash.My.Resources.Resources.เลือกชนิดเหมา">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Wash.My.Resources.Resources.เลือกชนิดเหมาา">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Wash.My.Resources.Resources.แก้ไข">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Wash.My.Resources.Resources.แก้ไข1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Wash.My.Resources.Resources.กลับ">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Wash.My.Resources.Resources.กลุ่มรายการ">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Wash.My.Resources.Resources.คงเหลือ">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Wash.My.Resources.Resources.ค้นเหมา">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -232,6 +277,11 @@ Wash
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Wash.My.Resources.Resources.ต่อโปรโมชั่น">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Wash.My.Resources.Resources.บันทึก">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -248,6 +298,11 @@ Wash
 </summary>
 </member>
 <member name="P:Wash.My.Resources.Resources.ยกเลิก">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Wash.My.Resources.Resources.รวมเ">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -277,6 +332,11 @@ Wash
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Wash.My.Resources.Resources.รายการลูกค้า1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Wash.My.Resources.Resources.รายการลูกค้าเหมา">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -293,6 +353,16 @@ Wash
 </summary>
 </member>
 <member name="P:Wash.My.Resources.Resources.ลูกค้าเหมามาซัก">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Wash.My.Resources.Resources.ส่งคืนผ้า">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Wash.My.Resources.Resources.สถานะเหมา">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
