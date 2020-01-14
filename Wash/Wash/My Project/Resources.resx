@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="สถานะรับคืน" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\สถานะรับคืน.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ชรำระค่าบริการรวมเหมาา" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ชรำระค่าบริการรวมเหมาา.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Untitled-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,8 +139,14 @@
   <data name="รายการลูกค้า" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\รายการลูกค้า.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ยกเลิก" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ยกเลิก.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="กลับ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\กลับ.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Bt-รายการเหมา" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bt-รายการเหมา.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,9 +157,6 @@
   <data name="ชำระค่าบริการ" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ชำระค่าบริการ.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ค้นหา1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ค้นหา1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Btclose" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Btclose.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,11 +166,14 @@
   <data name="เพิ่มลค" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\เพิ่มลค.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="เพิ่ม" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\เพิ่ม.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Bt-สถานะรับคืน" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bt-สถานะรับคืน.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="รายกรลูกค้าธรรมดา1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\รายกรลูกค้าธรรมดา1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ค้นหา1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ค้นหา1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="จ่ายเงิน" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\จ่ายเงิน.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BT-รายการลูกค้าาา" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BT-รายการลูกค้าาา.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,11 +181,11 @@
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icon\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="follow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\follow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="verified-account" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icon\verified-account.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="เพิ่มลูกต้า" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\เพิ่มลูกต้า.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,8 +196,8 @@
   <data name="BT-เพิ่มลูกค้าธรรมดา-vbvb" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BT-เพิ่มลูกค้าธรรมดา-vbvb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="พิมพ์" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\พิมพ์.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ลูกค้าเหมามาซัก" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ลูกค้าเหมามาซัก.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,14 +211,14 @@
   <data name="รายการใหม้" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\รายการใหม้.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icon\save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Bt-ค้าเหมามาซัก" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bt-ค้าเหมามาซัก.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\100.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="แก้ไข" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\แก้ไข.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="บันทึก" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\บันทึก.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,14 +229,14 @@
   <data name="unfollow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icon\unfollow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="สถานะรับคืน" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\สถานะรับคืน.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="verified-account" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icon\verified-account.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BT-report" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BT-report.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="กลับ" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\กลับ.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="รายกรลูกค้าธรรมดา1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\รายกรลูกค้าธรรมดา1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1000" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1000.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,14 +244,14 @@
   <data name="รายกรลูกค้าธรรมดา" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\รายกรลูกค้าธรรมดา.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="แก้ไข" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\แก้ไข.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icon\save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="รายการลูกค้าเหมา" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\รายการลูกค้าเหมา.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icon\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="เพิ่ม" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\เพิ่ม.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="เพิ่มลูกค้าธรรมดา" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\เพิ่มลูกค้าธรรมดา.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,8 +265,8 @@
   <data name="Bt-เพิ่มลูกค้าทั่วไปปป" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bt-เพิ่มลูกค้าทั่วไปปป.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Bt-สถานะรับคืน" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bt-สถานะรับคืน.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="พิมพ์" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\พิมพ์.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="เพิ่มลูกค้าา" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\เพิ่มลูกค้าา.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,8 +274,8 @@
   <data name="ชำระค่าบริการนะ" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ชำระค่าบริการนะ.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="จ่ายเงิน" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\จ่ายเงิน.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ชำระค่าบริการเหมา" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ชำระค่าบริการเหมา.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="F1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\F1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,10 +283,7 @@
   <data name="เข้าสู่ระบบ" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\เข้าสู่ระบบ.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ยกเลิก" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ยกเลิก.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ชำระค่าบริการนะเหมาา" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ชำระค่าบริการนะเหมาา.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -384,6 +384,9 @@
     <Content Include="Icon\unfollow.png" />
     <Content Include="Icon\user.png" />
     <Content Include="Icon\verified-account.png" />
+    <None Include="Resources\ชำระค่าบริการนะเหมาา.jpg" />
+    <None Include="Resources\ชรำระค่าบริการรวมเหมาา.jpg" />
+    <None Include="Resources\ชำระค่าบริการเหมา.jpg" />
     <None Include="Resources\ยกเลิก.jpg" />
     <None Include="Resources\เข้าสู่ระบบ.jpg" />
     <None Include="Resources\F1.jpg" />

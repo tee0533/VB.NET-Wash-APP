@@ -22,38 +22,44 @@ Partial Class FrmCustomer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim btSave As System.Windows.Forms.Button
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim btSave As System.Windows.Forms.Button
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCustomer))
         Me.pnlFooter = New System.Windows.Forms.Panel()
+        Me.btNew = New System.Windows.Forms.Button()
+        Me.btEdit = New System.Windows.Forms.Button()
+        Me.btDel = New System.Windows.Forms.Button()
+        Me.btBack = New System.Windows.Forms.Button()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.CheckBox16 = New System.Windows.Forms.CheckBox()
         Me.CheckBox17 = New System.Windows.Forms.CheckBox()
         Me.CheckBox18 = New System.Windows.Forms.CheckBox()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.CheckBox7 = New System.Windows.Forms.CheckBox()
         Me.CheckBox8 = New System.Windows.Forms.CheckBox()
         Me.CheckBox9 = New System.Windows.Forms.CheckBox()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.Label19 = New System.Windows.Forms.Label()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.ComboBox6 = New System.Windows.Forms.ComboBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.CheckBox5 = New System.Windows.Forms.CheckBox()
         Me.CheckBox6 = New System.Windows.Forms.CheckBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.CheckBox13 = New System.Windows.Forms.CheckBox()
         Me.CheckBox14 = New System.Windows.Forms.CheckBox()
         Me.CheckBox15 = New System.Windows.Forms.CheckBox()
-        Me.Panel6 = New System.Windows.Forms.Panel()
         Me.CheckBox10 = New System.Windows.Forms.CheckBox()
         Me.CheckBox11 = New System.Windows.Forms.CheckBox()
         Me.CheckBox12 = New System.Windows.Forms.CheckBox()
@@ -61,6 +67,8 @@ Partial Class FrmCustomer
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.ComboBox4 = New System.Windows.Forms.ComboBox()
@@ -73,6 +81,7 @@ Partial Class FrmCustomer
         Me.cmbCategory = New System.Windows.Forms.ComboBox()
         Me.cmbList = New System.Windows.Forms.ComboBox()
         Me.cmbGroup = New System.Windows.Forms.ComboBox()
+        Me.btAdd = New System.Windows.Forms.Button()
         Me.dgv = New System.Windows.Forms.DataGridView()
         Me.order = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.group = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -82,20 +91,11 @@ Partial Class FrmCustomer
         Me.total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.unit_price = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.price = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.btAdd = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.txtTotal_Price = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.dtpDate = New System.Windows.Forms.DateTimePicker()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.btNew = New System.Windows.Forms.Button()
-        Me.btEdit = New System.Windows.Forms.Button()
-        Me.btDel = New System.Windows.Forms.Button()
-        Me.btBack = New System.Windows.Forms.Button()
         Me.pnlHeader = New System.Windows.Forms.Panel()
         Me.txtTel = New System.Windows.Forms.TextBox()
         Me.txtName = New System.Windows.Forms.TextBox()
@@ -106,18 +106,34 @@ Partial Class FrmCustomer
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
-        Me.Panel5.SuspendLayout()
         Me.Panel8.SuspendLayout()
+        Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        Me.Panel7.SuspendLayout()
         Me.Panel6.SuspendLayout()
+        Me.Panel7.SuspendLayout()
         Me.pnlOption.SuspendLayout()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.pnlHeader.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'btSave
+        '
+        btSave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        btSave.BackgroundImage = Global.Wash.My.Resources.Resources.บันทึก
+        btSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        btSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        btSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        btSave.Location = New System.Drawing.Point(639, 0)
+        btSave.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        btSave.Name = "btSave"
+        btSave.Size = New System.Drawing.Size(183, 75)
+        btSave.TabIndex = 44
+        btSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        btSave.UseVisualStyleBackColor = True
+        AddHandler btSave.Click, AddressOf Me.btPrint_Click
         '
         'pnlFooter
         '
@@ -130,16 +146,73 @@ Partial Class FrmCustomer
         Me.pnlFooter.Controls.Add(Me.btBack)
         Me.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.pnlFooter.Location = New System.Drawing.Point(0, 899)
-        Me.pnlFooter.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnlFooter.Margin = New System.Windows.Forms.Padding(4)
         Me.pnlFooter.Name = "pnlFooter"
         Me.pnlFooter.Size = New System.Drawing.Size(1420, 80)
         Me.pnlFooter.TabIndex = 1
+        '
+        'btNew
+        '
+        Me.btNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btNew.BackgroundImage = Global.Wash.My.Resources.Resources.รายการใหม้
+        Me.btNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btNew.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btNew.Location = New System.Drawing.Point(1210, 0)
+        Me.btNew.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btNew.Name = "btNew"
+        Me.btNew.Size = New System.Drawing.Size(205, 75)
+        Me.btNew.TabIndex = 47
+        Me.btNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btNew.UseVisualStyleBackColor = True
+        '
+        'btEdit
+        '
+        Me.btEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btEdit.BackgroundImage = Global.Wash.My.Resources.Resources.แก้ไข
+        Me.btEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btEdit.Location = New System.Drawing.Point(1016, 0)
+        Me.btEdit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btEdit.Name = "btEdit"
+        Me.btEdit.Size = New System.Drawing.Size(193, 75)
+        Me.btEdit.TabIndex = 46
+        Me.btEdit.UseVisualStyleBackColor = True
+        '
+        'btDel
+        '
+        Me.btDel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btDel.BackgroundImage = Global.Wash.My.Resources.Resources.ลบบ
+        Me.btDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btDel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btDel.Location = New System.Drawing.Point(823, 0)
+        Me.btDel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btDel.Name = "btDel"
+        Me.btDel.Size = New System.Drawing.Size(192, 75)
+        Me.btDel.TabIndex = 45
+        Me.btDel.UseVisualStyleBackColor = True
+        '
+        'btBack
+        '
+        Me.btBack.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btBack.BackgroundImage = Global.Wash.My.Resources.Resources.กลับ
+        Me.btBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btBack.Location = New System.Drawing.Point(0, 0)
+        Me.btBack.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btBack.Name = "btBack"
+        Me.btBack.Size = New System.Drawing.Size(205, 75)
+        Me.btBack.TabIndex = 43
+        Me.btBack.UseVisualStyleBackColor = True
         '
         'SplitContainer1
         '
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SplitContainer1.Location = New System.Drawing.Point(0, 130)
-        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(4)
         Me.SplitContainer1.Name = "SplitContainer1"
         '
         'SplitContainer1.Panel1
@@ -170,6 +243,62 @@ Partial Class FrmCustomer
         Me.SplitContainer1.SplitterWidth = 5
         Me.SplitContainer1.TabIndex = 2
         '
+        'Panel8
+        '
+        Me.Panel8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel8.BackColor = System.Drawing.Color.Transparent
+        Me.Panel8.Controls.Add(Me.CheckBox16)
+        Me.Panel8.Controls.Add(Me.CheckBox17)
+        Me.Panel8.Controls.Add(Me.CheckBox18)
+        Me.Panel8.Location = New System.Drawing.Point(36, 286)
+        Me.Panel8.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(288, 50)
+        Me.Panel8.TabIndex = 58
+        Me.Panel8.Visible = False
+        '
+        'CheckBox16
+        '
+        Me.CheckBox16.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CheckBox16.AutoSize = True
+        Me.CheckBox16.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.CheckBox16.ForeColor = System.Drawing.SystemColors.Window
+        Me.CheckBox16.Location = New System.Drawing.Point(4, 12)
+        Me.CheckBox16.Margin = New System.Windows.Forms.Padding(4)
+        Me.CheckBox16.Name = "CheckBox16"
+        Me.CheckBox16.Size = New System.Drawing.Size(18, 17)
+        Me.CheckBox16.TabIndex = 54
+        Me.CheckBox16.UseVisualStyleBackColor = True
+        '
+        'CheckBox17
+        '
+        Me.CheckBox17.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CheckBox17.AutoSize = True
+        Me.CheckBox17.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.CheckBox17.ForeColor = System.Drawing.SystemColors.Window
+        Me.CheckBox17.Location = New System.Drawing.Point(92, 12)
+        Me.CheckBox17.Margin = New System.Windows.Forms.Padding(4)
+        Me.CheckBox17.Name = "CheckBox17"
+        Me.CheckBox17.Size = New System.Drawing.Size(18, 17)
+        Me.CheckBox17.TabIndex = 55
+        Me.CheckBox17.UseVisualStyleBackColor = True
+        '
+        'CheckBox18
+        '
+        Me.CheckBox18.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CheckBox18.AutoSize = True
+        Me.CheckBox18.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.CheckBox18.ForeColor = System.Drawing.SystemColors.Window
+        Me.CheckBox18.Location = New System.Drawing.Point(194, 12)
+        Me.CheckBox18.Margin = New System.Windows.Forms.Padding(4)
+        Me.CheckBox18.Name = "CheckBox18"
+        Me.CheckBox18.Size = New System.Drawing.Size(18, 17)
+        Me.CheckBox18.TabIndex = 56
+        Me.CheckBox18.UseVisualStyleBackColor = True
+        '
         'Panel5
         '
         Me.Panel5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -185,67 +314,11 @@ Partial Class FrmCustomer
         Me.Panel5.Controls.Add(Me.Button6)
         Me.Panel5.Controls.Add(Me.ComboBox6)
         Me.Panel5.Location = New System.Drawing.Point(39, 282)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(288, 50)
         Me.Panel5.TabIndex = 58
         Me.Panel5.Visible = False
-        '
-        'Panel8
-        '
-        Me.Panel8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel8.BackColor = System.Drawing.Color.Transparent
-        Me.Panel8.Controls.Add(Me.CheckBox16)
-        Me.Panel8.Controls.Add(Me.CheckBox17)
-        Me.Panel8.Controls.Add(Me.CheckBox18)
-        Me.Panel8.Location = New System.Drawing.Point(39, 282)
-        Me.Panel8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(288, 50)
-        Me.Panel8.TabIndex = 58
-        Me.Panel8.Visible = False
-        '
-        'CheckBox16
-        '
-        Me.CheckBox16.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CheckBox16.AutoSize = True
-        Me.CheckBox16.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.CheckBox16.ForeColor = System.Drawing.SystemColors.Window
-        Me.CheckBox16.Location = New System.Drawing.Point(4, 12)
-        Me.CheckBox16.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.CheckBox16.Name = "CheckBox16"
-        Me.CheckBox16.Size = New System.Drawing.Size(18, 17)
-        Me.CheckBox16.TabIndex = 54
-        Me.CheckBox16.UseVisualStyleBackColor = True
-        '
-        'CheckBox17
-        '
-        Me.CheckBox17.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CheckBox17.AutoSize = True
-        Me.CheckBox17.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.CheckBox17.ForeColor = System.Drawing.SystemColors.Window
-        Me.CheckBox17.Location = New System.Drawing.Point(92, 12)
-        Me.CheckBox17.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.CheckBox17.Name = "CheckBox17"
-        Me.CheckBox17.Size = New System.Drawing.Size(18, 17)
-        Me.CheckBox17.TabIndex = 55
-        Me.CheckBox17.UseVisualStyleBackColor = True
-        '
-        'CheckBox18
-        '
-        Me.CheckBox18.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CheckBox18.AutoSize = True
-        Me.CheckBox18.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.CheckBox18.ForeColor = System.Drawing.SystemColors.Window
-        Me.CheckBox18.Location = New System.Drawing.Point(194, 12)
-        Me.CheckBox18.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.CheckBox18.Name = "CheckBox18"
-        Me.CheckBox18.Size = New System.Drawing.Size(18, 17)
-        Me.CheckBox18.TabIndex = 56
-        Me.CheckBox18.UseVisualStyleBackColor = True
         '
         'CheckBox7
         '
@@ -255,7 +328,7 @@ Partial Class FrmCustomer
         Me.CheckBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckBox7.ForeColor = System.Drawing.SystemColors.Window
         Me.CheckBox7.Location = New System.Drawing.Point(4, 12)
-        Me.CheckBox7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CheckBox7.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckBox7.Name = "CheckBox7"
         Me.CheckBox7.Size = New System.Drawing.Size(18, 17)
         Me.CheckBox7.TabIndex = 54
@@ -269,7 +342,7 @@ Partial Class FrmCustomer
         Me.CheckBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckBox8.ForeColor = System.Drawing.SystemColors.Window
         Me.CheckBox8.Location = New System.Drawing.Point(91, 12)
-        Me.CheckBox8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CheckBox8.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckBox8.Name = "CheckBox8"
         Me.CheckBox8.Size = New System.Drawing.Size(18, 17)
         Me.CheckBox8.TabIndex = 55
@@ -283,7 +356,7 @@ Partial Class FrmCustomer
         Me.CheckBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckBox9.ForeColor = System.Drawing.SystemColors.Window
         Me.CheckBox9.Location = New System.Drawing.Point(192, 12)
-        Me.CheckBox9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CheckBox9.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckBox9.Name = "CheckBox9"
         Me.CheckBox9.Size = New System.Drawing.Size(18, 17)
         Me.CheckBox9.TabIndex = 56
@@ -326,6 +399,20 @@ Partial Class FrmCustomer
         Me.ComboBox5.Size = New System.Drawing.Size(273, 38)
         Me.ComboBox5.TabIndex = 47
         '
+        'Button7
+        '
+        Me.Button7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Button7.Image = Global.Wash.My.Resources.Resources.follow
+        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button7.Location = New System.Drawing.Point(0, 128)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(272, 59)
+        Me.Button7.TabIndex = 44
+        Me.Button7.Text = "เพิ่ม"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
         'Label19
         '
         Me.Label19.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -338,6 +425,20 @@ Partial Class FrmCustomer
         Me.Label19.Size = New System.Drawing.Size(74, 25)
         Me.Label19.TabIndex = 50
         Me.Label19.Text = "ประเภท"
+        '
+        'Button6
+        '
+        Me.Button6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Button6.Image = Global.Wash.My.Resources.Resources.follow
+        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button6.Location = New System.Drawing.Point(0, 128)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(272, 59)
+        Me.Button6.TabIndex = 44
+        Me.Button6.Text = "เพิ่ม"
+        Me.Button6.UseVisualStyleBackColor = True
         '
         'ComboBox6
         '
@@ -359,7 +460,7 @@ Partial Class FrmCustomer
         Me.Panel4.Controls.Add(Me.CheckBox5)
         Me.Panel4.Controls.Add(Me.CheckBox6)
         Me.Panel4.Location = New System.Drawing.Point(39, 286)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(288, 50)
         Me.Panel4.TabIndex = 58
@@ -373,7 +474,7 @@ Partial Class FrmCustomer
         Me.CheckBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckBox4.ForeColor = System.Drawing.SystemColors.Window
         Me.CheckBox4.Location = New System.Drawing.Point(4, 12)
-        Me.CheckBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CheckBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckBox4.Name = "CheckBox4"
         Me.CheckBox4.Size = New System.Drawing.Size(18, 17)
         Me.CheckBox4.TabIndex = 54
@@ -387,7 +488,7 @@ Partial Class FrmCustomer
         Me.CheckBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckBox5.ForeColor = System.Drawing.SystemColors.Window
         Me.CheckBox5.Location = New System.Drawing.Point(108, 12)
-        Me.CheckBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CheckBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckBox5.Name = "CheckBox5"
         Me.CheckBox5.Size = New System.Drawing.Size(18, 17)
         Me.CheckBox5.TabIndex = 55
@@ -401,7 +502,7 @@ Partial Class FrmCustomer
         Me.CheckBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckBox6.ForeColor = System.Drawing.SystemColors.Window
         Me.CheckBox6.Location = New System.Drawing.Point(212, 12)
-        Me.CheckBox6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CheckBox6.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckBox6.Name = "CheckBox6"
         Me.CheckBox6.Size = New System.Drawing.Size(18, 17)
         Me.CheckBox6.TabIndex = 56
@@ -423,11 +524,25 @@ Partial Class FrmCustomer
         Me.Panel3.Controls.Add(Me.ComboBox4)
         Me.Panel3.Controls.Add(Me.Label14)
         Me.Panel3.Location = New System.Drawing.Point(42, 278)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(288, 50)
         Me.Panel3.TabIndex = 58
         Me.Panel3.Visible = False
+        '
+        'Panel6
+        '
+        Me.Panel6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel6.Controls.Add(Me.Panel7)
+        Me.Panel6.Controls.Add(Me.CheckBox10)
+        Me.Panel6.Controls.Add(Me.CheckBox11)
+        Me.Panel6.Controls.Add(Me.CheckBox12)
+        Me.Panel6.Location = New System.Drawing.Point(1620, -113)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(288, 50)
+        Me.Panel6.TabIndex = 58
+        Me.Panel6.Visible = False
         '
         'Panel7
         '
@@ -436,7 +551,7 @@ Partial Class FrmCustomer
         Me.Panel7.Controls.Add(Me.CheckBox14)
         Me.Panel7.Controls.Add(Me.CheckBox15)
         Me.Panel7.Location = New System.Drawing.Point(1572, -59)
-        Me.Panel7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel7.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(288, 50)
         Me.Panel7.TabIndex = 58
@@ -450,7 +565,7 @@ Partial Class FrmCustomer
         Me.CheckBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckBox13.ForeColor = System.Drawing.SystemColors.Window
         Me.CheckBox13.Location = New System.Drawing.Point(4, 12)
-        Me.CheckBox13.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CheckBox13.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckBox13.Name = "CheckBox13"
         Me.CheckBox13.Size = New System.Drawing.Size(67, 33)
         Me.CheckBox13.TabIndex = 54
@@ -465,7 +580,7 @@ Partial Class FrmCustomer
         Me.CheckBox14.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckBox14.ForeColor = System.Drawing.SystemColors.Window
         Me.CheckBox14.Location = New System.Drawing.Point(108, 12)
-        Me.CheckBox14.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CheckBox14.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckBox14.Name = "CheckBox14"
         Me.CheckBox14.Size = New System.Drawing.Size(80, 33)
         Me.CheckBox14.TabIndex = 55
@@ -480,26 +595,12 @@ Partial Class FrmCustomer
         Me.CheckBox15.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckBox15.ForeColor = System.Drawing.SystemColors.Window
         Me.CheckBox15.Location = New System.Drawing.Point(212, 12)
-        Me.CheckBox15.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CheckBox15.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckBox15.Name = "CheckBox15"
         Me.CheckBox15.Size = New System.Drawing.Size(70, 33)
         Me.CheckBox15.TabIndex = 56
         Me.CheckBox15.Text = "ยาก"
         Me.CheckBox15.UseVisualStyleBackColor = True
-        '
-        'Panel6
-        '
-        Me.Panel6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel6.Controls.Add(Me.Panel7)
-        Me.Panel6.Controls.Add(Me.CheckBox10)
-        Me.Panel6.Controls.Add(Me.CheckBox11)
-        Me.Panel6.Controls.Add(Me.CheckBox12)
-        Me.Panel6.Location = New System.Drawing.Point(1620, -113)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(288, 50)
-        Me.Panel6.TabIndex = 58
-        Me.Panel6.Visible = False
         '
         'CheckBox10
         '
@@ -509,7 +610,7 @@ Partial Class FrmCustomer
         Me.CheckBox10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckBox10.ForeColor = System.Drawing.SystemColors.Window
         Me.CheckBox10.Location = New System.Drawing.Point(4, 12)
-        Me.CheckBox10.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CheckBox10.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckBox10.Name = "CheckBox10"
         Me.CheckBox10.Size = New System.Drawing.Size(67, 33)
         Me.CheckBox10.TabIndex = 54
@@ -524,7 +625,7 @@ Partial Class FrmCustomer
         Me.CheckBox11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckBox11.ForeColor = System.Drawing.SystemColors.Window
         Me.CheckBox11.Location = New System.Drawing.Point(108, 12)
-        Me.CheckBox11.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CheckBox11.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckBox11.Name = "CheckBox11"
         Me.CheckBox11.Size = New System.Drawing.Size(80, 33)
         Me.CheckBox11.TabIndex = 55
@@ -539,7 +640,7 @@ Partial Class FrmCustomer
         Me.CheckBox12.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckBox12.ForeColor = System.Drawing.SystemColors.Window
         Me.CheckBox12.Location = New System.Drawing.Point(212, 12)
-        Me.CheckBox12.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CheckBox12.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckBox12.Name = "CheckBox12"
         Me.CheckBox12.Size = New System.Drawing.Size(70, 33)
         Me.CheckBox12.TabIndex = 56
@@ -554,7 +655,7 @@ Partial Class FrmCustomer
         Me.CheckBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckBox1.ForeColor = System.Drawing.SystemColors.Window
         Me.CheckBox1.Location = New System.Drawing.Point(4, 12)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(18, 17)
         Me.CheckBox1.TabIndex = 54
@@ -568,7 +669,7 @@ Partial Class FrmCustomer
         Me.CheckBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckBox2.ForeColor = System.Drawing.SystemColors.Window
         Me.CheckBox2.Location = New System.Drawing.Point(108, 12)
-        Me.CheckBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CheckBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(18, 17)
         Me.CheckBox2.TabIndex = 55
@@ -594,11 +695,39 @@ Partial Class FrmCustomer
         Me.CheckBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckBox3.ForeColor = System.Drawing.SystemColors.Window
         Me.CheckBox3.Location = New System.Drawing.Point(212, 12)
-        Me.CheckBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CheckBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(18, 17)
         Me.CheckBox3.TabIndex = 56
         Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Button4.Image = Global.Wash.My.Resources.Resources.follow
+        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button4.Location = New System.Drawing.Point(0, 128)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(272, 59)
+        Me.Button4.TabIndex = 44
+        Me.Button4.Text = "เพิ่ม"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Button5.Image = Global.Wash.My.Resources.Resources.follow
+        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button5.Location = New System.Drawing.Point(0, 128)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(272, 59)
+        Me.Button5.TabIndex = 44
+        Me.Button5.Text = "เพิ่ม"
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'ComboBox3
         '
@@ -658,7 +787,7 @@ Partial Class FrmCustomer
         Me.pnlOption.Controls.Add(Me.CheckMid)
         Me.pnlOption.Controls.Add(Me.CheckHard)
         Me.pnlOption.Location = New System.Drawing.Point(36, 282)
-        Me.pnlOption.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnlOption.Margin = New System.Windows.Forms.Padding(4)
         Me.pnlOption.Name = "pnlOption"
         Me.pnlOption.Size = New System.Drawing.Size(288, 50)
         Me.pnlOption.TabIndex = 58
@@ -672,7 +801,7 @@ Partial Class FrmCustomer
         Me.CheckEz.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckEz.ForeColor = System.Drawing.SystemColors.Window
         Me.CheckEz.Location = New System.Drawing.Point(4, 12)
-        Me.CheckEz.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CheckEz.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckEz.Name = "CheckEz"
         Me.CheckEz.Size = New System.Drawing.Size(18, 17)
         Me.CheckEz.TabIndex = 54
@@ -686,7 +815,7 @@ Partial Class FrmCustomer
         Me.CheckMid.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckMid.ForeColor = System.Drawing.SystemColors.Window
         Me.CheckMid.Location = New System.Drawing.Point(108, 12)
-        Me.CheckMid.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CheckMid.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckMid.Name = "CheckMid"
         Me.CheckMid.Size = New System.Drawing.Size(18, 17)
         Me.CheckMid.TabIndex = 55
@@ -700,7 +829,7 @@ Partial Class FrmCustomer
         Me.CheckHard.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckHard.ForeColor = System.Drawing.SystemColors.Window
         Me.CheckHard.Location = New System.Drawing.Point(212, 12)
-        Me.CheckHard.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CheckHard.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckHard.Name = "CheckHard"
         Me.CheckHard.Size = New System.Drawing.Size(18, 17)
         Me.CheckHard.TabIndex = 56
@@ -757,6 +886,20 @@ Partial Class FrmCustomer
         Me.cmbGroup.Size = New System.Drawing.Size(238, 38)
         Me.cmbGroup.TabIndex = 45
         '
+        'btAdd
+        '
+        Me.btAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btAdd.BackgroundImage = Global.Wash.My.Resources.Resources.เพิ่ม
+        Me.btAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btAdd.Location = New System.Drawing.Point(49, 464)
+        Me.btAdd.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btAdd.Name = "btAdd"
+        Me.btAdd.Size = New System.Drawing.Size(272, 78)
+        Me.btAdd.TabIndex = 44
+        Me.btAdd.UseVisualStyleBackColor = True
+        '
         'dgv
         '
         Me.dgv.AllowUserToAddRows = False
@@ -785,7 +928,7 @@ Partial Class FrmCustomer
         Me.dgv.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgv.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgv.Location = New System.Drawing.Point(0, 50)
-        Me.dgv.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgv.Margin = New System.Windows.Forms.Padding(4)
         Me.dgv.Name = "dgv"
         Me.dgv.ReadOnly = True
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -873,76 +1016,6 @@ Partial Class FrmCustomer
         Me.price.ReadOnly = True
         Me.price.Width = 125
         '
-        'Button7
-        '
-        Me.Button7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button7.Image = Global.Wash.My.Resources.Resources.follow
-        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button7.Location = New System.Drawing.Point(0, 128)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(272, 59)
-        Me.Button7.TabIndex = 44
-        Me.Button7.Text = "เพิ่ม"
-        Me.Button7.UseVisualStyleBackColor = True
-        '
-        'Button6
-        '
-        Me.Button6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button6.Image = Global.Wash.My.Resources.Resources.follow
-        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button6.Location = New System.Drawing.Point(0, 128)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(272, 59)
-        Me.Button6.TabIndex = 44
-        Me.Button6.Text = "เพิ่ม"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button4.Image = Global.Wash.My.Resources.Resources.follow
-        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(0, 128)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(272, 59)
-        Me.Button4.TabIndex = 44
-        Me.Button4.Text = "เพิ่ม"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button5.Image = Global.Wash.My.Resources.Resources.follow
-        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.Location = New System.Drawing.Point(0, 128)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(272, 59)
-        Me.Button5.TabIndex = 44
-        Me.Button5.Text = "เพิ่ม"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'btAdd
-        '
-        Me.btAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btAdd.BackgroundImage = Global.Wash.My.Resources.Resources.เพิ่ม
-        Me.btAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btAdd.Location = New System.Drawing.Point(49, 464)
-        Me.btAdd.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btAdd.Name = "btAdd"
-        Me.btAdd.Size = New System.Drawing.Size(272, 78)
-        Me.btAdd.TabIndex = 44
-        Me.btAdd.UseVisualStyleBackColor = True
-        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(185, Byte), Integer))
@@ -1011,79 +1084,6 @@ Partial Class FrmCustomer
         Me.Label18.TabIndex = 104
         Me.Label18.Text = "วันที่"
         '
-        'btNew
-        '
-        Me.btNew.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btNew.BackgroundImage = Global.Wash.My.Resources.Resources.รายการใหม้
-        Me.btNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btNew.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btNew.Location = New System.Drawing.Point(1210, 0)
-        Me.btNew.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btNew.Name = "btNew"
-        Me.btNew.Size = New System.Drawing.Size(205, 75)
-        Me.btNew.TabIndex = 47
-        Me.btNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btNew.UseVisualStyleBackColor = True
-        '
-        'btEdit
-        '
-        Me.btEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btEdit.BackgroundImage = Global.Wash.My.Resources.Resources.แก้ไข
-        Me.btEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btEdit.Location = New System.Drawing.Point(1016, 0)
-        Me.btEdit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btEdit.Name = "btEdit"
-        Me.btEdit.Size = New System.Drawing.Size(193, 75)
-        Me.btEdit.TabIndex = 46
-        Me.btEdit.UseVisualStyleBackColor = True
-        '
-        'btDel
-        '
-        Me.btDel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btDel.BackgroundImage = Global.Wash.My.Resources.Resources.ลบบ
-        Me.btDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btDel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btDel.Location = New System.Drawing.Point(823, 0)
-        Me.btDel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btDel.Name = "btDel"
-        Me.btDel.Size = New System.Drawing.Size(192, 75)
-        Me.btDel.TabIndex = 45
-        Me.btDel.UseVisualStyleBackColor = True
-        '
-        'btSave
-        '
-        btSave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        btSave.BackgroundImage = Global.Wash.My.Resources.Resources.บันทึก
-        btSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        btSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        btSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        btSave.Location = New System.Drawing.Point(639, 0)
-        btSave.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        btSave.Name = "btSave"
-        btSave.Size = New System.Drawing.Size(183, 75)
-        btSave.TabIndex = 44
-        btSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        btSave.UseVisualStyleBackColor = True
-        AddHandler btSave.Click, AddressOf Me.btPrint_Click
-        '
-        'btBack
-        '
-        Me.btBack.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btBack.BackgroundImage = Global.Wash.My.Resources.Resources.กลับ
-        Me.btBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btBack.Location = New System.Drawing.Point(0, 0)
-        Me.btBack.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btBack.Name = "btBack"
-        Me.btBack.Size = New System.Drawing.Size(205, 75)
-        Me.btBack.TabIndex = 43
-        Me.btBack.UseVisualStyleBackColor = True
-        '
         'pnlHeader
         '
         Me.pnlHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(47, Byte), Integer), CType(CType(121, Byte), Integer), CType(CType(185, Byte), Integer))
@@ -1146,7 +1146,7 @@ Partial Class FrmCustomer
         Me.Controls.Add(Me.pnlFooter)
         Me.Controls.Add(Me.pnlHeader)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmCustomer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ระบบบริหารจัดการร้านซักรีด"
@@ -1156,18 +1156,18 @@ Partial Class FrmCustomer
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel5.PerformLayout()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        Me.Panel7.ResumeLayout(False)
-        Me.Panel7.PerformLayout()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
         Me.pnlOption.ResumeLayout(False)
         Me.pnlOption.PerformLayout()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()
