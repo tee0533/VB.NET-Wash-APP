@@ -77,28 +77,28 @@ SELECT TOP (1000) [groupid]
         End Select
     End Sub
 
-    Private Sub CheckEz_CheckedChanged(sender As Object, e As EventArgs) Handles CheckEz.CheckedChanged, CheckBox7.CheckedChanged, CheckBox4.CheckedChanged, CheckBox16.CheckedChanged, CheckBox13.CheckedChanged, CheckBox10.CheckedChanged, CheckBox1.CheckedChanged
+    Private Sub CheckEz_CheckedChanged(sender As Object, e As EventArgs) Handles CheckEz.CheckedChanged
         If (CheckEz.Checked = True) Then
             CheckHard.Checked = False
             CheckMid.Checked = False
         End If
     End Sub
 
-    Private Sub CheckMid_CheckedChanged(sender As Object, e As EventArgs) Handles CheckMid.CheckedChanged, CheckBox8.CheckedChanged, CheckBox5.CheckedChanged, CheckBox2.CheckedChanged, CheckBox17.CheckedChanged, CheckBox14.CheckedChanged, CheckBox11.CheckedChanged
+    Private Sub CheckMid_CheckedChanged(sender As Object, e As EventArgs) Handles CheckMid.CheckedChanged
         If (CheckMid.Checked = True) Then
             CheckHard.Checked = False
             CheckEz.Checked = False
         End If
     End Sub
 
-    Private Sub CheckHard_CheckedChanged(sender As Object, e As EventArgs) Handles CheckHard.CheckedChanged, CheckBox9.CheckedChanged, CheckBox6.CheckedChanged, CheckBox3.CheckedChanged, CheckBox18.CheckedChanged, CheckBox15.CheckedChanged, CheckBox12.CheckedChanged
+    Private Sub CheckHard_CheckedChanged(sender As Object, e As EventArgs) Handles CheckHard.CheckedChanged
         If (CheckHard.Checked = True) Then
             CheckMid.Checked = False
             CheckEz.Checked = False
         End If
     End Sub
 
-    Private Sub btAdd_Click(sender As Object, e As EventArgs) Handles btAdd.Click, Button7.Click, Button6.Click, Button5.Click, Button4.Click
+    Private Sub btAdd_Click(sender As Object, e As EventArgs) Handles btAdd.Click
         Try
             Dim vPriceRolled As Integer = 0
             If (cmbCategory.Text.Trim = "รีดอย่างเดียว") Then
@@ -199,7 +199,7 @@ SELECT TOP (1000) [groupid]
         FrmViewer.wash_id = wash_id
         FrmViewer.Show()
     End Sub
-    Private Sub cmbCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCategory.SelectedIndexChanged, ComboBox5.SelectedIndexChanged, ComboBox4.SelectedIndexChanged
+    Private Sub cmbCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCategory.SelectedIndexChanged
         If (cmbCategory.Text.Trim = "รีดอย่างเดียว") Then
             CheckMid.Checked = True
             CheckHard.Checked = True
