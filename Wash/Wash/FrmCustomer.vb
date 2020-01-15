@@ -279,4 +279,12 @@ SELECT TOP (1000) [groupid]
     Private Sub btEdit_Click(sender As Object, e As EventArgs) Handles btEdit.Click
 
     End Sub
+
+    Private Sub btMenu_Click(sender As Object, e As EventArgs) Handles btMenu.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btBack_Click(sender As Object, e As EventArgs) Handles btBack.Click
+        Me.Close()
+    End Sub
 End Class

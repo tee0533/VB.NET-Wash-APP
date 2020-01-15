@@ -245,6 +245,78 @@ Public Class ClassConnectDb
 
         Return res
     End Function
+    Public Shared Function edit_wash_header_status(ByVal wash_id As String, ByVal wash_date As String, ByVal cus_name As String, cus_tel As String, number As String) As String
+        Dim res As String = String.Empty
+
+        Using conn As SqlConnection = New SqlConnection()
+            conn.ConnectionString = strconn
+            conn.Open()
+
+            Using cmd As SqlCommand = conn.CreateCommand()
+                Dim sql As String = "update [dbo].[wash_header_mao_status]
+                           set 
+                           [wash_date]=@wash_date
+                           ,[cus_name]=@cus_name
+                           ,[cus_tel]=@cus_tel
+                           ,[number]=@number where wash_id= " & wash_id
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = sql
+                cmd.Parameters.Clear()
+                cmd.Parameters.Add(New SqlParameter("@wash_id", wash_date))
+                cmd.Parameters.Add(New SqlParameter("@wash_date", wash_date))
+                cmd.Parameters.Add(New SqlParameter("@cus_name", cus_name))
+                cmd.Parameters.Add(New SqlParameter("@cus_tel", cus_tel))
+                cmd.Parameters.Add(New SqlParameter("@number", number))
+                Try
+                    If cmd.ExecuteNonQuery > 0 Then
+                        res = "OK|"
+                    Else
+                        res = "NOK|No Data Execute"
+                    End If
+
+                Catch ex As Exception
+                    res = "NOK|" & ex.Message.ToString().Trim()
+                End Try
+
+                conn.Close()
+                conn.Dispose()
+            End Using
+        End Using
+
+        Return res
+    End Function
+    Public Shared Function edit_cus_id(ByVal wash_id As String, ByVal cus_id As String) As String
+        Dim res As String = String.Empty
+
+        Using conn As SqlConnection = New SqlConnection()
+            conn.ConnectionString = strconn
+            conn.Open()
+
+            Using cmd As SqlCommand = conn.CreateCommand()
+                Dim sql As String = "update [dbo].[wash_header_mao]
+                           set [cus_id]=@cus_id where wash_id= " & wash_id
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = sql
+                cmd.Parameters.Clear()
+                cmd.Parameters.Add(New SqlParameter("@cus_id", cus_id))
+                Try
+                    If cmd.ExecuteNonQuery > 0 Then
+                        res = "OK|"
+                    Else
+                        res = "NOK|No Data Execute"
+                    End If
+
+                Catch ex As Exception
+                    res = "NOK|" & ex.Message.ToString().Trim()
+                End Try
+
+                conn.Close()
+                conn.Dispose()
+            End Using
+        End Using
+
+        Return res
+    End Function
     Public Shared Function save_history_mao(ByVal wash_id As String, ByVal plist As String, ByVal pBalance As String) As String
         Dim res As String = String.Empty
 

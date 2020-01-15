@@ -51,7 +51,23 @@
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         If dgvHeader.Rows.Count <= 0 Then Exit Sub
         Dim index As Integer = dgvHeader.CurrentRow.Index
-        Dim cus_id As String = Trim(dgvHeader.Rows(index).Cells("รหัส").Value.ToString)
-        FrmCustomer_Mao_List.Show()
+        Dim id As String = Trim(dgvHeader.Rows(index).Cells("รหัส").Value.ToString)
+        Dim status As String = Trim(dgvHeader.Rows(index).Cells("status").Value.ToString)
+        If (status = "ส่งคืนแล้ว") Then
+            MsgBox("ไม่สามารถแก้ไขได้ เนื่องจาก สถานะส่งคืนแล้ว", MsgBoxStyle.Information, "เกิดข้อผิดพลาด")
+            Exit Sub
+        End If
+        FrmCustomer_Mao_List.list_mao_id = id
+        FrmCustomer_Mao_List.frm_Action = "edit"
+        FrmCustomer_Mao_List.ShowDialog()
+        Load_Data()
+    End Sub
+
+    Private Sub btnAddCustomer_Click(sender As Object, e As EventArgs) Handles btnAddCustomer.Click
+        FrmCustomer_Mao.ShowDialog()
+    End Sub
+
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        Load_Data()
     End Sub
 End Class

@@ -19,6 +19,28 @@
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt
     End Function
+    Friend Shared Function load_wash_header_mao(cus_id As String) As DataTable
+        Dim sql As String = String.Empty
+        sql = "SELECT  Customer.name, Customer.tel, wash_header_mao.wash_id, wash_header_mao.cus_id, wash_header_mao.promotion_id, wash_header_mao.promotion_name, wash_header_mao.price, wash_header_mao.description, wash_header_mao.amount, 
+            wash_header_mao.balance, wash_header_mao.pay_money, wash_header_mao.change_money, wash_header_mao.pay_date, wash_header_mao.wash_date_list, wash_header_mao.promotion_list, wash_header_mao.status, 
+            wash_header_mao.expire_date
+            FROM   wash_header_mao INNER JOIN Customer
+            ON wash_header_mao.cus_id = Customer.cus_id where wash_header_mao.cus_id=" & cus_id
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Return dt
+    End Function
+    Friend Shared Function load_wash_header_mao_wash(wash_id As String) As DataTable
+        Dim sql As String = String.Empty
+        sql = "SELECT    wash_list_mao.id, wash_list_mao.wash_id, wash_list_mao.cus_id, wash_list_mao.group_id, wash_list_mao.group_name, wash_list_mao.list_id, wash_list_mao.list_name, wash_list_mao.number, 
+                         wash_header_mao.cus_id AS Expr1, Customer.name AS name,Customer.name AS tel, wash_header_mao.promotion_id, wash_header_mao.promotion_name, wash_header_mao.price, wash_header_mao.description, wash_header_mao.amount, 
+                         wash_header_mao.balance, wash_header_mao.wash_date_list
+                FROM            wash_list_mao INNER JOIN
+                                         wash_header_mao ON wash_list_mao.wash_id = wash_header_mao.wash_id INNER JOIN
+                                         Customer ON wash_header_mao.cus_id = Customer.cus_id
+                WHERE         wash_list_mao.wash_id = " & wash_id
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Return dt
+    End Function
     Friend Shared Function getList(pGroupID As String) As DataTable
         Dim sql As String = String.Empty
         sql = "SELECT ListNo
@@ -67,6 +89,19 @@
             Return False
         End If
     End Function
+
+    Friend Shared Function update_customer(cus_id As String, name As String, tel As String) As String
+        Dim sql As String = String.Empty
+        sql = "UPDATE [dbo].[Customer]
+               SET [name] = '@name'
+                  ,[tel] = '@tel'
+             WHERE cus_id =" & cus_id
+        sql = sql.Replace("@name", name)
+        sql = sql.Replace("@tel", tel)
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Return ClassConnectDb.Exec_NonQuery(sql)
+    End Function
+
     Friend Shared Function Check_Cus_Name_Data_Exist_Mao(pName As String) As Boolean
         Dim sql As String = String.Empty
         sql = "SELECT count(name) AS  vCount
@@ -92,6 +127,14 @@
         sql = "SELECT wash_id
                 FROM wash_header_mao 
                 where cus_id =" & cus_id
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Return dt.Rows(0).Item("wash_id").ToString()
+    End Function
+    Friend Shared Function get_wash_id_mao_edit(id As String) As String
+        Dim sql As String = String.Empty
+        sql = "SELECT wash_id
+                FROM [wash_header_mao_status 
+                where id =" & id
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt.Rows(0).Item("wash_id").ToString()
     End Function
@@ -159,6 +202,11 @@
         sql = String.Format("DELETE FROM [dbo].[wash_header_mao] where cus_id={0};
                 DELETE FROM [dbo].Customer  where cus_id={0};
                 DELETE FROM [dbo].wash_list_mao  where cus_id={0};", cus_id)
+        Return ClassConnectDb.Exec_NonQuery(sql)
+    End Function
+    Friend Shared Function wash_list_mao(wash_id As String) As String
+        Dim sql As String = String.Empty
+        sql = String.Format("DELETE FROM [dbo].[wash_list_mao] where wash_id={0};", wash_id)
         Return ClassConnectDb.Exec_NonQuery(sql)
     End Function
     Friend Shared Function Delete_Wash_Mao_status(cus_id As String) As String

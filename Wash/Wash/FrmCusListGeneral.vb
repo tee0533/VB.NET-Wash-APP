@@ -31,8 +31,6 @@
         If dgvHeader.Rows.Count <= 0 Then Exit Sub
         Dim index As Integer = dgvHeader.CurrentRow.Index
         Dim vWash_ID As String = Trim(dgvHeader.Rows(index).Cells("รหัส").Value.ToString)
-
-
         If MsgBox("คุณต้องการลบรหัส " & vWash_ID & " ?", vbOKCancel + vbInformation) = vbOK Then
             Delete_Data(vWash_ID)
             Load_Data()
@@ -72,5 +70,17 @@
 
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         Load_Data()
+    End Sub
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        Me.Close()
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnAddCustomer_Click(sender As Object, e As EventArgs) Handles btnAddCustomer.Click
+        FrmCustomer.ShowDialog()
     End Sub
 End Class

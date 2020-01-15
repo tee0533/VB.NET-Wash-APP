@@ -28,11 +28,11 @@ Partial Class FrmCusSearch
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.btnSelect = New System.Windows.Forms.Button()
         Me.รหัส = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ชื่อลูกค้า = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.เบอร์โทร = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.โปรโมชั่น = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnSelect = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -99,16 +99,6 @@ Partial Class FrmCusSearch
         Me.DataGridView1.Size = New System.Drawing.Size(900, 388)
         Me.DataGridView1.TabIndex = 49
         '
-        'btnSelect
-        '
-        Me.btnSelect.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btnSelect.Location = New System.Drawing.Point(423, 484)
-        Me.btnSelect.Name = "btnSelect"
-        Me.btnSelect.Size = New System.Drawing.Size(77, 35)
-        Me.btnSelect.TabIndex = 50
-        Me.btnSelect.Text = "เลือก"
-        Me.btnSelect.UseVisualStyleBackColor = True
-        '
         'รหัส
         '
         Me.รหัส.HeaderText = "รหัส"
@@ -136,6 +126,16 @@ Partial Class FrmCusSearch
         Me.โปรโมชั่น.Name = "โปรโมชั่น"
         Me.โปรโมชั่น.ReadOnly = True
         '
+        'btnSelect
+        '
+        Me.btnSelect.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.btnSelect.Location = New System.Drawing.Point(423, 484)
+        Me.btnSelect.Name = "btnSelect"
+        Me.btnSelect.Size = New System.Drawing.Size(77, 35)
+        Me.btnSelect.TabIndex = 50
+        Me.btnSelect.Text = "เลือก"
+        Me.btnSelect.UseVisualStyleBackColor = True
+        '
         'FrmCusSearch
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -149,7 +149,7 @@ Partial Class FrmCusSearch
         Me.MaximizeBox = False
         Me.Name = "FrmCusSearch"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmCusSearch"
+        Me.Text = "ระบบบริหารจัดการร้านซักรีด"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

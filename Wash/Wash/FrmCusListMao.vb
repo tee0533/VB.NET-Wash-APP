@@ -72,4 +72,13 @@
         FrmPromotion.Show()
         Load_Data()
     End Sub
+
+    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+        If dgvHeader.Rows.Count <= 0 Then Exit Sub
+        Dim index As Integer = dgvHeader.CurrentRow.Index
+        Dim cus_id As String = Trim(dgvHeader.Rows(index).Cells("รหัส").Value.ToString)
+        FrmCustomer_Mao.cus_id = cus_id
+        FrmCustomer_Mao.Frm_Action = "edit"
+        FrmCustomer_Mao.ShowDialog()
+    End Sub
 End Class

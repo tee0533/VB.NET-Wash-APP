@@ -196,10 +196,10 @@ Partial Class FrmCustomer_Mao_List
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(197, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.SplitContainer1.Panel1.BackgroundImage = Global.Wash.My.Resources.Resources.กลุ่มรายการ
         Me.SplitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btAdd)
         Me.SplitContainer1.Panel1.Controls.Add(Me.txtNum)
         Me.SplitContainer1.Panel1.Controls.Add(Me.cmbList)
         Me.SplitContainer1.Panel1.Controls.Add(Me.cmbGroup)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.btAdd)
         Me.SplitContainer1.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.SplitContainer1.Panel1.ForeColor = System.Drawing.SystemColors.ControlText
         '

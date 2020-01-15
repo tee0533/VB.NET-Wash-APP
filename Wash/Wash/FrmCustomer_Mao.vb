@@ -2,6 +2,8 @@
 
 Public Class FrmCustomer_Mao
     Public Action As String = "add"
+    Public Frm_Action As String = "add"
+    Public cus_id As String = "add"
     Private Sub BtMenu_Click(sender As Object, e As EventArgs) Handles btMenu.Click
         Me.Close()
     End Sub
@@ -9,6 +11,31 @@ Public Class FrmCustomer_Mao
     Private Sub FrmCustomer_Mao_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         init_combobox()
         dtpDate.Value = Date.Today
+        If (Frm_Action = "edit") Then
+            btAdd.Visible = False
+            bind_data()
+        End If
+    End Sub
+    Private Sub bind_data()
+        Dim dt As DataTable = ClassServiceDb.load_wash_header_mao(cus_id)
+        dgv.Rows.Clear()
+        If (dt.Rows.Count > 0) Then
+            txtName.Text = dt.Rows(0).Item("name")
+            txtTel.Text = dt.Rows(0).Item("tel")
+            cbType_Mao.SelectedValue = dt.Rows(0).Item("promotion_id")
+            Try
+                Dim Number As Integer = 1
+                Dim vMao As String = dt.Rows(0).Item("promotion_id") & "-" & dt.Rows(0).Item("promotion_name")
+                Dim vPrice As String = dt.Rows(0).Item("price").ToString()
+                Dim vAmount As String = dt.Rows(0).Item("amount").ToString()
+                Dim vDescriptions As String = dt.Rows(0).Item("description").ToString()
+                Dim row As String() = New String() {Number, vMao, vAmount, vPrice, vDescriptions}
+                dgv.Rows.Add(row)
+                assign_total_price()
+            Catch ex As Exception
+
+            End Try
+        End If
     End Sub
     Private Sub init_combobox()
         Dim dt As DataTable = ClassServiceDb.getType_Mao()
@@ -57,9 +84,26 @@ Public Class FrmCustomer_Mao
 
     Private Sub BtSave_Click(sender As Object, e As EventArgs) Handles btSave.Click
         If Check_Data() Then
-            save_data()
+            If (Frm_Action = "edit") Then
+                save_customer()
+            Else
+                save_data()
+            End If
+
         End If
 
+    End Sub
+
+    Private Sub save_customer()
+        Dim res() As String = ClassServiceDb.update_customer(cus_id, txtName.Text.Trim(), txtTel.Text.Trim()).Split("|")
+        If (res(0) = "OK") Then
+            MsgBox("บันทึกข้อมูลเรียบร้อยแล้ว", MsgBoxStyle.Information, "การบันทึกข้อมูล")
+            FrmCusListMao.Load_Data()
+            Me.Close()
+
+        Else
+            MsgBox(res(1), MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
+        End If
     End Sub
 
     Private Sub save_data()

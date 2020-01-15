@@ -10,6 +10,8 @@ Public Class FrmCustomer_Mao_List
     Public vBalance As String
 
     Public Action As String = "add"
+    Public frm_Action As String = "add"
+    Public list_mao_id As String
     Public Sub AssingValue()
         lblID.Text = id
         txtName.Text = vname
@@ -65,9 +67,57 @@ Public Class FrmCustomer_Mao_List
     End Sub
 
     Private Sub FrmCustomer_Mao_List_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        clear_data()
         dtpDate.Value = Date.Today
         init_combobox_group()
+        If (frm_Action = "edit") Then
+            bind_data()
+        End If
     End Sub
+
+    Private Sub clear_data()
+        txtName.Text = String.Empty
+        txtPromotion.Text = String.Empty
+        txtDetail.Text = String.Empty
+        txtNum.Text = 1
+        txtBalance.Text = String.Empty
+    End Sub
+
+    Private Sub bind_data()
+        Dim wash_id As String = ClassServiceDb.get_wash_id_mao_edit(list_mao_id)
+        Dim dt As DataTable = ClassServiceDb.load_wash_header_mao_wash(wash_id)
+        dgv.Rows.Clear()
+        Dim i As Integer = 1
+        If (dt.Rows.Count > 0) Then
+            id = dt.Rows("0").Item("cus_id").ToString()
+            vname = dt.Rows("0").Item("name").ToString()
+            vPromotion = dt.Rows("0").Item("promotion_name").ToString()
+            AssingValue()
+            Try
+                Dim Iron_wash As Integer = 0
+                Dim vGroup As String = String.Empty
+                Dim vList As String = String.Empty
+                Dim vCount As String = String.Empty
+                Dim row As String() = New String() {1, 2, 3, 4}
+                For index As Integer = 0 To dt.Rows.Count - 1
+                    vGroup = dt.Rows(index).Item("group_id").ToString() & "-" & dt.Rows(index).Item("group_name").ToString()
+                    vList = dt.Rows(index).Item("list_id").ToString() & "-" & dt.Rows(index).Item("list_name").ToString()
+                    vCount = dt.Rows(index).Item("number").ToString()
+                    row = New String() {i, vGroup, vList, vCount}
+                    dgv.Rows.Add(row)
+                Next index
+
+
+                If (txtPromotion.Text.Trim <> "เหมา 1000 บาท ไม่จำกัดชิ้น") Then
+                    assign_balance()
+                End If
+                i += i
+            Catch ex As Exception
+
+            End Try
+        End If
+    End Sub
+
 
     Private Sub cmbGroup_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbGroup.SelectedIndexChanged
         If cmbGroup.Text = String.Empty Then
@@ -134,10 +184,43 @@ Public Class FrmCustomer_Mao_List
     Private Sub btSave_Click(sender As Object, e As EventArgs) Handles btSave.Click
         If (Check_Data()) Then
             Dim wash_id = ClassServiceDb.get_wash_id_mao(id)
-            Save_Header(id, wash_id)
+            If (frm_Action = "edit") Then 'แก้ไข
+                edit_data(wash_id)
+            Else 'เพิ่มข้อมูล
+                Save_Header(id, wash_id)
+            End If
+
         End If
 
     End Sub
+
+    Private Sub edit_data(wash_id As String)
+        Dim vtel As String = ClassServiceDb.get_cus_tel(id)
+        Dim total As Integer
+        Dim i As Integer = 0
+        Do While dgv.RowCount > i
+            total = total + CType(dgv.Rows(i).Cells("total").Value, Integer)
+            i = i + 1
+        Loop
+        Dim res() As String = ClassConnectDb.edit_wash_header_status(wash_id, dtpDate.Value.ToString("yyyy-MM-dd"), txtName.Text.Trim(), vtel, total).Split("|")
+        If (res(0) = "OK") Then
+            res = ClassConnectDb.edit_cus_id(wash_id, id).Split("|")
+            If (res(0) = "OK") Then
+                res = ClassServiceDb.wash_list_mao(wash_id).Split("|")
+                If (res(0) = "OK") Then
+                    Save_List(id, wash_id)
+                Else
+                    MsgBox(res(1), MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
+                End If
+            Else
+                MsgBox(res(1), MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
+            End If
+
+        Else
+            MsgBox(res(1), MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
+        End If
+    End Sub
+
     Function Check_Data() As Boolean
         If (txtPromotion.Text.Trim <> "เหมา 1000 บาท ไม่จำกัดชิ้น") Then
             If (CType(txtBalance.Text, Integer) < 0) Then
@@ -164,7 +247,7 @@ Public Class FrmCustomer_Mao_List
             total = total + CType(dgv.Rows(i).Cells("total").Value, Integer)
             i = i + 1
         Loop
-        Dim res() As String = ClassConnectDb.add_wash_header_status(pWash_ID, dtpDate.Value.ToString("dd/MM/yyy"), txtName.Text.Trim(), vtel, total).Split("|")
+        Dim res() As String = ClassConnectDb.add_wash_header_status(pWash_ID, dtpDate.Value.ToString("yyyy-MM-dd"), txtName.Text.Trim(), vtel, total).Split("|")
         If (res(0) = "OK") Then
             Save_List(cus_id, pWash_ID)
         Else
