@@ -56,9 +56,8 @@
         Dim index As Integer = dgvHeader.CurrentRow.Index
         Dim cus_id As String = Trim(dgvHeader.Rows(index).Cells("รหัส").Value.ToString)
         If MsgBox("คุณต้องการลบรหัส " & cus_id & " ?", vbOKCancel + vbInformation) = vbOK Then
-            Dim res As String = ClassServiceDb.Delete_Wash_Mao(cus_id)
+            Dim res As String = ClassServiceDb.Delete_Wash_Mao_status(cus_id)
             Load_Data()
-
         End If
 
     End Sub
@@ -71,5 +70,6 @@
         FrmPromotion.promotion_name = promotion_name
         FrmPromotion.id = cus_id
         FrmPromotion.Show()
+        Load_Data()
     End Sub
 End Class

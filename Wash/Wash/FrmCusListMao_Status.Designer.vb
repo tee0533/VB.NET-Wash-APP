@@ -74,7 +74,6 @@ Partial Class FrmCusListMao_Status
         Me.dgvHeader.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvHeader.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvHeader.Location = New System.Drawing.Point(0, 0)
-        Me.dgvHeader.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgvHeader.Name = "dgvHeader"
         Me.dgvHeader.ReadOnly = True
         Me.dgvHeader.RowHeadersVisible = False
@@ -83,7 +82,7 @@ Partial Class FrmCusListMao_Status
         Me.dgvHeader.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvHeader.RowTemplate.Height = 30
         Me.dgvHeader.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvHeader.Size = New System.Drawing.Size(1416, 694)
+        Me.dgvHeader.Size = New System.Drawing.Size(1061, 561)
         Me.dgvHeader.TabIndex = 0
         '
         'วันที่รับ
@@ -140,10 +139,9 @@ Partial Class FrmCusListMao_Status
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel4.Controls.Add(Me.dgvHeader)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel4.Location = New System.Drawing.Point(0, 195)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel4.Location = New System.Drawing.Point(0, 159)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1420, 698)
+        Me.Panel4.Size = New System.Drawing.Size(1065, 565)
         Me.Panel4.TabIndex = 5
         '
         'btnAddCustomer
@@ -152,10 +150,9 @@ Partial Class FrmCusListMao_Status
         Me.btnAddCustomer.BackgroundImage = Global.Wash.My.Resources.Resources.เพิ่มลค
         Me.btnAddCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnAddCustomer.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btnAddCustomer.Location = New System.Drawing.Point(1208, 1)
-        Me.btnAddCustomer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAddCustomer.Location = New System.Drawing.Point(905, 1)
         Me.btnAddCustomer.Name = "btnAddCustomer"
-        Me.btnAddCustomer.Size = New System.Drawing.Size(205, 80)
+        Me.btnAddCustomer.Size = New System.Drawing.Size(154, 65)
         Me.btnAddCustomer.TabIndex = 6
         Me.btnAddCustomer.UseVisualStyleBackColor = True
         '
@@ -170,10 +167,9 @@ Partial Class FrmCusListMao_Status
         Me.Panel2.Controls.Add(Me.btnBack)
         Me.Panel2.Controls.Add(Me.btnAddCustomer)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 893)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Location = New System.Drawing.Point(0, 724)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1420, 86)
+        Me.Panel2.Size = New System.Drawing.Size(1065, 71)
         Me.Panel2.TabIndex = 4
         '
         'btnEdit
@@ -182,10 +178,9 @@ Partial Class FrmCusListMao_Status
         Me.btnEdit.BackgroundImage = Global.Wash.My.Resources.Resources.แก้ไข
         Me.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btnEdit.Location = New System.Drawing.Point(1001, 1)
-        Me.btnEdit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnEdit.Location = New System.Drawing.Point(750, 1)
         Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(205, 80)
+        Me.btnEdit.Size = New System.Drawing.Size(154, 65)
         Me.btnEdit.TabIndex = 10
         Me.btnEdit.UseVisualStyleBackColor = True
         '
@@ -195,10 +190,9 @@ Partial Class FrmCusListMao_Status
         Me.btnDelete.BackgroundImage = Global.Wash.My.Resources.Resources.ลบบ
         Me.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btnDelete.Location = New System.Drawing.Point(794, 1)
-        Me.btnDelete.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnDelete.Location = New System.Drawing.Point(595, 1)
         Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(205, 80)
+        Me.btnDelete.Size = New System.Drawing.Size(154, 65)
         Me.btnDelete.TabIndex = 9
         Me.btnDelete.UseVisualStyleBackColor = True
         '
@@ -208,10 +202,9 @@ Partial Class FrmCusListMao_Status
         Me.btnSend.BackgroundImage = Global.Wash.My.Resources.Resources.ส่งคืนผ้า
         Me.btnSend.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnSend.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btnSend.Location = New System.Drawing.Point(587, 1)
-        Me.btnSend.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSend.Location = New System.Drawing.Point(439, 1)
         Me.btnSend.Name = "btnSend"
-        Me.btnSend.Size = New System.Drawing.Size(205, 80)
+        Me.btnSend.Size = New System.Drawing.Size(154, 65)
         Me.btnSend.TabIndex = 8
         Me.btnSend.UseVisualStyleBackColor = True
         '
@@ -222,9 +215,8 @@ Partial Class FrmCusListMao_Status
         Me.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.btnBack.Location = New System.Drawing.Point(2, 1)
-        Me.btnBack.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(205, 80)
+        Me.btnBack.Size = New System.Drawing.Size(154, 65)
         Me.btnBack.TabIndex = 7
         Me.btnBack.UseVisualStyleBackColor = True
         '
@@ -239,9 +231,8 @@ Partial Class FrmCusListMao_Status
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1420, 195)
+        Me.Panel1.Size = New System.Drawing.Size(1065, 159)
         Me.Panel1.TabIndex = 3
         '
         'btnSearch
@@ -249,42 +240,38 @@ Partial Class FrmCusListMao_Status
         Me.btnSearch.BackgroundImage = Global.Wash.My.Resources.Resources.ค้นหา1
         Me.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btnSearch.Location = New System.Drawing.Point(697, 27)
-        Me.btnSearch.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSearch.Location = New System.Drawing.Point(523, 22)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(139, 62)
+        Me.btnSearch.Size = New System.Drawing.Size(104, 50)
         Me.btnSearch.TabIndex = 4
         Me.btnSearch.UseVisualStyleBackColor = True
         '
         'txtSearch
         '
         Me.txtSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.txtSearch.Location = New System.Drawing.Point(298, 31)
-        Me.txtSearch.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtSearch.Location = New System.Drawing.Point(224, 25)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(391, 49)
+        Me.txtSearch.Size = New System.Drawing.Size(294, 40)
         Me.txtSearch.TabIndex = 3
         '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = Global.Wash.My.Resources.Resources.BT_Home
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(37, 28)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox1.Location = New System.Drawing.Point(28, 23)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(137, 137)
+        Me.PictureBox1.Size = New System.Drawing.Size(103, 111)
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
         'FrmCusListMao_Status
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1420, 979)
+        Me.ClientSize = New System.Drawing.Size(1065, 795)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmCusListMao_Status"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmCusListMao_Status"

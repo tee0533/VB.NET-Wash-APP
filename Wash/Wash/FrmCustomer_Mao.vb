@@ -82,9 +82,9 @@ Public Class FrmCustomer_Mao
 
         If (cbType_Mao.SelectedValue = 3) Then
             vExpire_Date = Today.AddDays(30)
-            Expire = vExpire_Date.ToString("dd/MM/yyy", New CultureInfo("en-US"))
+            Expire = vExpire_Date.ToString("yyy-MM-dd", New CultureInfo("en-US"))
         Else
-            Expire = Now.ToString("dd/MM/yyy", New CultureInfo("en-US"))
+            Expire = Now.ToString("yyy-MM-dd", New CultureInfo("en-US"))
         End If
         Dim res() As String = ClassConnectDb.add_wash_header_mao(pCusID, Expire, dt).Split("|")
         If (res(0) = "OK") Then

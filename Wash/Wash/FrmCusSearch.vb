@@ -30,10 +30,16 @@
     End Sub
     Private Sub CallValues()
         If DataGridView1.Rows.Count <= 0 Then Exit Sub
+
         Dim index As Integer = DataGridView1.CurrentRow.Index
         Dim vCus_ID As String = Trim(DataGridView1.Rows(index).Cells("รหัส").Value.ToString)
         Dim vCus_Name As String = Trim(DataGridView1.Rows(index).Cells("ชื่อลูกค้า").Value.ToString)
         Dim vPromotion As String = Trim(DataGridView1.Rows(index).Cells("โปรโมชั่น").Value.ToString)
+        Dim status As Boolean = ClassServiceDb.get_status_customer_mao(vCus_ID)
+        If (status.Equals(False)) Then
+            MsgBox("ลูกค้าชื่อ " & vCus_Name & " ยังไม่ชำระบริการ", MsgBoxStyle.Information, "Wash System")
+            Exit Sub
+        End If
         FrmCustomer_Mao_List.id = vCus_ID
         FrmCustomer_Mao_List.vname = vCus_Name
         FrmCustomer_Mao_List.vPromotion = vPromotion

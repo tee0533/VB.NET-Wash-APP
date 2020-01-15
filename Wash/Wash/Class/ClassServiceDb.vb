@@ -36,6 +36,14 @@
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt
     End Function
+
+    Friend Shared Function get_status_customer_mao(vCus_ID As String) As Boolean
+        Dim sql As String = String.Empty
+        sql = "select status from wash_header_mao where cus_id=" & vCus_ID
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Return Convert.ToBoolean(dt.Rows(0).Item("status"))
+    End Function
+
     Friend Shared Function get_customer(pSearch As String) As DataTable
         Dim sql As String = String.Empty
         Dim cond As String = String.Empty
@@ -151,6 +159,11 @@
         sql = String.Format("DELETE FROM [dbo].[wash_header_mao] where cus_id={0};
                 DELETE FROM [dbo].Customer  where cus_id={0};
                 DELETE FROM [dbo].wash_list_mao  where cus_id={0};", cus_id)
+        Return ClassConnectDb.Exec_NonQuery(sql)
+    End Function
+    Friend Shared Function Delete_Wash_Mao_status(cus_id As String) As String
+        Dim sql As String = String.Empty
+        sql = String.Format("DELETE FROM [dbo].[wash_header_mao_status] where id={0};", cus_id)
         Return ClassConnectDb.Exec_NonQuery(sql)
     End Function
     Friend Shared Function Delete_Wash_Header(pWash_ID As String) As String
