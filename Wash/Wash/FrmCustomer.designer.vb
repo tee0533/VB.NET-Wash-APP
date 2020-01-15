@@ -417,7 +417,7 @@ Partial Class FrmCustomer
         Me.CheckHard.AutoSize = True
         Me.CheckHard.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckHard.ForeColor = System.Drawing.SystemColors.Window
-        Me.CheckHard.Location = New System.Drawing.Point(159, 10)
+        Me.CheckHard.Location = New System.Drawing.Point(150, 15)
         Me.CheckHard.Name = "CheckHard"
         Me.CheckHard.Size = New System.Drawing.Size(15, 14)
         Me.CheckHard.TabIndex = 56
@@ -430,7 +430,7 @@ Partial Class FrmCustomer
         Me.CheckMid.AutoSize = True
         Me.CheckMid.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckMid.ForeColor = System.Drawing.SystemColors.Window
-        Me.CheckMid.Location = New System.Drawing.Point(81, 10)
+        Me.CheckMid.Location = New System.Drawing.Point(77, 13)
         Me.CheckMid.Name = "CheckMid"
         Me.CheckMid.Size = New System.Drawing.Size(15, 14)
         Me.CheckMid.TabIndex = 55
@@ -443,7 +443,7 @@ Partial Class FrmCustomer
         Me.CheckEz.AutoSize = True
         Me.CheckEz.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.CheckEz.ForeColor = System.Drawing.SystemColors.Window
-        Me.CheckEz.Location = New System.Drawing.Point(3, 10)
+        Me.CheckEz.Location = New System.Drawing.Point(8, 12)
         Me.CheckEz.Name = "CheckEz"
         Me.CheckEz.Size = New System.Drawing.Size(15, 14)
         Me.CheckEz.TabIndex = 54
@@ -456,9 +456,9 @@ Partial Class FrmCustomer
         Me.pnlOption.Controls.Add(Me.CheckEz)
         Me.pnlOption.Controls.Add(Me.CheckMid)
         Me.pnlOption.Controls.Add(Me.CheckHard)
-        Me.pnlOption.Location = New System.Drawing.Point(19, 223)
+        Me.pnlOption.Location = New System.Drawing.Point(19, 222)
         Me.pnlOption.Name = "pnlOption"
-        Me.pnlOption.Size = New System.Drawing.Size(222, 41)
+        Me.pnlOption.Size = New System.Drawing.Size(228, 41)
         Me.pnlOption.TabIndex = 58
         Me.pnlOption.Visible = False
         '
@@ -477,6 +477,7 @@ Partial Class FrmCustomer
         Me.group.MinimumWidth = 6
         Me.group.Name = "group"
         Me.group.ReadOnly = True
+        Me.group.Width = 6
         '
         'list
         '
@@ -496,12 +497,11 @@ Partial Class FrmCustomer
         '
         'level
         '
-        Me.level.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
         Me.level.HeaderText = "ระดับ/ราคา"
         Me.level.MinimumWidth = 6
         Me.level.Name = "level"
         Me.level.ReadOnly = True
-        Me.level.Width = 109
+        Me.level.Width = 90
         '
         'total
         '
@@ -514,11 +514,11 @@ Partial Class FrmCustomer
         '
         'unit_price
         '
-        Me.unit_price.HeaderText = "ราคาต่อหน่วย"
+        Me.unit_price.HeaderText = "ราคา/หน่วย"
         Me.unit_price.MinimumWidth = 6
         Me.unit_price.Name = "unit_price"
         Me.unit_price.ReadOnly = True
-        Me.unit_price.Width = 120
+        Me.unit_price.Width = 90
         '
         'price
         '
@@ -538,6 +538,7 @@ Partial Class FrmCustomer
         Me.Controls.Add(Me.pnlFooter)
         Me.Controls.Add(Me.pnlHeader)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "FrmCustomer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ระบบบริหารจัดการร้านซักรีด"

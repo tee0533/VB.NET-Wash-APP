@@ -281,7 +281,7 @@ Public Class ClassConnectDb
 
         Return res
     End Function
-    Public Shared Function update_promotion(ByVal cus_id As String, ByVal old_promotion As String, ByVal new_promotion_id As String, ByVal new_promotion As String) As String
+    Public Shared Function update_promotion(ByVal cus_id As String, ByVal old_promotion As String, ByVal new_promotion_id As String, ByVal new_promotion As String, expire_date As String, balance As String) As String
         Dim res As String = String.Empty
 
         Using conn As SqlConnection = New SqlConnection()
@@ -293,6 +293,10 @@ Public Class ClassConnectDb
                                        SET [promotion_id] =@new_promotion_id
                                           ,[promotion_name] =@new_promotion
                                           ,[promotion_list] =  CAST((@old_promotion+'|') as nvarchar(200))+CAST((case when [promotion_list] is null then '' else [promotion_list] end) as nvarchar(200))
+                                          ,[expire_date]=@expire_date
+                                          ,[amount]=@balance
+                                          ,[balance]=@balance
+                                          ,[status] = 0   
                                       where cus_id =@cus_id "
                 cmd.CommandType = CommandType.Text
                 cmd.CommandText = sql
@@ -301,6 +305,8 @@ Public Class ClassConnectDb
                 cmd.Parameters.Add(New SqlParameter("@new_promotion_id", new_promotion_id))
                 cmd.Parameters.Add(New SqlParameter("@new_promotion", new_promotion))
                 cmd.Parameters.Add(New SqlParameter("@old_promotion", old_promotion))
+                cmd.Parameters.Add(New SqlParameter("@expire_date", expire_date))
+                cmd.Parameters.Add(New SqlParameter("@balance", balance))
                 Try
                     If cmd.ExecuteNonQuery() > 0 Then
                         res = "OK|"

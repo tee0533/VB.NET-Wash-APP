@@ -237,7 +237,7 @@
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt
     End Function
-    Friend Shared Function get_wash_header_mao(wash_id As String) As DataTable
+    Friend Shared Function get_wash_header_mao(cus_id As String) As DataTable
         Dim sql As String = String.Empty
         sql = "SELECT [wash_id]
               ,[cus_id]
@@ -254,7 +254,7 @@
               ,[promotion_list]
               ,[status]
               ,[expire_date]
-          FROM [dbo].[wash_header_mao] where wash_id=" & wash_id
+          FROM [dbo].[wash_header_mao] where cus_id=" & cus_id
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt
     End Function
@@ -313,8 +313,8 @@
             Dim category_name As String = arrCategory(1)
             Dim Levels As String = String.Empty
             Dim Levels_price As String = String.Empty
-            If (row("ระดับการรีด/ราคา").ToString() <> String.Empty) Then
-                Dim arrLevels = row("ระดับการรีด/ราคา").ToString().Trim().Split("-")
+            If (row("ระดับ/ราคา").ToString() <> String.Empty) Then
+                Dim arrLevels = row("ระดับ/ราคา").ToString().Trim().Split("-")
                 Levels = arrLevels(0)
                 Levels_price = arrLevels(1)
             End If
@@ -358,7 +358,7 @@
             sql = sql.Replace("@levels", Levels)
             sql = sql.Replace("@Levels_price", Levels_price)
             sql = sql.Replace("@number", row("จำนวน"))
-            sql = sql.Replace("@unit_price", row("ราคาต่อหน่วย"))
+            sql = sql.Replace("@unit_price", row("ราคา/หน่วย"))
             sql = sql.Replace("@price", row("ราคา"))
             list.Add(sql)
         Next row

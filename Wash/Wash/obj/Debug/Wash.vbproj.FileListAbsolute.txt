@@ -325,3 +325,4 @@ D:\svn\Wash\Wash\obj\Debug\Wash.vbproj.CopyComplete
 D:\svn\Wash\Wash\obj\Debug\Wash.exe
 D:\svn\Wash\Wash\obj\Debug\Wash.xml
 D:\svn\Wash\Wash\obj\Debug\Wash.pdb
+F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.FrmPromotion.resources

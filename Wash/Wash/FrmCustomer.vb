@@ -210,7 +210,7 @@ SELECT TOP (1000) [groupid]
         End If
     End Sub
     Private Sub Save_Header(ByVal pCusID As String)
-        Dim strDate = dtpDate.Value.ToString("dd/MM/yyyy", New CultureInfo("en-US"))
+        Dim strDate = dtpDate.Value.ToString("yyyy-MM-dd", New CultureInfo("en-US"))
         Dim res() As String = ClassConnectDb.add_wash_header(pCusID, strDate, txtTotal_Price.Text).Split("|")
         If (res(0) = "OK") Then
             wash_id = res(1)
