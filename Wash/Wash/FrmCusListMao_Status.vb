@@ -41,9 +41,9 @@
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         If dgvHeader.Rows.Count <= 0 Then Exit Sub
         Dim index As Integer = dgvHeader.CurrentRow.Index
-        Dim cus_id As String = Trim(dgvHeader.Rows(index).Cells("รหัส").Value.ToString)
-        If MsgBox("คุณต้องการลบรหัส " & cus_id & " ?", vbOKCancel + vbInformation) = vbOK Then
-            Dim res As String = ClassServiceDb.Delete_Wash_Mao(cus_id)
+        Dim id As String = Trim(dgvHeader.Rows(index).Cells("รหัส").Value.ToString)
+        If MsgBox("คุณต้องการลบรหัส " & id & " ?", vbOKCancel + vbInformation) = vbOK Then
+            Dim res As String = ClassServiceDb.Delete_Wash_Mao(id)
             Load_Data()
         End If
     End Sub

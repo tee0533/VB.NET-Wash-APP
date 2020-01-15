@@ -133,7 +133,7 @@
     Friend Shared Function get_wash_id_mao_edit(id As String) As String
         Dim sql As String = String.Empty
         sql = "SELECT wash_id
-                FROM [wash_header_mao_status 
+                FROM wash_header_mao_status 
                 where id =" & id
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt.Rows(0).Item("wash_id").ToString()
@@ -197,11 +197,16 @@
         Dim vPrice As Integer = dt.Rows(0).Item("ListPrice")
         Return vPrice
     End Function
-    Friend Shared Function Delete_Wash_Mao(cus_id As String) As String
+    Friend Shared Function Delete_Wash_Mao(id As String) As String
         Dim sql As String = String.Empty
-        sql = String.Format("DELETE FROM [dbo].[wash_header_mao] where cus_id={0};
-                DELETE FROM [dbo].Customer  where cus_id={0};
-                DELETE FROM [dbo].wash_list_mao  where cus_id={0};", cus_id)
+        sql = "SELECT wash_id
+              FROM wash_header_mao_status
+              where id  =" & id
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Dim wash_id As Integer = dt.Rows(0).Item("wash_id")
+
+        sql = String.Format("DELETE FROM [dbo].[wash_header_mao_status] where id={0};
+                DELETE FROM [dbo].wash_list_mao  where wash_id={1};", id, wash_id)
         Return ClassConnectDb.Exec_NonQuery(sql)
     End Function
     Friend Shared Function wash_list_mao(wash_id As String) As String

@@ -183,10 +183,12 @@ Public Class FrmCustomer_Mao_List
 
     Private Sub btSave_Click(sender As Object, e As EventArgs) Handles btSave.Click
         If (Check_Data()) Then
-            Dim wash_id = ClassServiceDb.get_wash_id_mao(id)
+
             If (frm_Action = "edit") Then 'แก้ไข
+                Dim wash_id = ClassServiceDb.get_wash_id_mao_edit(list_mao_id)
                 edit_data(wash_id)
             Else 'เพิ่มข้อมูล
+                Dim wash_id = ClassServiceDb.get_wash_id_mao(id)
                 Save_Header(id, wash_id)
             End If
 
@@ -204,20 +206,12 @@ Public Class FrmCustomer_Mao_List
         Loop
         Dim res() As String = ClassConnectDb.edit_wash_header_status(wash_id, dtpDate.Value.ToString("yyyy-MM-dd"), txtName.Text.Trim(), vtel, total).Split("|")
         If (res(0) = "OK") Then
-            res = ClassConnectDb.edit_cus_id(wash_id, id).Split("|")
+            res = ClassServiceDb.wash_list_mao(wash_id).Split("|")
             If (res(0) = "OK") Then
-                res = ClassServiceDb.wash_list_mao(wash_id).Split("|")
-                If (res(0) = "OK") Then
-                    Save_List(id, wash_id)
-                Else
-                    MsgBox(res(1), MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
-                End If
+                Save_List(id, wash_id)
             Else
                 MsgBox(res(1), MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
             End If
-
-        Else
-            MsgBox(res(1), MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
         End If
     End Sub
 
