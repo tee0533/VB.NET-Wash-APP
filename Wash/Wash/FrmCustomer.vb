@@ -3,11 +3,20 @@
 Public Class FrmCustomer
     Dim wash_id As String
     Private Sub FrmCustomer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        clear_data()
         Initial_frm()
         init_combobox_group()
         init_combobox_category()
         AutoComplete()
     End Sub
+
+    Private Sub clear_data()
+        txtName.Text = String.Empty
+        txtTel.Text = String.Empty
+        dgv.Rows.Clear()
+        txtNum.Text = 1
+    End Sub
+
     Private Sub Initial_frm()
         dtpDate.Value = Date.Today
         Load_Data()
@@ -226,7 +235,12 @@ SELECT TOP (1000) [groupid]
         If (res(0) = "OK") Then
             MsgBox("บันทึกข้อมูลเรียบร้อย", MsgBoxStyle.Information, "Wash System")
             Me.Close()
-            FrmCusListGeneral.Show()
+            Try
+                FrmCusListGeneral.Load_Data()
+                FrmCusListGeneral.ShowDialog()
+            Catch ex As Exception
+            End Try
+
         Else
             MsgBox(res(1), MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
         End If

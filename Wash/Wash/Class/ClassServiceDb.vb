@@ -221,7 +221,13 @@
     End Function
     Friend Shared Function Delete_Wash_Header(pWash_ID As String) As String
         Dim sql As String = String.Empty
-        sql = "DELETE FROM [dbo].[wash_header] WHERE  WASH_ID=" & pWash_ID
+        sql = "SELECT cus_id
+              FROM wash_header
+              where wash_id  =" & pWash_ID
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Dim cus_id As Integer = dt.Rows(0).Item("cus_id")
+
+        sql = String.Format("DELETE FROM [dbo].[wash_header] WHERE  WASH_ID={0};DELETE FROM [dbo].[Customer] WHERE  cus_id={1};", pWash_ID, cus_id)
         Return ClassConnectDb.Exec_NonQuery(sql)
     End Function
     Friend Shared Function getWash_Header(ByVal value As String) As DataTable
@@ -241,7 +247,7 @@
         If (Not String.IsNullOrEmpty(value)) Then
             cond = String.Format("where c.name like '%{0}%' or c.tel like '%{0}%'", value)
         End If
-        sql = "SELECT c.cus_id as 'รหัส',c.name as 'ชื่อลูกค้า',c.tel as 'เบอร์โทร',m.promotion_name as 'โปรโมชั่น',m.balance as 'คงเหลือ', case WHEN  m.status =1 then 'ชำระแล้ว' else 'ค้างชำระ' end as 'สถานะ'
+        sql = "SELECT c.cus_id as 'รหัส',c.name as 'ชื่อลูกค้า',c.tel as 'เบอร์โทร',m.promotion_name as 'โปรโมชั่น',m.balance as 'คงเหลือ', case WHEN  m.status =1 then 'ชำระแล้ว' else 'ค้างชำระ' end as 'สถานะ', case WHEN  m.promotion_id =3 then expire_date else NULL end as 'วันหมดอายุ'
               FROM Customer c 
               inner join 
               dbo.wash_header_mao  m
@@ -262,7 +268,7 @@
     End Function
     Friend Shared Function getWash_List(ByVal wash_id As String) As DataTable
         Dim sql As String = String.Empty
-        sql = "SELECT row_number() OVER (ORDER BY wh.wash_id) AS 'ลำดับ',wl.list_name as 'รายการ',wh.wash_date  as 'วันที่รับ',wl.number,wl.price as 'ราคา'
+        sql = "SELECT row_number() OVER (ORDER BY wh.wash_id) AS 'ลำดับ',wl.list_name as 'รายการ',wh.wash_date  as 'วันที่รับ',wl.number as 'จำนวน',wl.price as 'ราคา'
               FROM wash_list  wl
 			  inner join wash_header wh
 			  on wl.wash_id =wh.wash_id 
@@ -329,6 +335,12 @@
         sql = "select promotion_id,promotion_name from promotion"
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt
+    End Function
+    Friend Shared Function get_promotion_expire_date(cus_id As String) As String
+        Dim sql As String = String.Empty
+        sql = "SELECT expire_date FROM [dbo].wash_header_mao where cus_id =" & cus_id
+        Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
+        Return dt.Rows(0).Item("expire_date").ToString()
     End Function
     Friend Shared Function get_promotion_balance(cus_id As String) As String
         Dim sql As String = String.Empty
@@ -481,16 +493,16 @@
     Friend Shared Function get_Rpt_Wash_Mao(ByVal cus_id As String) As DataTable
         Dim sql As String = String.Empty
         sql = "SELECT c.name
-      , c.tel
-      ,h.wash_id
-      ,c.cus_id
-      ,[promotion_id]
-      ,[promotion_name]
-      ,[price]
-      ,[description]
-      ,h.created_at
-  FROM [dbo].[wash_header_mao] h inner join Customer c
-  on h.cus_id =c.cus_id where h.cus_id=" & cus_id
+              ,c.tel
+              ,h.wash_id
+              ,c.cus_id
+              ,[promotion_id]
+              ,[promotion_name]
+              ,[price]
+              ,[description]
+              ,h.created_at
+          FROM [dbo].[wash_header_mao] h inner join Customer c
+          on h.cus_id =c.cus_id where h.cus_id=" & cus_id
         Dim dt As DataTable = ClassConnectDb.Query_TBL(sql)
         Return dt
     End Function

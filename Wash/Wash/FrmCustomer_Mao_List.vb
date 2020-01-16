@@ -45,7 +45,7 @@ Public Class FrmCustomer_Mao_List
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        FrmCusSearch.Search = txtName.Text.Trim
+        'FrmCusSearch.Search = txtName.Text.Trim
         FrmCusSearch.ShowDialog()
     End Sub
     Private Sub init_combobox_group()
@@ -76,6 +76,7 @@ Public Class FrmCustomer_Mao_List
     End Sub
 
     Private Sub clear_data()
+        dgv.Rows.Clear()
         txtName.Text = String.Empty
         txtPromotion.Text = String.Empty
         txtDetail.Text = String.Empty
@@ -218,11 +219,17 @@ Public Class FrmCustomer_Mao_List
     Function Check_Data() As Boolean
         If (txtPromotion.Text.Trim <> "เหมา 1000 บาท ไม่จำกัดชิ้น") Then
             If (CType(txtBalance.Text, Integer) < 0) Then
-                MsgBox("โปรโมชั่นคงเหลือไม่พอสำหรับการซัก", MsgBoxStyle.Critical, "Wash System")
+                MsgBox("โปรโมชั่นคงเหลือไม่พอสำหรับการซัก", MsgBoxStyle.Information, "Wash System")
+                Return False
+            End If
+        Else 'เหมา 1000 บาท ไม่จำกัดชิ้น
+            Dim vExpire_Date As String = ClassServiceDb.get_promotion_expire_date(id)
+            If (Convert.ToDateTime(vExpire_Date).Date <= Now.Date) Then
+                MsgBox("โปรโมชั่นของลูกค้าท่านนี้หมดอายุแล้ว", MsgBoxStyle.Information, "Wash System")
                 Return False
             End If
         End If
-        If (dgv.RowCount = 0) Then
+            If (dgv.RowCount = 0) Then
             MsgBox("กรุณาใส่ข้อมูลการซัก", MsgBoxStyle.Information, "Wash System")
             Return False
         End If
@@ -255,8 +262,13 @@ Public Class FrmCustomer_Mao_List
         If (res(0) = "OK") Then
             save_history(pWash_ID, txtBalance.Text)
             MsgBox("บันทึกข้อมูลเรียบร้อย", MsgBoxStyle.Information, "Wash System")
-            Me.Close()
-            FrmCusListMao.Show()
+            Try
+                Me.Close()
+                FrmCusListMao.Load_Data()
+                FrmCusListMao.ShowDialog()
+            Catch ex As Exception
+            End Try
+
         Else
             MsgBox(res(1), MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
         End If

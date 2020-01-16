@@ -9,13 +9,24 @@ Public Class FrmCustomer_Mao
     End Sub
 
     Private Sub FrmCustomer_Mao_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        clear_data()
         init_combobox()
         dtpDate.Value = Date.Today
         If (Frm_Action = "edit") Then
             btAdd.Visible = False
             bind_data()
+        Else
+            btAdd.Visible = True
         End If
     End Sub
+
+    Private Sub clear_data()
+        dgv.Rows.Clear()
+        txtName.Text = String.Empty
+        txtTel.Text = String.Empty
+
+    End Sub
+
     Private Sub bind_data()
         Dim dt As DataTable = ClassServiceDb.load_wash_header_mao(cus_id)
         dgv.Rows.Clear()
@@ -136,11 +147,22 @@ Public Class FrmCustomer_Mao
             Me.Close()
             Dim result As Integer = MessageBox.Show("ต้องการชำระบริการหรือไม่?", "Wash System", MessageBoxButtons.YesNo)
             If result = DialogResult.Yes Then
-                FrmPayServiceMao.cus_id = pCusID
-                FrmPayServiceMao.Show()
+                Try
+                    FrmPayServiceMao.cus_id = pCusID
+                    FrmPayServiceMao.ShowDialog()
+                Catch ex As Exception
+
+                End Try
+
+            Else
+                Try
+                    FrmCusListMao.Load_Data()
+                    FrmCusListMao.ShowDialog()
+                Catch ex As Exception
+
+                End Try
             End If
-            FrmCusListMao.Load_Data()
-            FrmCusListMao.Show()
+
         Else
             MsgBox(res(1), MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
         End If

@@ -22,11 +22,23 @@
     End Sub
 
     Private Sub MenuGeneral_Click_1(sender As Object, e As EventArgs) Handles MenuGeneral.Click
-        FrmCusListGeneral.ShowDialog()
+        Try
+            FrmCusListGeneral.ShowDialog()
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
     Private Sub MenuAddCusMao_Click(sender As Object, e As EventArgs) Handles MenuAddCusMao.Click
-        FrmCustomer_Mao.ShowDialog()
+        Try
+            FrmCustomer_Mao.Frm_Action = "add"
+            FrmCustomer_Mao.Action = "add"
+            FrmCustomer_Mao.ShowDialog()
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
     Private Sub FrmMainMenu_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
@@ -55,6 +67,11 @@
     End Sub
 
     Private Sub MenuCusMao_Status_Click(sender As Object, e As EventArgs) Handles MenuCusMao_Status.Click
-        FrmCusListMao_Status.ShowDialog()
+        Try
+            FrmCusListMao_Status.ShowDialog()
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 End Class

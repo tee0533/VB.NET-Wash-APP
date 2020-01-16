@@ -10,7 +10,7 @@
         For i = 0 To dgvHeader.ColumnCount - 1
             Dim col As New DataGridViewColumn
             col = dgvHeader.Columns(i)
-            If (i = 3) Then
+            If (i = 1) Or (i = 3) Then
                 col.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
             Else
                 col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill

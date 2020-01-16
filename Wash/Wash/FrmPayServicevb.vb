@@ -102,7 +102,7 @@
     End Function
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
         FrmViewer.wash_id = wash_id
-        FrmViewer.Name = "รายงานการซักทั่วไป"
+        FrmViewer.report_name = "รายงานการซักทั่วไป"
         FrmViewer.ShowDialog()
     End Sub
 

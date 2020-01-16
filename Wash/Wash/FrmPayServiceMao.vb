@@ -86,14 +86,26 @@
             If (res(0) = "OK") Then
                 MsgBox("บันทึกข้อมูลเรียบร้อย", MsgBoxStyle.Information, "Wash System")
                 If MsgBox("คุณต้องการพิมพ์ใบเสร็จหรือไม่ ?", vbOKCancel + vbInformation) = vbOK Then
-                    Me.Close()
-                    FrmViewer.cus_id = cus_id
-                    FrmViewer.report_name = "รายงานใบเสร็จลูกค้าเหมา"
-                    FrmViewer.ShowDialog()
-                    FrmCusListMao.Load_Data()
+
+                    Try
+                        Me.Close()
+                        FrmViewer.cus_id = cus_id
+                        FrmViewer.report_name = "รายงานใบเสร็จลูกค้าเหมา"
+                        FrmViewer.ShowDialog()
+                        FrmCusListMao.Load_Data()
+                        FrmCusListMao.ShowDialog()
+                    Catch ex As Exception
+
+                    End Try
                 Else
-                    Me.Close()
-                    FrmCusListMao.Load_Data()
+                    Try
+                        Me.Close()
+                        FrmCusListMao.Load_Data()
+                        FrmCusListMao.ShowDialog()
+                    Catch ex As Exception
+
+                    End Try
+
                 End If
             Else
                 MsgBox(res(1), MsgBoxStyle.Critical, "Wash System")
@@ -113,8 +125,13 @@
         Return True
     End Function
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
-        FrmViewer.wash_id = cus_id
-        FrmViewer.ShowDialog()
+        Try
+            FrmViewer.wash_id = cus_id
+            FrmViewer.ShowDialog()
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click

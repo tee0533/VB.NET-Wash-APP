@@ -22,11 +22,11 @@ Partial Class FrmCustomer_Mao
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnlFooter = New System.Windows.Forms.Panel()
         Me.btNew = New System.Windows.Forms.Button()
         Me.btEdit = New System.Windows.Forms.Button()
@@ -85,7 +85,7 @@ Partial Class FrmCustomer_Mao
         Me.btNew.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.btNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btNew.Location = New System.Drawing.Point(906, 2)
-        Me.btNew.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btNew.Margin = New System.Windows.Forms.Padding(2)
         Me.btNew.Name = "btNew"
         Me.btNew.Size = New System.Drawing.Size(154, 65)
         Me.btNew.TabIndex = 47
@@ -100,7 +100,7 @@ Partial Class FrmCustomer_Mao
         Me.btEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.btEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btEdit.Location = New System.Drawing.Point(751, 2)
-        Me.btEdit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btEdit.Margin = New System.Windows.Forms.Padding(2)
         Me.btEdit.Name = "btEdit"
         Me.btEdit.Size = New System.Drawing.Size(154, 65)
         Me.btEdit.TabIndex = 46
@@ -114,7 +114,7 @@ Partial Class FrmCustomer_Mao
         Me.btDel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.btDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btDel.Location = New System.Drawing.Point(596, 2)
-        Me.btDel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btDel.Margin = New System.Windows.Forms.Padding(2)
         Me.btDel.Name = "btDel"
         Me.btDel.Size = New System.Drawing.Size(154, 65)
         Me.btDel.TabIndex = 45
@@ -128,7 +128,7 @@ Partial Class FrmCustomer_Mao
         Me.btSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.btSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btSave.Location = New System.Drawing.Point(441, 2)
-        Me.btSave.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btSave.Margin = New System.Windows.Forms.Padding(2)
         Me.btSave.Name = "btSave"
         Me.btSave.Size = New System.Drawing.Size(154, 65)
         Me.btSave.TabIndex = 44
@@ -143,7 +143,7 @@ Partial Class FrmCustomer_Mao
         Me.btBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.btBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btBack.Location = New System.Drawing.Point(2, 2)
-        Me.btBack.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btBack.Margin = New System.Windows.Forms.Padding(2)
         Me.btBack.Name = "btBack"
         Me.btBack.Size = New System.Drawing.Size(154, 65)
         Me.btBack.TabIndex = 43
@@ -195,7 +195,7 @@ Partial Class FrmCustomer_Mao
         Me.btAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.btAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btAdd.Location = New System.Drawing.Point(45, 149)
-        Me.btAdd.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btAdd.Margin = New System.Windows.Forms.Padding(2)
         Me.btAdd.Name = "btAdd"
         Me.btAdd.Size = New System.Drawing.Size(178, 67)
         Me.btAdd.TabIndex = 44
@@ -206,44 +206,44 @@ Partial Class FrmCustomer_Mao
         Me.dgv.AllowUserToAddRows = False
         Me.dgv.AllowUserToDeleteRows = False
         Me.dgv.AllowUserToResizeColumns = False
-        DataGridViewCellStyle21.BackColor = System.Drawing.Color.White
-        Me.dgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle21
-        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle22.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgv.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgv.ColumnHeadersHeight = 35
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.order, Me.TypeMao, Me.piece, Me.price, Me.condition})
-        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle23.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgv.DefaultCellStyle = DataGridViewCellStyle23
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgv.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgv.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgv.Location = New System.Drawing.Point(0, 48)
         Me.dgv.Name = "dgv"
         Me.dgv.ReadOnly = True
-        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle24.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle24
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgv.RowHeadersVisible = False
         Me.dgv.RowHeadersWidth = 51
-        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle25.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgv.RowsDefaultCellStyle = DataGridViewCellStyle25
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgv.RowsDefaultCellStyle = DataGridViewCellStyle5
         Me.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv.Size = New System.Drawing.Size(788, 520)
         Me.dgv.TabIndex = 97
@@ -310,7 +310,7 @@ Partial Class FrmCustomer_Mao
         Me.txtTotal_Price.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.txtTotal_Price.ForeColor = System.Drawing.Color.Red
         Me.txtTotal_Price.Location = New System.Drawing.Point(573, 4)
-        Me.txtTotal_Price.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtTotal_Price.Margin = New System.Windows.Forms.Padding(2)
         Me.txtTotal_Price.Multiline = True
         Me.txtTotal_Price.Name = "txtTotal_Price"
         Me.txtTotal_Price.Size = New System.Drawing.Size(98, 41)
@@ -399,7 +399,7 @@ Partial Class FrmCustomer_Mao
         Me.btMenu.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.btMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btMenu.Location = New System.Drawing.Point(28, 10)
-        Me.btMenu.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btMenu.Margin = New System.Windows.Forms.Padding(2)
         Me.btMenu.Name = "btMenu"
         Me.btMenu.Size = New System.Drawing.Size(85, 85)
         Me.btMenu.TabIndex = 38
@@ -414,7 +414,7 @@ Partial Class FrmCustomer_Mao
         Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.pnlHeader)
         Me.Controls.Add(Me.pnlFooter)
-        Me.MinimizeBox = False
+        Me.MaximizeBox = False
         Me.Name = "FrmCustomer_Mao"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Text = "ระบบบริหารจัดการร้านซักรีด"

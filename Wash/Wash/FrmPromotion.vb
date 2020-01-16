@@ -35,6 +35,8 @@ Public Class FrmPromotion
             balance = 0
             If (Convert.ToDateTime(expire_date).Date > Now.Date) Then
                 expire_date = Convert.ToDateTime(expire_date).AddDays(30).Date.ToString("yyyy-MM-dd", New CultureInfo("en-US"))
+            Else
+                expire_date = Now.AddDays(30).Date.ToString("yyyy-MM-dd", New CultureInfo("en-US"))
             End If
         Else
             expire_date = Convert.ToDateTime(expire_date).ToString("yyyy-MM-dd", New CultureInfo("en-US"))
@@ -48,7 +50,13 @@ Public Class FrmPromotion
             Dim res() As String = ClassConnectDb.update_promotion(lblID.Text, txtPromotion.Text, cbPromotion.SelectedValue, cbPromotion.Text, expire_date, balance).Split("|")
             If (res(0) = "OK") Then
                 MsgBox("ต่อโปรโมชั่นเรียบร้อย", MsgBoxStyle.Information, "Wash System")
-                Me.Close()
+                Try
+                    Me.Close()
+                    FrmCusListMao.Load_Data()
+                    FrmCusListMao.ShowDialog()
+                Catch ex As Exception
+                End Try
+
             Else
                 MsgBox(res(1), MsgBoxStyle.Critical, "Wash System")
             End If
