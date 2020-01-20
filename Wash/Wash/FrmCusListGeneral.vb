@@ -34,7 +34,6 @@
         If MsgBox("คุณต้องการลบรหัส " & vWash_ID & " ?", vbOKCancel + vbInformation) = vbOK Then
             Delete_Data(vWash_ID)
             Load_Data()
-
         End If
     End Sub
 
