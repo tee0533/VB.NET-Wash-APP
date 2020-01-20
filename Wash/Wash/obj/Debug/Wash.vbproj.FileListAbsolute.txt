@@ -330,3 +330,7 @@ F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\bin\Debug\Wash.exe.manifest
 F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\bin\Debug\Wash.application
 F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.exe.manifest
 F:\SVN\Source Code\Job\VB.NET-Wash-APP\Wash\obj\Debug\Wash.application
+E:\SVN\VB.NET-Wash-APP\Wash\Wash\bin\Debug\Wash.exe.manifest
+E:\SVN\VB.NET-Wash-APP\Wash\Wash\bin\Debug\Wash.application
+E:\SVN\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.exe.manifest
+E:\SVN\VB.NET-Wash-APP\Wash\Wash\obj\Debug\Wash.application
