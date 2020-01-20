@@ -236,8 +236,11 @@ SELECT TOP (1000) [groupid]
             MsgBox("บันทึกข้อมูลเรียบร้อย", MsgBoxStyle.Information, "Wash System")
             Me.Close()
             Try
-                FrmCusListGeneral.Load_Data()
-                FrmCusListGeneral.ShowDialog()
+                If (FrmCusListGeneral.ShowDialog = False) Then
+                    FrmCusListGeneral.ShowDialog()
+                    FrmCusListGeneral.Load_Data()
+                End If
+
             Catch ex As Exception
             End Try
 
