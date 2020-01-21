@@ -91,9 +91,9 @@
                         Me.Close()
                         FrmViewer.cus_id = cus_id
                         FrmViewer.report_name = "รายงานใบเสร็จลูกค้าเหมา"
-                        FrmViewer.ShowDialog()
+                        FrmViewer.Show()
                         FrmCusListMao.Load_Data()
-                        FrmCusListMao.ShowDialog()
+                        FrmCusListMao.Show()
                     Catch ex As Exception
 
                     End Try
@@ -101,7 +101,7 @@
                     Try
                         Me.Close()
                         FrmCusListMao.Load_Data()
-                        FrmCusListMao.ShowDialog()
+                        FrmCusListMao.Show()
                     Catch ex As Exception
 
                     End Try
@@ -127,7 +127,7 @@
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
         Try
             FrmViewer.wash_id = cus_id
-            FrmViewer.ShowDialog()
+            FrmViewer.Show()
         Catch ex As Exception
 
         End Try

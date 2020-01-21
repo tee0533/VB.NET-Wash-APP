@@ -18,12 +18,12 @@
     End Sub
 
     Private Sub MenuAddCusGeneral_Click(sender As Object, e As EventArgs) Handles MenuAddCusGeneral.Click
-        FrmCustomer.ShowDialog()
+        FrmCustomer.Show()
     End Sub
 
     Private Sub MenuGeneral_Click_1(sender As Object, e As EventArgs) Handles MenuGeneral.Click
         Try
-            FrmCusListGeneral.ShowDialog()
+            FrmCusListGeneral.Show()
         Catch ex As Exception
 
         End Try
@@ -34,7 +34,7 @@
         Try
             FrmCustomer_Mao.Frm_Action = "add"
             FrmCustomer_Mao.Action = "add"
-            FrmCustomer_Mao.ShowDialog()
+            FrmCustomer_Mao.Show()
         Catch ex As Exception
 
         End Try
@@ -48,7 +48,7 @@
     Private Sub MenuCusMao_Click(sender As Object, e As EventArgs) Handles MenuCusMao.Click
         Try
             FrmCusListMao.Close()
-            FrmCusListMao.ShowDialog()
+            FrmCusListMao.Show()
         Catch ex As Exception
 
         End Try
@@ -59,7 +59,7 @@
         Try
             FrmCustomer_Mao_List.frm_Action = "add"
             FrmCustomer_Mao_List.list_mao_id = 0
-            FrmCustomer_Mao_List.ShowDialog()
+            FrmCustomer_Mao_List.Show()
         Catch ex As Exception
 
         End Try
@@ -68,7 +68,7 @@
 
     Private Sub MenuCusMao_Status_Click(sender As Object, e As EventArgs) Handles MenuCusMao_Status.Click
         Try
-            FrmCusListMao_Status.ShowDialog()
+            FrmCusListMao_Status.Show()
         Catch ex As Exception
 
         End Try

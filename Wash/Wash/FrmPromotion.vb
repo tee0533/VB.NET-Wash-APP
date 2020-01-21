@@ -53,7 +53,7 @@ Public Class FrmPromotion
                 Try
                     Me.Close()
                     FrmCusListMao.Load_Data()
-                    FrmCusListMao.ShowDialog()
+                    FrmCusListMao.Show()
                 Catch ex As Exception
                 End Try
 

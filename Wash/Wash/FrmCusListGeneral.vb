@@ -64,7 +64,9 @@
             Exit Sub
         End If
         FrmPayServicevb.wash_id = vWash_ID
-        FrmPayServicevb.ShowDialog()
+        FrmPayServicevb.Show()
+
+
     End Sub
 
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
@@ -80,6 +82,6 @@
     End Sub
 
     Private Sub btnAddCustomer_Click(sender As Object, e As EventArgs) Handles btnAddCustomer.Click
-        FrmCustomer.ShowDialog()
+        FrmCustomer.Show()
     End Sub
 End Class

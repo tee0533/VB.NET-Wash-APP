@@ -81,7 +81,7 @@
                 Me.Close()
                 FrmViewer.wash_id = wash_id
                 FrmViewer.report_name = "รายงานการซักทั่วไป"
-                FrmViewer.ShowDialog()
+                FrmViewer.Show()
                 FrmCusListGeneral.Load_Data()
             Else
                 Me.Close()
@@ -103,7 +103,7 @@
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
         FrmViewer.wash_id = wash_id
         FrmViewer.report_name = "รายงานการซักทั่วไป"
-        FrmViewer.ShowDialog()
+        FrmViewer.Show()
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click

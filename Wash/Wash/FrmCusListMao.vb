@@ -44,7 +44,7 @@
             Exit Sub
         End If
         FrmPayServiceMao.cus_id = cus_id
-        FrmPayServiceMao.ShowDialog()
+        FrmPayServiceMao.Show()
     End Sub
 
     Private Sub BtnAddCustomer_Click(sender As Object, e As EventArgs) Handles btnAddCustomer.Click
@@ -79,6 +79,6 @@
         Dim cus_id As String = Trim(dgvHeader.Rows(index).Cells("รหัส").Value.ToString)
         FrmCustomer_Mao.cus_id = cus_id
         FrmCustomer_Mao.Frm_Action = "edit"
-        FrmCustomer_Mao.ShowDialog()
+        FrmCustomer_Mao.Show()
     End Sub
 End Class

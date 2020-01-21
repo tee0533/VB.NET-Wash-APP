@@ -46,7 +46,7 @@ Public Class FrmCustomer_Mao_List
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         'FrmCusSearch.Search = txtName.Text.Trim
-        FrmCusSearch.ShowDialog()
+        FrmCusSearch.Show()
     End Sub
     Private Sub init_combobox_group()
         Dim dt As DataTable = ClassServiceDb.getgroup_cloth()
@@ -229,7 +229,7 @@ Public Class FrmCustomer_Mao_List
                 Return False
             End If
         End If
-            If (dgv.RowCount = 0) Then
+        If (dgv.RowCount = 0) Then
             MsgBox("กรุณาใส่ข้อมูลการซัก", MsgBoxStyle.Information, "Wash System")
             Return False
         End If
@@ -265,7 +265,7 @@ Public Class FrmCustomer_Mao_List
             Try
                 Me.Close()
                 FrmCusListMao.Load_Data()
-                FrmCusListMao.ShowDialog()
+                FrmCusListMao.Show()
             Catch ex As Exception
             End Try
 

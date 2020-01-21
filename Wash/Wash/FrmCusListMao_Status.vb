@@ -59,12 +59,12 @@
         End If
         FrmCustomer_Mao_List.list_mao_id = id
         FrmCustomer_Mao_List.frm_Action = "edit"
-        FrmCustomer_Mao_List.ShowDialog()
+        FrmCustomer_Mao_List.Show()
         Load_Data()
     End Sub
 
     Private Sub btnAddCustomer_Click(sender As Object, e As EventArgs) Handles btnAddCustomer.Click
-        FrmCustomer_Mao.ShowDialog()
+        FrmCustomer_Mao.Show()
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click

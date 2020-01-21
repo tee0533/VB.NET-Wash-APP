@@ -149,7 +149,7 @@ Public Class FrmCustomer_Mao
             If result = DialogResult.Yes Then
                 Try
                     FrmPayServiceMao.cus_id = pCusID
-                    FrmPayServiceMao.ShowDialog()
+                    FrmPayServiceMao.Show()
                 Catch ex As Exception
 
                 End Try
@@ -157,7 +157,7 @@ Public Class FrmCustomer_Mao
             Else
                 Try
                     FrmCusListMao.Load_Data()
-                    FrmCusListMao.ShowDialog()
+                    FrmCusListMao.Show()
                 Catch ex As Exception
 
                 End Try
