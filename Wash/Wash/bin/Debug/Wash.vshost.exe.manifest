@@ -275,14 +275,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Wash.exe" size="19096576">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Wash.exe" size="19097600">
       <assemblyIdentity name="Wash" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>XlXc5z3yOG6tj7kN8IaFqBFESLs=</dsig:DigestValue>
+        <dsig:DigestValue>V4C7ic3EzvqvfsbMm4f21kuFgP4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

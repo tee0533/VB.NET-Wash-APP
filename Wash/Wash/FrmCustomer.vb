@@ -2,6 +2,7 @@
 
 Public Class FrmCustomer
     Dim wash_id As String
+    Public Action As String = "add"
     Private Sub FrmCustomer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         clear_data()
         Initial_frm()
@@ -139,7 +140,7 @@ SELECT TOP (1000) [groupid]
             Dim vUnit_price As Integer = ClassServiceDb.getProductPrice(cmbList.SelectedValue)
             Dim vPrice As String = (vUnit_price + vPriceRolled + Iron_wash) * Convert.ToInt32(vCount)
             Dim Level As String = String.Empty
-            If (cmbCategory.Text.Trim = "รีดอย่างเดียว") Then
+            If (cmbCategory.Text.Trim <> "ซักอย่างเดียว") Then
                 If (CheckEz.Checked) Then
                     Level = "ง่าย-5"
                 ElseIf (CheckMid.Checked) Then
@@ -149,8 +150,20 @@ SELECT TOP (1000) [groupid]
                 End If
             End If
             Dim row As String() = New String() {Number, vGroup, vList, vCategory, Level, vCount, vUnit_price, vPrice}
-            dgv.Rows.Add(row)
-            assign_total_price()
+            If Action = "edit" Then
+                If dgv.Rows.Count <= 0 Then Exit Sub
+                Dim index As Integer = dgv.CurrentRow.Index
+                For Each rows As DataGridViewRow In dgv.SelectedRows
+                    dgv.Rows.Remove(rows)
+                Next
+                dgv.Rows.Add(row)
+                Action = "add"
+                Me.Text = "#การเพิ่มข้อมูล"
+            Else
+                dgv.Rows.Add(row)
+                assign_total_price()
+            End If
+
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "เกิดข้อผิดพลาด")
         End Try
@@ -209,13 +222,16 @@ SELECT TOP (1000) [groupid]
         FrmViewer.Show()
     End Sub
     Private Sub cmbCategory_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCategory.SelectedIndexChanged
-        If (cmbCategory.Text.Trim = "รีดอย่างเดียว") Then
+        If (cmbCategory.Text.Trim = "ซักอย่างเดียว") Then
+            CheckMid.Checked = False
+            CheckHard.Checked = False
+            CheckEz.Checked = False
+            pnlOption.Visible = False
+        Else
             CheckMid.Checked = True
             CheckHard.Checked = True
             CheckEz.Checked = True
             pnlOption.Visible = True
-        Else
-            pnlOption.Visible = False
         End If
     End Sub
     Private Sub Save_Header(ByVal pCusID As String)
@@ -292,9 +308,22 @@ SELECT TOP (1000) [groupid]
     End Sub
 
     Private Sub btEdit_Click(sender As Object, e As EventArgs) Handles btEdit.Click
-
+        For Each row As DataGridViewRow In dgv.SelectedRows
+            Me.Text = "#การแก้ไขข้อมูล"
+            Action = "edit"
+            assign_data()
+        Next
     End Sub
-
+    Private Sub assign_data()
+        If dgv.Rows.Count <= 0 Then Exit Sub
+        Dim index As Integer = dgv.CurrentRow.Index
+        Dim arrGroup = dgv.Rows(index).Cells("group").Value.ToString().Trim().Split("-")
+        cmbGroup.SelectedValue = arrGroup(0)
+        Dim arrlist = dgv.Rows(index).Cells("list").Value.ToString().Trim().Split("-")
+        cmbList.SelectedValue = arrlist(0)
+        Dim arrcategory = dgv.Rows(index).Cells("category").Value.ToString().Trim().Split("-")
+        cmbCategory.SelectedValue = arrcategory(0)
+    End Sub
     Private Sub btMenu_Click(sender As Object, e As EventArgs) Handles btMenu.Click
         Me.Close()
     End Sub
